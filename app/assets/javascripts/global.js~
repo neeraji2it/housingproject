@@ -1,0 +1,14 @@
+
+(function($) {
+$(document).ready (function() {
+$('#primary')
+$(document).ready(function() {
+
+$(document).ready(function(){
+  $("p").hover(function(){
+    $("p").css("background-color","yellow");
+    },function(){
+    $("p").css("background-color","pink");
+  });
+});
+ })( jQuery );

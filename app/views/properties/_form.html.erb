@@ -1,0 +1,178 @@
+
+<div id ="property_1">
+  <div class="control-group">
+    <%= f.label :type_of_land, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :type_of_land, options_for_select([["Select" ,""],["Agricultural","Agricultural"],["Residential","Residential"],["Industrial","Industrial"],["Commercial","Commercial"]], @property.type_of_land), :class => 'dropdownvisible'  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :rate, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rate, :class => 'text_field' %>/sqft
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :area, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :area, :class => 'text_field' %>in sqft
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :person_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :person_type, options_for_select([["Select" ,""],["Broker","Broker"],["Individual","Individual"],["Developer","Developer"]], @property.person_type),:class => 'text_field'  %>
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <%= f.label :city, :class => 'control-label' %>
+    <div class="controls">
+            <%= f.text_field :city, :class => 'text_field' %>
+
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :location, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :location, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :description, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <%= f.label :mobile, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :mobile, :class => 'text_field',:maxlength =>'10' %>
+    </div>
+  </div>
+
+
+</div>
+
+<div id ="property_2">
+
+
+
+  <div class="control-group">
+    <%= f.label :electricity_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :electricity_type, options_for_select([["Select" ,""],[" 1-Phase Electricity ","1-Phase Electricity "],["2-Phase Electricity ","2-Phase Electricity "],[" 3-Phase Electricity "," 3-Phase Electricity "]], @property.electricity_type),:class => 'text_field'  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :present_land_status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :present_land_status, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :boundary_status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :boundary_status, options_for_select([["Select" ,""],["No Boundary","No Boundary"],["Boundary Available","Boundary Available"]], @property.boundary_status),:class => 'text_field'  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :drainage_status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :drainage_status, options_for_select([["Select" ,""],["No Drainage","No Drainage"],["Drainage Available","Drainage Available"]], @property.drainage_status),:class => 'text_field'  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Inlevel_road, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :inleave_rode, options_for_select([["Select" ,""],["Elevated from the road","Elevated from the road"],["Depressed from the road","Depressed from the road"],["Inlevel with the road","Inlevel with the road"]], @property.inleave_rode),:class => 'text_field'%>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :shed_status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :shed_status, options_for_select([["Select" ,""],["No Shed","No Shed"],["Shed Available","Shed Available"]], @property.shed_status),:class => 'text_field'  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :borewell_status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :borewell_status, options_for_select([["Select" ,""],["No Borewell","No Borewell"],["Borewell Available","Borewell Available"],["Govt Pipeline Available","Govt Pipeline Available"],["Well Available","Well Available"],["River Borewell","River Borewell"]], @property.borewell_status),:class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :land_status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :land_status, :class => 'text_field'  %>
+    </div>
+  </div>
+    <div class="control-group">
+    <%= f.label :video_url, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :land_status, :class => 'text_field'  %>
+    </div>
+    </div>
+  
+  <div class="control-group">
+    <%= f.label :document, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :document, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <% if @property.new_record?  %>
+      <div class="control-group">
+        <label class="control-label" for="address">
+          Upload images
+        </label>
+
+        <div class="controls">
+          <%= f.fields_for :images, :html => {:multipart => true} do |image| %>
+            <%= image.file_field :image %>
+            <%= image.link_to_remove "Remove this task" %>
+          <% end %>
+        </div>
+        <div class="controls" style="margin-top: -22px;margin-left: 285px;">
+          <%= f.link_to_add "Add a task", :images %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+<div class="form-actions">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <center>
+
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+      properties_path, :class => 'btn btn-primary' %></center>  </div>
+

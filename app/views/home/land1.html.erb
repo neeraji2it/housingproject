@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housing</title>
+  <link href="css/default.css" rel="stylesheet" type="text/css">
+</head>
+<body class="landpage left-landpage-a">
+
+
+  <article>	
+    <div class="main-breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="/home/home1" title="Home">Home</a><i class="fa fa-chevron-right"></i></li>
+        <li><a href='/home/land?lat=<%= @lat %>&lon=<%=@lon%>&city=<%=@property.city %>' title="Mumbai"><%= @property.city %></a><i class="fa fa-chevron-right"></i></li>
+        <li><a href="/home/land1?id=<%= @property.id %>" title="Land">land</a><i class="fa fa-chevron-right"></i></li>
+        <li class="active">Lorem Ipsum</li>
+      </ol>
+    </div>
+    <div class="left-column"> 
+      <div class="box-serching">
+        <input type="text"  class="input-location-search col-xs-6 col-sm-5 col-md-5 col-lg-5" name="" title="e.g. Hiranandani Gardens" value="e.g. Hiranandani Gardens" placeholder="e.g. Hiranandani Gardens" />
+        <select class="filters-search col-xs-6 col-sm-3 col-md-3 col-lg-3" title="Filters"><option>Filters</option></select>
+        <select class="unit-location-search col-xs-6 col-sm-3 col-md-3 col-lg-3" title="Unit:sqft"><option>Unit: sqft</option></select>        
+      </div>        
+      <div class="img_map">
+        <%= gmaps4rails(@json) %>
+      </div>   
+    </div>	
+    <div class="right-column">
+      <div class="box-btn">
+        <div class="col-xs-7 col-sm-6 col-md-6 col-lg-6">
+          <a class="btn-login btn_back" href="/home/home1" title="Back to Results"><i class="fa fa-arrow-circle-left"></i>Back to Results</a>
+        </div>		
+        <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 alRight">
+          <%= link_to "Gallary", gallery_home_path(@property) %>
+          <a class="btn-login btn_back" href="/home/land1?id= <% if @properties.first.id == @property.id %><%= @properties.first.id %><%else%> <%=(@property.id)-1 %><%end%>" title="Prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-login btn_back" href="/home/land1?id=<% if @properties.last.id == @property.id %><%= @properties.last.id %><%else%> <%=(@property.id)+1 %><%end%>" title="Next"> <i class="fa fa-chevron-right"></i></a>			
+        </div>
+      </div>   
+      <div class="land_img">
+        <%= image_tag("img-land-a.png",:alt =>"img-land-a.") %> 
+        <div class="contact_us_details">
+          <div class="icon-phone"><i class="fa fa-phone"></i></div>
+          <div>
+            <p>65.3 Lacs sqfs, Residential land </p>
+            <p>near NH-17 Hiqhway,sanqurli</p>
+          </div>           
+        </div>
+      </div>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" title="Key Information">
+                <i class="fa fa-info"></i> Key Information
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <div class="row price">							
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">&nbsp;&nbsp;&nbsp;Price
+                  <p>&nbsp;&nbsp;&nbsp;<strong><i class="fa fa-inr"></i></strong><%= @property.price %></p>
+                  <div class="text-listed-by"> listed By<p><%= @property.person_type %></p></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Rate
+                  <p><strong><i class="fa fa-inr"></i></strong><%= @property.rate %>/<span>sqft</span></p>
+                  <div class="text-listed-by">Type of land<p><%= @property.type_of_land %></p></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Area
+                  <p><%= @property.area %> <span>sqft</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" title="Details">
+                <i class="fa fa-bars"></i> Details
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="text_details">
+                <%if @property.electricity_type.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%  end %><i class="fa fa-bolt"></i> <%= @property.electricity_type %> </div>
+                  <%if @property.present_land_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%  end %><i class="fa fa-road"></i>Presently used for <%= @property.present_land_status %> </div>
+                    <%if @property.boundary_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%  end %><i class="fa fa-road"></i> <%= @property.boundary_status %> </div>
+                      <%if @property.drainage_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="co l-xs-6 col-sm-6 col-md-6 col-lg-6"><%end%><i class="fa fa-road"></i> <%= @property.drainage_status %> </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><i class="fa fa-arrows-h"></i> <%= @property.inleave_rode %> </div>
+                        <%if @property.shed_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%end%><i class="fa fa-building-o"></i> <%= @property.shed_status %></div>
+                          <%if @property.borewell_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%end%><i class="fa fa-tint"></i> <%= @property.borewell_status %></div>
+                            <div class="col-sm-12 col-md-12 col-lg-12"><i class="fa fa-road"></i> <%= @property.land_status %> </div>
+                          </div>						
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a  class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" title="Commute Options">
+                            <i class="fa fa-car"></i> Commute Options
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <div class="panel-group" id="accordion1">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title panal-icon icon_bus">
+                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1" title="Bus Station">Bus Station</a>
+                                </h4>
+                              </div>
+                              <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">None found</div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title panal-icon icon_train">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse2" title="Train Station"> Train Station</a>
+                                </h4>
+                              </div>
+                              <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">None found</div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title panal-icon icon_ariports">
+                                  <a  class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse3" title="Airports">Airports</a>
+                                </h4>
+                              </div>
+                              <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">None found</div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title panal-icon icon_custom">
+                                  <a  class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse4" title="Custom">Custom</a>
+                                </h4>
+                              </div>
+                              <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">None found</div>
+                              </div>
+                            </div>                        
+                          </div>
+                          <p class="btn-top">
+                            <a class="btn-login btn_back" href="#" title="Back to Top"><i class="fa fa-angle-up"></i>Back to Top</a>
+                          </p>	
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a  class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapsefour" title="Contact">
+                            <i class="fa fa-phone"></i> Contact
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapsefour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p class="remove-spacing f11">When you call, don't forget to mention that you found  this on</p>
+                          <p class="f11"><a href="#" title="" target="_blank">www.lipsum.com</a></p>
+                          <div class="land_fom">
+                            <div class="user-box crow">
+                              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2"><%=  image_tag("img_user.png", :alt => 'img_user.png')%></div>
+                              <div class="user_name col-xs-7 col-sm-7 col-md-7 col-lg-8">Lorem Ipsum <i class="fa fa-check-circle"></i> </div>
+                            </div>
+                            <div class="user_details">
+                              <%= form_for :contact, :url => '/contact', :method => 'post' do |f|   %>
+                                <p> <%= f.text_field :name, :class=>"form-control" ,:placeholder=>"Name", :title=>"Name"%> </p>
+                                <p> <%= f.text_field :email, :class=>"form-control", :placeholder=>"E-mail", :title=>"E-mail"%> </p>
+                                <p> <%= f.text_field :mobile, :class=>"form-control", :placeholder=>"Phone", :title=>"Phone"%> </p>
+
+                                <p class="top-spacing">
+                                  <%= f.submit 'send', :class=>"btn-send", :title=>"Send"%>
+                                  <a class="btn-login btn-close" href="/home/land1" title="Close"> Close </a> 
+                                </p>
+                              <% end  %>
+                            </div>
+                          </div>							
+                        </div>
+                      </div>
+                    </div>                        
+                  </div>
+                </div>
+                <div class="clearF"></div>  	
+                </article>
+                <footer>
+                  <div class="copyright">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <p>&copy; Copyright 2013. All Right Reserved.</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">          
+                      <ul class="list-privacy">              
+                        <li><a href="#" title="Privacy policy">Privacy policy</a></li>
+                        <li><a href="#" title="Terms &amp; conditions">Terms &amp; conditions</a></li>                    
+                      </ul>
+                    </div>       
+                    <div class="clearF"></div>  
+                  </div>    
+                </footer>
+
+                <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+                <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+                <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+                <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+                <script>
+                  function show_gallery() {
+                    alert("hello")
+                    $("#dialog").dialog();
+                  }
+
+                  $(document).ready(function() {
+                    $('.bxslider').bxSlider();
+                  });
+                </script>
+
+                </script>
+
+                <div id="dialog" title="Quick chat">
+                  <ul class="bxslider">
+                    <% @images.each do |image| %>
+                      <li><%= image_tag(image.image.url(:original)) %></li>
+                    <% end %>
+                  </ul>
+                </div>
+
+                </body>
+                </html>

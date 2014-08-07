@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_of_land: MyString
+  title: MyString
+  price: 9.99
+  rate: 9.99
+  area: 9.99
+  person_type: MyString
+  city: MyString
+  location: MyString
+  description: MyText
+  name: MyString
+  email: MyString
+  mobile: MyString
+  lattitude: 9.99
+  longitude: 9.99
+  view_count: 1
+  contact_count: 1
+  electricity_type: MyString
+  present_land_status: MyString
+  boundary_status: MyString
+  drainage_status: MyString
+  inleave_rode: MyString
+  shed_status: MyString
+  borewell_status: MyString
+  land_status: MyString
+
+two:
+  type_of_land: MyString
+  title: MyString
+  price: 9.99
+  rate: 9.99
+  area: 9.99
+  person_type: MyString
+  city: MyString
+  location: MyString
+  description: MyText
+  name: MyString
+  email: MyString
+  mobile: MyString
+  lattitude: 9.99
+  longitude: 9.99
+  view_count: 1
+  contact_count: 1
+  electricity_type: MyString
+  present_land_status: MyString
+  boundary_status: MyString
+  drainage_status: MyString
+  inleave_rode: MyString
+  shed_status: MyString
+  borewell_status: MyString
+  land_status: MyString
