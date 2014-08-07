@@ -31,6 +31,18 @@ gem 'nifty-generators'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+
+
+# better rails console
+gem 'pry-rails'
+
+# better_errors
+group :development do
+  gem "better_errors"
+end
+gem "binding_of_caller"
+
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
@@ -48,5 +60,3 @@ gem 'spring',        group: :development
 
 gem 'gmaps4rails','~>1.5.6'
 
-
-gem 'pry-rails'

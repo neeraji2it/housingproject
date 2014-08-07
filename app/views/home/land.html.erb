@@ -6,39 +6,55 @@
       <li class="active"></li>
     </ol>
   </div>
-<%= form_for :search,:url => location_search_home_index_path, :method => 'get'  do |f| %>
-  <div class="left-column"> 
-    <div class="box-serching">
+  <%= form_for :search,:url => location_search_home_index_path, :method => 'get'  do |f| %>
+    <div class="left-column"> 
+      <div class="box-serching">
         <input type="text"  class="input-location-search col-xs-6 col-sm-5 col-md-5 col-lg-5" name="" title="e.g. Hiranandani Gardens" value="e.g. Hiranandani Gardens" placeholder="e.g. Hiranandani Gardens" />
-      <select class="filters-search col-xs-3 col-sm-3 col-md-3 col-lg-3" title="Filters"><option>Filters</option></select>
-      <select class="unit-location-search col-xs-3 col-sm-3 col-md-3 col-lg-3" title="Unit:sqft"><option>Unit: sqft</option></select>        
-    </div>    
+        <select class="filters-search col-xs-3 col-sm-3 col-md-3 col-lg-3" title="Filters"><option>Filters</option></select>
+        <select class="unit-location-search col-xs-3 col-sm-3 col-md-3 col-lg-3" title="Unit:sqft"><option>Unit: sqft</option></select>        
+      </div>    
     <%  end %>
     <div class="right-column">    
-    <p class="remove-spacing">
-      <button type="button" class="bars-btn"><i class="fa fa-bars"></i></span></button><span class="text-results"><%= @properties.count %> Results</span>
-    </p>		
-    <div class="box-result results-collapse contentResult">
-      <select class="price-area" title="Price/Area"><option>Sorted by: Price/Area (low to high)<br></option></select>     
-      <ul class="list-low-high">        	
-        <% @properties.each do |i| %>
+      <p class="remove-spacing">
+        <button type="button" class="bars-btn"><i class="fa fa-bars"></i></span></button><span class="text-results"><%= @properties.count %> Results</span>
+      </p>		
+      <div class="box-result results-collapse contentResult">
+        <select class="price-area" title="Price/Area"><option>Sorted by: Price/Area (low to high)<br></option></select>     
+        <ul class="list-low-high">        	
+          <% @properties.each do |property| %>
 
-          <li><div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3"><%= link_to image_tag(i.image.url(:original)), :action => 'land1', :id => i.id %></div> 
-            <div class="pen-heading col-xs-4 col-sm-4 col-md-4 col-lg-4"><%= i.location %> <p><i class="fa fa-map-marker"></i> <%= i.inleave_rode %></p></div>
-            <div class="pen-heading col-xs-2 col-sm-2 col-md-2 col-lg-2"><%= i.area %><p>Sqft</p></div>
-            <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3"><i class="fa fa-inr"></i> <%= i.price %><p><i class="fa fa-inr"></i><%= i.rate %>/ sqft</p></div>               
-          </li>
-          
+            <li>
+              <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <% image = property.try(:images).try(:first).try(:image).try(:url) %>
+                <%= link_to image_tag(image), :action => 'land1', :id => property.id %>
+              </div> 
+              <div class="pen-heading col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <%= property.location %> 
+                <p><i class="fa fa-map-marker"></i> 
+                  <%= property.inleave_rode %>
+                </p>
+              </div>
+              <div class="pen-heading col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <%= property.area %>
+                <p>Sqft</p>
+              </div>
+              <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <i class="fa fa-inr"></i> 
+                <%= property.price %>
+                <p><i class="fa fa-inr"></i><%= property.rate %>/ sqft</p>
+              </div>               
+            </li>
 
-        <% end %>
-      </ul>
+
+          <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="img_map">
-    <%= gmaps4rails(@json) %>
-  </div>        
-</div>	
-<div class="clearF"></div>        	
+    <div class="img_map">
+      <%= gmaps4rails(@json) %>
+    </div>        
+  </div>	
+  <div class="clearF"></div>        	
 </article>
 <footer>
   <div class="copyright">

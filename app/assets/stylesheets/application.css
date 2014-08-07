@@ -12,20 +12,19 @@
  *= require_tree .
  */
 #property_2{
-float:right;
-width:45%;
-position:relative;
-top:5px;
-padding:20px;
-border-left:1px solid black;
+    float:right;
+    width:45%;
+    position:relative;
+    top:5px;
+    padding:20px;
+    border-left:1px solid black;
 }
 
 #property_1{
-float:left;
-width:45%;
-position:relative;
-top:5px;
-padding:5px 20px 10px 5px;
-left:5px;
+    float:left;
+    width:45%;
+    position:relative;
+    top:5px;
+    padding:5px 20px 10px 5px;
+    left:5px;
 }
-
