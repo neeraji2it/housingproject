@@ -11,3 +11,6 @@ nbproject/
 # Ignore Log and tmp files
 tmp/
 
+# ignore development.log file
+log/development.log
+
