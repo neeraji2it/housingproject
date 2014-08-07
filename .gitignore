@@ -7,3 +7,7 @@ database.yml
 # Ignore netbeans project direcotry
 nbproject/
 
+
+# Ignore Log and tmp files
+tmp/
+
