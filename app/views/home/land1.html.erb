@@ -35,7 +35,7 @@
           <a class="btn-login btn_back" href="/home/home1" title="Back to Results"><i class="fa fa-arrow-circle-left"></i>Back to Results</a>
         </div>		
         <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 alRight">
-          <%= link_to "Gallary", gallery_home_path(@property) %>
+          <%= link_to "Gallary", gallery_home_path(@property), :class => "btn-login btn_back" %>
           <a class="btn-login btn_back" href="/home/land1?id= <% if @properties.first.id == @property.id %><%= @properties.first.id %><%else%> <%=(@property.id)-1 %><%end%>" title="Prev"><i class="fa fa-chevron-left"></i></a>
           <a class="btn-login btn_back" href="/home/land1?id=<% if @properties.last.id == @property.id %><%= @properties.last.id %><%else%> <%=(@property.id)+1 %><%end%>" title="Next"> <i class="fa fa-chevron-right"></i></a>			
         </div>
@@ -229,13 +229,6 @@
 
                 </script>
 
-                <div id="dialog" title="Quick chat">
-                  <ul class="bxslider">
-                    <% @images.each do |image| %>
-                      <li><%= image_tag(image.image.url(:original)) %></li>
-                    <% end %>
-                  </ul>
-                </div>
 
                 </body>
                 </html>

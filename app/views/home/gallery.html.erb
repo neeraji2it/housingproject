@@ -1,12 +1,12 @@
 <ul class="bxslider">
-  <li>
-    <% @images.each do |image| %>
-      <%= image_tag(image.image.url(:original)) %>
-    <% end %>
-  </li>
+  <% @images.each do |image| %>
+    <li><img src="<%= image.image.url(:original) %> " /></li>
+  <% end %>
 </ul>
 
-<script>
+
+<script src="/assets/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
   $(document).ready(function() {
     $('.bxslider').bxSlider();
   });

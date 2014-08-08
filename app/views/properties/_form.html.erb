@@ -41,7 +41,7 @@
   <div class="control-group">
     <%= f.label :city, :class => 'control-label' %>
     <div class="controls">
-            <%= f.text_field :city, :class => 'text_field' %>
+      <%= f.text_field :city, :class => 'text_field' %>
 
     </div>
   </div>
@@ -133,13 +133,13 @@
       <%= f.text_field :land_status, :class => 'text_field'  %>
     </div>
   </div>
-    <div class="control-group">
+  <div class="control-group">
     <%= f.label :video_url, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :land_status, :class => 'text_field'  %>
     </div>
-    </div>
-  
+  </div>
+
   <div class="control-group">
     <%= f.label :document, :class => 'control-label' %>
     <div class="controls">
@@ -159,9 +159,9 @@
             <%= image.link_to_remove "Remove this task" %>
           <% end %>
         </div>
-        <div class="controls" style="margin-top: -22px;margin-left: 285px;">
-          <%= f.link_to_add "Add a task", :images %>
-        </div>
+        <div class="controls">
+          <%= f.link_to_add "Add a task", :images %></div>
+
       </div>
     <% end %>
 

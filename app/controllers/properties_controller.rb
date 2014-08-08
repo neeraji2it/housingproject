@@ -17,12 +17,11 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
-    @post_attachment = @property.images.build
+    1.times{@property.images.build}
   end
 
   # GET /properties/1/edit
   def edit
-   1.times{@property.images.build}
 
   end
 
@@ -30,7 +29,7 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-
+    1.times{@property.images.build} if @property.images.blank?
     respond_to do |format|
       if @property.save
         format.html { redirect_to @property, notice: 'Property was successfully created.' }
@@ -67,13 +66,13 @@ class PropertiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_property
-      @property = Property.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_property
+    @property = Property.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def property_params
-      params.require(:property).permit!
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def property_params
+    params.require(:property).permit!
+  end
 end

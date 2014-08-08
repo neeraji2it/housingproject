@@ -3,13 +3,10 @@
   <head>
     <title>HousingProject</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', "jquery.bxslider", 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'default.css' %>
 
     <script type="text/javascript" src="/assets/js/custom.js"></script>
-    <script type="text/javascript"  src="/assets/js/jquery.min.js"></script> 
-    <script type="text/javascript"  src="/assets/js/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript"  src="/assets/js/html5.js"></script>
     <script type="text/javascript"  src ="/assets/javascripts/gmaps4rails/gmaps4rails.base.js.coffee"></script>
     <script type="text/javascript"  src ="/assets/javascripts/gmaps4rails/gmaps4rails.googlemaps.js.coffee "></script>
     <script type="text/javascript"  src ="/assets/javascripts/gmaps4rails/gmaps4rails.bing.js.coffee"></script>
@@ -67,19 +64,17 @@
         $(function() {
           $("#dialog").dialog();
         });
-        < /script
-
       </script>
 
       <div id="dialog" title="Quick chat">
         <%= form_for :chat, :url => '/chat', :method => 'post', :class => 'form' do |f|   %>
-          <label>Name: <span>*</span></label>
+        <label>Name: <span>*</span></label><br>
           <%= f.text_field :name %><br/>
-          <label>Email: <span>*</span></label>
-          <%= f.text_field :email%><br/>
-          <label>Contact No: <span>*</span></label>
+          <label>Email: <span>*</span></label><br>
+          <%= f.text_field :email%>
+          <label>Phone: <span>*</span></label>
           <%= f.text_field :phone,:maxlength =>'10'%><br/>
-          <label>Message:</label>
+          <label>Message:<span>*</span></label>
           <%= f.text_field :message%><br/>
           <%= f.submit 'send', :class=>"btn-send", :title=>"Send"%>
           <br/>
@@ -90,6 +85,5 @@
 
     <%= yield %>
     <%= yield :scripts %> 
-
   </body>
 </html>

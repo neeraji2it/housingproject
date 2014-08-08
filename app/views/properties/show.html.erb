@@ -52,7 +52,7 @@
   <dd> <a href="<%= @property.document.url %>"><b> download attachment</b></a></dd>
   
    <dt><strong><%= model_class.human_attribute_name(:image)%>:</strong></dt>
-  <dd><%= image_tag(@property.image.url(:original)) %></dd>
+  <dd><%= image_tag(@property.images.first.image.url(:original)) %></dd>
 </dl>
 
 <div class="form-actions">
