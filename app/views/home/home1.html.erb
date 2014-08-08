@@ -44,118 +44,19 @@
         <div class="box-city">
           <div class="row">
             <ul class="ch-grid">
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-1"></div>
-                    <div class="ch-info-back" data-lon="72.87" data-lat="19.076" data-city="Mumbai">
-                      <h3>Mumbai</h3>
+              <% @cities = ["Mumbai","Hosur","Bangalore","Hyderabad","Chennai","Chittor","Kanakapur","Mysore","Coorg","Chickamagalpur","Anantapur"] %>
+              <% @cities.each_with_index do |name, index| %>
+                <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                  <div class="ch-item">
+                    <div class="ch-info">
+                      <div class="ch-info-front ch-img-<%= index+1%>"></div>
+                      <div class="ch-info-back">
+                        <h3><%= link_to name, land_home_index_path(:city => name), :style => 'color: white;' %></h3>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-2"></div>
-                    <div class="ch-info-back" data-lon="77.82" data-lat="12.72" data-city="Pune">
-                      <h3>Hosur</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-3"></div>
-                    <div class="ch-info-back" data-lon="77.5946" data-lat="12.9716" data-city="Bangalore">
-                      <h3>Bangalore</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-4"></div>
-                    <div class="ch-info-back" data-lon="78.4867" data-lat="17.385" data-city="Hyderabad">
-                      <h3>Hyderabad</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-5"></div>
-                    <div class="ch-info-back" data-lon="80.2508" data-lat="13.0524" data-city="Chennai">
-                      <h3>Chennai</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-6"></div>
-                    <div class="ch-info-back" data-lon="79.1003" data-lat=" 13.2172" data-city="Kolkata">                      
-                      <h3>Chittor</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-7"></div>
-                    <div class="ch-info-back" data-lon="77.417" data-lat="12.55" data-city="Delhi">
-                      <h3>Kanakapur</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-8"></div>
-                    <div class="ch-info-back" data-lon="76.6394" data-lat="12.2958" data-city="Gurgaon">
-                      <h3>Mysore</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-9"></div>
-                    <div class="ch-info-back" data-lon="75.8069" data-lat="12.3375" data-city="Faridabad">
-                      <h3>Coorg</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-10"></div>
-                    <div class="ch-info-back" data-lon="75.7754" data-lat="13.3153" data-city="Noida">
-                      <h3>Chickamagalpur</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                <div class="ch-item">
-                  <div class="ch-info">
-                    <div class="ch-info-front ch-img-11"></div>
-                    <div class="ch-info-back" data-lon="77.6005" data-lat="14.6819" data-city="Ghaziabad">
-                      <h3>Anatapur</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              
-              </li>
+                </li>
+              <% end %>
             </ul>
           </div>
           <div class="clearF"></div>
@@ -167,8 +68,8 @@
   <article>
     <div class="container">
       <div class="box-welcome">
-        <h1>Lorem Ipsum is simply</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <h1>Housing experience</h1>
+        <p>Living on campus at HBU is an integral part of your educational experience. Our on-campus housing provides living and learning environments with opportunities to grow spiritually, develop interpersonal skills, increase understanding of diverse cultures and learn self-discipline in organizing time for study, work and social activities</p>
       </div>
       <div class="box-features">
         <div class="row">
@@ -176,22 +77,19 @@
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> <span><i class="fa fa-check"></i></span> </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
               <h4>Lorem Ipsum </h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
-            </div>
+        <p>Living on campus at HBU is an integral part of your educational experience. </p>            </div>
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> <span><i class="fa fa-building-o"></i></span> </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
               <h4>There are many</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been .</p>
-            </div>
+        <p>Living on campus at HBU is an integral part of your educational experience.</p>            </div>
           </div>
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> <span><i class="fa fa-smile-o"></i></span> </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
               <h4>Contrary to popular</h4>
-              <p>simply dummy text of Lorem Ipsum is the printing and typesetting industry. Lorem Ipsum is </p>
-            </div>
+        <p>Living on campus at HBU is an integral part of your educational experience.</p>            </div>
           </div>
         </div>
       </div>
