@@ -20,6 +20,8 @@ class HomeController < ApplicationController
     @lat = params[:lat]
     @lon = params[:lon]
     @json = (@json1 + @json2).gsub("][",",")
+    
+
     @city = params[:city]
   end
   
