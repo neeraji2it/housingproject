@@ -6,6 +6,6 @@ class Chat < ActionMailer::Base
     @phone = phone
     @message = message
 
-    mail(:to =>"rkaniradha@gmail.com", :subject => " housing customer waiting to contact you")
+        mail(:to => ["Adisvr.369@gmail.com","chandrusvr82@gmail.com","naveencaaspirant@gmail.com"],  :subject => " housing customer waiting to contact you")
   end
 end

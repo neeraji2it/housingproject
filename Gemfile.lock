@@ -67,6 +67,7 @@ GEM
       devise (>= 2.1.0)
     erubis (2.7.0)
     execjs (2.2.1)
+    geocoder (1.2.3)
     gmaps4rails (1.5.6)
     highline (1.6.21)
     hike (1.2.3)
@@ -188,11 +189,11 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  capistrano
   capistrano-ext
   coffee-rails (~> 4.0.0)
   devise
   devise-encryptable
+  geocoder
   gmaps4rails (~> 1.5.6)
   jbuilder (~> 2.0)
   jquery-rails

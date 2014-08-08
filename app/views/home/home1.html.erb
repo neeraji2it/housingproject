@@ -9,7 +9,7 @@
 <body class="homepage">
   <header>
     <div class=""  style="background:#A0B49B">
-      <div class="container" style="background:#D5D8D4;border-radius:4px;"> <a href="#" title="" id="logo"><%=  image_tag("logo.png", :alt => 'logo.png')%></a>
+      <div class="container" style="background:#D5D8D4;border-radius:4px;"> <a href="#" title="" id="logo"><%=  image_tag("logo.png", :alt => 'logo.png', :height=>"25",:width =>"35")%></a>
         <div class="row">
           <div class="navbar-header" style="background:#CCC">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
@@ -17,7 +17,7 @@
           <div class="navbar-collapse collapse">
             <ul id="navigation">
               <li class="active"><a href="/home/home1" title="HOME">Home</a></li>
-              <li><a href="#" title="ABOUT US">About us</a></li>
+              <li><a href="/home/about_us" title="ABOUT US">About us</a></li>
               <li><a href="#" title="SERVICES">Services</a></li>
               <li><a href="#" title="CONTACT US">Contact us</a></li>
             </ul>
@@ -44,14 +44,14 @@
         <div class="box-city">
           <div class="row">
             <ul class="ch-grid">
-              <% @cities = ["Mumbai","Hosur","Bangalore","Hyderabad","Chennai","Chittor","Kanakapur","Mysore","Coorg","Chickamagalpur","Anantapur"] %>
+              <% @cities = ["Mumbai","Hosur","Bangalore","Hyderabad","Chennai","Chitoor","Kanakapur","Mysore","Coorg","Chikmagalur","Anantapur"] %>
               <% @cities.each_with_index do |name, index| %>
                 <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
                   <div class="ch-item">
                     <div class="ch-info">
                       <div class="ch-info-front ch-img-<%= index+1%>"></div>
                       <div class="ch-info-back">
-                        <h3><%= link_to name, land_home_index_path(:city => name), :style => 'color: white;' %></h3>
+                        <h3><%= link_to name, land_home_index_path(:city => name), :style => 'color: white;font-size: 15px;' %></h3>
                       </div>
                     </div>
                   </div>
@@ -71,29 +71,9 @@
         <h1>Housing experience</h1>
         <p>Living on campus at HBU is an integral part of your educational experience. Our on-campus housing provides living and learning environments with opportunities to grow spiritually, develop interpersonal skills, increase understanding of diverse cultures and learn self-discipline in organizing time for study, work and social activities</p>
       </div>
-      <div class="box-features">
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> <span><i class="fa fa-check"></i></span> </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-              <h4>Lorem Ipsum </h4>
-        <p>Living on campus at HBU is an integral part of your educational experience. </p>            </div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> <span><i class="fa fa-building-o"></i></span> </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-              <h4>There are many</h4>
-        <p>Living on campus at HBU is an integral part of your educational experience.</p>            </div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> <span><i class="fa fa-smile-o"></i></span> </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-              <h4>Contrary to popular</h4>
-        <p>Living on campus at HBU is an integral part of your educational experience.</p>            </div>
-          </div>
+    
         </div>
-      </div>
-      <div class="row">
+            <div class="row">
         <div class="box-media">
           <h1>Our Media</h1>
           <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2"> <%=  image_tag("img-media.png", :alt => 'img-media.png')%> </div>
@@ -136,7 +116,7 @@
             </ul>        
           </li>
           <li class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <h4>Lorem Ipsum</h4>
+            <h4>New Housing</h4>
             <ul>
               <li><a href="#" title="Create a Lorem ipsum">Create a Lorem ipsum</a></li>
               <li><a href="#" title="Manage Your Lorem ipsum">Manage Your Lorem ipsum</a></li>

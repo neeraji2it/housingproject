@@ -14,6 +14,9 @@ resources :home do
       get :land
       get :land1
       get :land2
+      get :about_us
+      get :privacy_policy
+      get :help
       get :location_search
     end
     

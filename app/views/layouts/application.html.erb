@@ -18,31 +18,31 @@
         <div class="span9"></div>
         <header>
           <div class="topbar">   
-            <!-- <a href="#" title="" id="logo"><img src="images/logo.png" alt="" title=""/></a> -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
-            </div>
-            <div class="navbar-collapse collapse">              
-              <ul id="navigation">	
-                <li><a href="/home/home1" title="HOME">Home</a></li>
-                <li><a href="#" title="ABOUT US">About us</a></li>
-                <li><a href="#" title="SERVICES">Services</a></li>
-                <li><a href="#" title="CONTACT US">Contact us</a></li>
-              </ul>   
-              <ul id="navigation">
-                <% if user_signed_in? %>
-                  <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn-login' %></li>
-                <% else %>
-                  <li><%= link_to "LOGIN", new_user_session_path,:class => 'btn-login' %></li>
-                <%end%>
-                <li><li><%= link_to "SIGNUP", new_user_registration_path,:class =>'btn-login' %> </li>
-                <% flash.each do |name, msg| %>
-                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-                <% end %>
-              </ul>   
-            </div>        
-            <div class="clearF"></div>
-          </div> 
+            <div class="container"<a href="#" title="" id="logo"><%=  image_tag("logo.png", :alt => 'logo.png', :height=>"25",:width =>"35")%></a>           <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
+              </div>
+              <div class="navbar-collapse collapse">              
+                <ul id="navigation">	
+                  <li><a href="/home/home1" title="HOME">Home</a></li>
+                  <li><a href="/home/about_us" title="ABOUT US">About us</a></li>
+                  <li><a href="/home/privacy_policy" title="Privacy Policy">privacy_policy</a></li>
+                  <li><a href="/home/help" title="Help">Help</a></li>
+                  <li><a href="#" title="CONTACT US">Contact us</a></li>
+                </ul>   
+                <ul id="navigation">
+                  <% if user_signed_in? %>
+                    <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn-login' %></li>
+                  <% else %>
+                    <li><%= link_to "LOGIN", new_user_session_path,:class => 'btn-login' %></li>
+                  <%end%>
+                  <li><li><%= link_to "SIGNUP", new_user_registration_path,:class =>'btn-login' %> </li>
+                  <% flash.each do |name, msg| %>
+                    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                  <% end %>
+                </ul>   
+              </div>        
+              <div class="clearF"></div>
+            </div> 
         </header>
 
       </div>
