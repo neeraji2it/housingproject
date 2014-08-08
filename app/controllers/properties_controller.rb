@@ -1,3 +1,6 @@
+
+
+
 class PropertiesController < ApplicationController
   include ApplicationHelper
   before_filter :admin_login_required
@@ -58,11 +61,9 @@ class PropertiesController < ApplicationController
   # DELETE /properties/1
   # DELETE /properties/1.json
   def destroy
+    @property = Property.find(params[:id])
     @property.destroy
-    respond_to do |format|
-      format.html { redirect_to properties_url, notice: 'Property was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to properties_url
   end
 
   private
