@@ -3,15 +3,16 @@ class ChatController < ApplicationController
 
   end
   def create
-        name = params[:chat][:name]
+    name = params[:chat][:name]
     email = params[:chat][:email]
     phone = params[:chat][:phone]
-      message = params[:chat][:message]
+    message = params[:chat][:message]
     Chat.contact(email, name, phone, message).deliver
     return if request.xhr?
-    redirect_to :home1_home_index, notice: 'we will get you soon'
+    redirect_to '/', notice: 'we will get you soon'
   end
-    private
+  
+  private
   # Use callbacks to share common setup or constraints between actions.
   def set_chat
     @chat = Chat.find(params[:id])

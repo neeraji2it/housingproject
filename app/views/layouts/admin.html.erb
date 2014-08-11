@@ -9,45 +9,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% if controller.action_name !="home1" %>
-
-      <div class="row">
-        <div class="span9"></div>
-        <header>
-          <div class="topbar">   
-            <a href="#" title="" id="logo"></a>
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
-            </div>
-            <div class="navbar-collapse collapse">              
-              <ul id="navigation">	
-                <li><a href="/home/home1" title="HOME">Home</a></li>
-                <li><a href="/home/about_us" title="ABOUT US">About us</a></li>
-                <li><a href="/home/privacy_policy" title="Privacy Policy">privacy_policy</a></li>
-                <li><a href="/home/help" title="Help">Help</a></li>
-                <li><a href="#" title="CONTACT US">Contact us</a></li>
-              </ul>   
-              <ul id="navigation">
-                <% if admin_signed_in? %>
-                  <li> <%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'btn-login' %></li>
-                <% end %>
-                <% flash.each do |name, msg| %>
-                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-                <% end %>
-
-              </ul>   
-            </div>        
-            <div class="clearF"></div>
-          </div> 
-        </header>
-
-      </div>
-
-    <%  end %>
-
-
+    <header>
+      <div class="topbar">     
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
+        </div>
+        <div class="navbar-collapse collapse">              
+          <ul id="navigation">
+            <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'btn-login' %></li>
+          </ul>  
+        </div>                  
+        <div class="clearF"></div>
+      </div> 
+    </header>
     <%= yield %>
     <%= yield :scripts %> 
-
   </body>
 </html>

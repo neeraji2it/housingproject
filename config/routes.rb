@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :properties
 
 
-devise_for :users
-resources :home do
-   collection do
+  devise_for :users
+  resources :home do
+    collection do
       get :home1
       get :land
       get :land1
@@ -23,16 +23,16 @@ resources :home do
     member do
       get :gallery
     end
- end
+  end
 
- resources :contact
-     resources :chat
+  resources :contact
+  resources :chat
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#home1'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

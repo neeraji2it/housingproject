@@ -47,8 +47,6 @@ input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover, but
 html body a.btn { color: #FFF; padding: 5px 18px; text-decoration: none; }
 html body a.btn:focus, html body a.btn:active, html body a.btn:hover { color: #FFF; text-decoration: none; }
 input, input:focus, input:active, .btn:focus, .btn:active:focus, .btn.active:focus { outline: none; }
-a { color: #232024; }
-a:hover { color: #484848; }
 a:visited { text-decoration: none; }
 a:focus, a:active { color: #484848; text-decoration: none; outline: none; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0px; padding-bottom: 15px; }

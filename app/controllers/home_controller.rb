@@ -3,9 +3,6 @@ class HomeController < ApplicationController
   def index
   end
   
-  def home
-  end
-  
   def land
     @properties = Property.where(:city => params[:city]).order(:price)
     @json2 = @properties.to_gmaps4rails
@@ -16,8 +13,6 @@ class HomeController < ApplicationController
   def land1
     @property = Property.find(params[:id])
     @properties = Property.where(:city => @property.city)
-    
-    
     @json = @property.to_gmaps4rails
     @images = Image.where(:property_id =>@property.id)
   end

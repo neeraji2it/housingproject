@@ -12,44 +12,6 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% if controller.action_name !="home1" %>
-
-      <div class="row">
-        <div class="span9"></div>
-        <header>
-          <div class="topbar">   
-            <div class="container"<a href="#" title="" id="logo"><%=  image_tag("logo.png", :alt => 'logo.png', :height=>"25",:width =>"35")%></a>           <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
-              </div>
-              <div class="navbar-collapse collapse">              
-                <ul id="navigation">	
-                  <li><a href="/home/home1" title="HOME">Home</a></li>
-                  <li><a href="/home/about_us" title="ABOUT US">About us</a></li>
-                  <li><a href="/home/privacy_policy" title="Privacy Policy">privacy_policy</a></li>
-                  <li><a href="/home/help" title="Help">Help</a></li>
-                  <li><a href="#" title="CONTACT US">Contact us</a></li>
-                </ul>   
-                <ul id="navigation">
-                  <% if user_signed_in? %>
-                    <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn-login' %></li>
-                  <% else %>
-                    <li><%= link_to "LOGIN", new_user_session_path,:class => 'btn-login' %></li>
-                  <%end%>
-                  <li><li><%= link_to "SIGNUP", new_user_registration_path,:class =>'btn-login' %> </li>
-                  <% flash.each do |name, msg| %>
-                    <%= content_tag :div, msg, :id => "flash_#{name}" %>
-                  <% end %>
-                </ul>   
-              </div>        
-              <div class="clearF"></div>
-            </div> 
-        </header>
-
-      </div>
-
-    <%  end %>
-
-
     <meta charset="utf-8">
     <title>jQuery UI Dialog - Default functionality</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
@@ -76,10 +38,11 @@
           <br/>
         <% end  %>
       </div>
-      _
     <%end%>
-
-    <%= yield %>
-    <%= yield :scripts %> 
+    <%= render :partial => '/layouts/header' %>
+    <article>	
+      <%= yield %>
+      <%= yield :scripts %> 
+    </article>
   </body>
 </html>

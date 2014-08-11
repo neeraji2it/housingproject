@@ -136,7 +136,7 @@
   <div class="control-group">
     <%= f.label :video_url, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :land_status, :class => 'text_field'  %>
+      <%= f.text_field :video_url, :class => 'text_field'  %> (Youtube URL)
     </div>
   </div>
 
@@ -156,15 +156,14 @@
         <div class="controls">
           <%= f.fields_for :images, :html => {:multipart => true} do |image| %>
             <%= image.file_field :image %>
-            <%= image.link_to_remove "Remove this task" %>
+            <%= image.link_to_remove image_tag("/assets/remove.png") %>
           <% end %>
         </div>
-        <div class="controls">
-          <%= f.link_to_add "Add a task", :images %></div>
-
       </div>
     <% end %>
-
+    <div class="controls">
+      <%= f.link_to_add image_tag("/assets/add.jpeg"), :images %>
+    </div>
   </div>
 </div>
 <div class="form-actions">

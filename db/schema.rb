@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140808055337) do
+ActiveRecord::Schema.define(version: 20140811122714) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20140808055337) do
     t.datetime "updated_at"
     t.boolean  "gmaps"
     t.float    "latitude",              limit: 24
+    t.string   "video_url"
   end
 
   create_table "users", force: true do |t|
