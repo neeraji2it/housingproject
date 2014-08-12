@@ -1,6 +1,3 @@
-
-
-
 class PropertiesController < ApplicationController
   include ApplicationHelper
   before_filter :admin_login_required

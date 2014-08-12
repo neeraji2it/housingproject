@@ -1,15 +1,11 @@
 class Property < ActiveRecord::Base
   has_attached_file :document
-  validates_attachment :document
-  validates_attachment :document
+  validates_attachment_content_type :document, :content_type => ['application/pdf']
   validates_presence_of :location, :city, :description, :mobile
   #validates_presence_of :type_of_land, :title, :price, :area, :person_type,:city, :location, :description, :name,
   #  :email, :mobile, :electricity_type,:boundary_status,:drainage_status,:inleave_rode,:shed_status,:borewell_status, :land_status
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
   acts_as_gmappable
-
   has_many :images , :dependent => :destroy
-    
   accepts_nested_attributes_for :images, :allow_destroy => true, :reject_if=>:all_blank
   
   

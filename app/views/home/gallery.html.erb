@@ -1,6 +1,6 @@
 <ul class="bxslider">
   <% @images.each do |image| %>
-    <li><%= image_tag(image.image.url(:original), :height => "300", width =>"500")  %></li>
+    <li><%= image_tag(image.image.url(:original), :height => "300", :width =>"500")  %></li>
   <% end %>
 </ul>
 
