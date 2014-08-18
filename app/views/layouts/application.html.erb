@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HousingProject</title>
+    <title>SVR Farms</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', "jquery.bxslider", 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'default.css' %>
@@ -14,9 +14,15 @@
   <body>
     <meta charset="utf-8">
     <title>jQuery UI Dialog - Default functionality</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <%#*<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">%>
+    
+    <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery-1.10.2.js"></script>
+      <script src="jquery-ui.js"></script>
+    
+    
+    <%#*<script src="//code.jquery.com/jquery-1.10.2.js"></script>%>
+    <%#*<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>%>
     <link rel="stylesheet" href="/resources/demos/style.css"><% unless request.fullpath == "/admins/sign_in"  %>
       <script>
         $(function() {
@@ -33,7 +39,8 @@
           <label>Phone: <span>*</span></label>
           <%= f.text_field :phone,:maxlength =>'10'%><br/>
           <label>Message:<span>*</span></label>
-          <%= f.text_field :message%><br/>
+          <%= f.text_area :message%><br/>
+        
           <%= f.submit 'send', :class=>"btn-send", :title=>"Send"%>
           <br/>
         <% end  %>

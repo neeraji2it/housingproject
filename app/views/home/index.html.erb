@@ -1,9 +1,9 @@
-<div class=""  style="background:#A0B49B">
+<div class="home-bnr">
   <div class="container">
     <div class="content-banner">
       <h1>Choose A City to Explore</h1>
       <p>Find rentals, resale, agents, PGs, new projects and land plots across 25 cities in India.</p>
-      <p>More coming soon!</p>
+      <p>More coming soon!</p>666
     </div>
     <div class="box-city">
       <div class="row">
@@ -13,9 +13,11 @@
             <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
               <div class="ch-item">
                 <div class="ch-info">
-                  <div class="ch-info-front ch-img-<%= index+1%>"></div>
-                  <div class="ch-info-back">
-                    <h3><%= link_to name, land_home_index_path(:city => name), :style => 'color: white;font-size: 15px;' %></h3>
+                  <div class="ch-info-front">
+                  <h3><%= link_to name, land_home_index_path(:city => name), :style => 'color: white;font-size: 15px;' %></h3>
+                  </div>
+                  <div class="ch-info-back ch-img-<%= index+1%>">
+                    
                   </div>
                 </div>
               </div>

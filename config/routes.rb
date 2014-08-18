@@ -18,16 +18,16 @@ Rails.application.routes.draw do
       get :privacy_policy
       get :help
       get :location_search
-    end
+      end
     
     member do
       get :gallery
-    end
+   end
   end
 
   resources :contact
   resources :chat
-
+ resources :contactus
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

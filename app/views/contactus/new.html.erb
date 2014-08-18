@@ -1,0 +1,37 @@
+<div style="padding: 30px 30px 0px 30px">
+  <caption> Contact US </caption>
+    
+<%= form_for @contactus, :url => contactus_path do |f| %>
+ 
+<div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+
+<div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.email_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+
+<div class="control-group">
+  <%=f.label :subject,:class => 'control-label'%>
+  <div class ="controls">
+    <%=f.text_field :subject, :class => 'text_field'%>
+  </div>
+</div>
+
+
+<div class="control-group">
+  <%=f.label :message,:class => 'control-label'%>
+  <div class ="controls">
+    <%=f.text_area :message, :class => 'text_area'%>
+  </div>
+</div>
+<%= f.submit "Send" ,:class=>"btn btn-primary arrow-right" ,:style=>"margin-left:90px;" %>
+<%  end %>
+
+</div>

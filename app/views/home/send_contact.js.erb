@@ -1,0 +1,4 @@
+<% if @contactus.errors.any? %>
+  $('.modal-body').html("<%= escape_javascript(render(:partial => "send_contact_form")) %>");
+
+<% end %>
