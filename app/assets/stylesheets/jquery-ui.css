@@ -838,16 +838,16 @@ body .ui-tooltip {
 .ui-widget-content a {color: #222222;}
 .ui-widget-header {	border: 1px solid #aaaaaa; color: #f8f8f8;	font-weight: bold; background-image: -webkit-gradient(
 	linear,
-	right bottom,
-	right top,
-	color-stop(0, #5BBBEB),
-	color-stop(1, #0088CC)
+	left top,
+	left bottom,
+	color-stop(0, #229C59),
+	color-stop(1, #62D997)
 );
-background-image: -o-linear-gradient(top, #5BBBEB 0%, #0088CC 100%);
-background-image: -moz-linear-gradient(top, #5BBBEB 0%, #0088CC 100%);
-background-image: -webkit-linear-gradient(top, #5BBBEB 0%, #0088CC 100%);
-background-image: -ms-linear-gradient(top, #5BBBEB 0%, #0088CC 100%);
-background-image: linear-gradient(to top, #5BBBEB 0%, #0088CC 100%);}
+background-image: -o-linear-gradient(bottom, #229C59 0%, #62D997 100%);
+background-image: -moz-linear-gradient(bottom, #229C59 0%, #62D997 100%);
+background-image: -webkit-linear-gradient(bottom, #229C59 0%, #62D997 100%);
+background-image: -ms-linear-gradient(bottom, #229C59 0%, #62D997 100%);
+background-image: linear-gradient(to bottom, #229C59 0%, #62D997 100%);}
 .ui-widget-header a {color: #222222;}
 
 /* Interaction states
@@ -964,7 +964,7 @@ background-image: linear-gradient(to top, #5BBBEB 0%, #0088CC 100%);}
 	height: 16px;
 }
 .ui-icon,
-.ui-state-default .ui-icon { background-image: url("images/ui-icons_888888_256x240.png"); }
+.ui-state-default .ui-icon { background-image: url("images/icon-close.png"); }
 
 /* positioning */
 .ui-icon-closethick { background-position: -96px -128px; }
