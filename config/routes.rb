@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       get :privacy_policy
       get :help
       get :location_search
+      get :main_home
       end
     
     member do
@@ -32,7 +33,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#main_home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

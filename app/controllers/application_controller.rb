@@ -22,6 +22,7 @@ end
        return 'application'
      end
    end
+   
    def admin_login_required
      unless current_admin
        flash[:alert]="Please login with admin credentials"

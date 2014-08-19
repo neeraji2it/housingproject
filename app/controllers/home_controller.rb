@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   
   def index
+    
   end
   
   def show
@@ -41,6 +42,10 @@ class HomeController < ApplicationController
   def gallery
     @property = Property.find(params[:id])
     @images = Image.where(:property_id =>@property.id)
+  end
+  
+  def main_home
+    render :layout => false
   end
 
 end
