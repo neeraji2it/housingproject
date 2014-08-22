@@ -24,23 +24,7 @@
     <%#*<script src="//code.jquery.com/jquery-1.10.2.js"></script>%>
     <%#*<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>%>
     <link rel="stylesheet" href="/resources/demos/style.css"><% unless request.fullpath == "/admins/sign_in"  %>
-      <script>
-        $(function() {
-          $("#dialog").dialog();
-        });
-      </script>
-
-      <div id="dialog" title="Quick Contact">
-        <%= form_for :chat, :url => '/chat', :method => 'post', :class => 'form' do |f|   %>
-          <%= f.text_field :name, :placeholder => "Name" %><br/>
-          <%= f.text_field :email, :placeholder => "Email"%>
-          <%= f.text_field :phone, :maxlength =>'10',  :placeholder => "Phone"%><br/>
-          <%= f.text_area :message, :placeholder => "Write a message!"%><br/>
-        
-          <%= f.submit 'Send', :title=>"Send"%>
-          <br/>
-        <% end  %>
-      </div>
+     
     <%end%>
     <%= render :partial => '/layouts/header' %>
     <article>	

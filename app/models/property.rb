@@ -12,6 +12,7 @@ class Property < ActiveRecord::Base
   def gmaps4rails_address
     "#{self.location}, #{self.city}"
   end
+  
   def gmaps4rails_infowindow
     "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} "
   end

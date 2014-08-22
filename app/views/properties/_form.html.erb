@@ -41,15 +41,16 @@
   <div class="control-group">
     <%= f.label :city, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :city, :class => 'text_field' %>
-
+      <%#= f.text_field :city, :class => 'text_field' %>
+     <%#= f.select :city, options_for_select([["select",""]]+CITES,selected => params[:search] ? params[seach][:city] : ""),{},:onchange => "change_city(this)" %>
+<%= f.select :city, CITES, {} %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :location, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :location, :class => 'text_field' %>
-    </div>
+           </div>
   </div>
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
