@@ -26,7 +26,7 @@ class @Gmaps4RailsBing extends Gmaps4Rails
     switch @map_options.type
       when "road"           then return Microsoft.Maps.MapTypeId.road
       when "aerial"         then return Microsoft.Maps.MapTypeId.aerial
-      when "auto"           then return Microsoft.Maps.MapTypeId.auto
+    #  when "auto"           then return Microsoft.Maps.MapTypeId.auto
       when "birdseye"       then return Microsoft.Maps.MapTypeId.birdseye
       when "collinsBart"    then return Microsoft.Maps.MapTypeId.collinsBart
       when "mercator"       then return Microsoft.Maps.MapTypeId.mercator

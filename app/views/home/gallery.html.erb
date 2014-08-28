@@ -1,10 +1,12 @@
+
+<div class="bgcolor">
+
+
 <ul class="bxslider">
   <% @images.each do |image| %>
     <li><%= image_tag(image.image.url(:original), :height => "300", :width =>"500")  %></li>
   <% end %>
 </ul>
-
-
 
 <div class="row-fluid" style="float:right;max-width: 54%;">
   <div class="span12">
@@ -58,6 +60,8 @@
 </div>
 
 
+</div>
+  
 <script src="/assets/jquery.bxslider.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
@@ -73,4 +77,9 @@
     width: 480px;
     
   }
+  .bgcolor{
+color: cyan;
+  }
+  
+  
 </style>

@@ -13,7 +13,6 @@ class HomeController < ApplicationController
     @json2 = @properties.to_gmaps4rails
     @city = params[:city]
   end
-
   
   def land1
     @property = Property.find(params[:id])
@@ -45,6 +44,11 @@ class HomeController < ApplicationController
   end
   
   def main_home
+    render :layout => false
+  end
+  
+  
+  def jointventure
     render :layout => false
   end
 

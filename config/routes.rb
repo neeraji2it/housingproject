@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get :help
       get :location_search
       get :main_home
+      get :jointventure
       end
     
     member do
