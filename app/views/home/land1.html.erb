@@ -8,16 +8,42 @@
         <li class="active">Lorem Ipsum</li>
       </ol>
     </div>
+    
     <div class="left-column"> 
       <div class="box-serching">
         <input type="text"  class="input-location-search col-xs-6 col-sm-5 col-md-5 col-lg-5" name="" title="e.g. Hiranandani Gardens" value="e.g. Hiranandani Gardens" placeholder="e.g. Hiranandani Gardens" />
         <select class="filters-search col-xs-6 col-sm-3 col-md-3 col-lg-3" title="Filters"><option>Filters</option></select>
         <select class="unit-location-search col-xs-6 col-sm-3 col-md-3 col-lg-3" title="Unit:sqft"><option>Unit: sqft</option></select>        
-      </div>        
+      </div>    
+      
+      
+      
+      
+      
+      
+      
       <div class="img_map">
-        <%= gmaps4rails(@json) %>
-      </div>   
+    <%#= gmaps4rails(@json) %>
+        <%= gmaps({
+            "map_options" => {"auto_zoom" => false, "zoom" => 10 },
+            "markers" => {"data" => @json },
+            
+          })
+      %>
+
+      </div> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </div>	
+    
+       
     <div class="right-column">
       <div class="box-btn">
         <div class="col-xs-7 col-sm-6 col-md-6 col-lg-6" style="width: 45%">
@@ -238,5 +264,4 @@
                   });
                 </script>
 
-
-
+      

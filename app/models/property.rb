@@ -15,8 +15,9 @@ class Property < ActiveRecord::Base
   
   def gmaps4rails_infowindow
     "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} "
-  end
+    end
   
+    
   
   
   #def validate_on_create

@@ -21,6 +21,7 @@ class HomeController < ApplicationController
     @images = Image.where(:property_id =>@property.id)
   end
 
+  
   def location_search
     @properties = Property.all
     if params[:search].present? and (!params[:search][:location].blank?)
@@ -39,7 +40,7 @@ class HomeController < ApplicationController
   end
   
   def gallery
-    @property = Property.find(params[:id])
+    @property = Pgroperty.find(params[:id])
     @images = Image.where(:property_id =>@property.id)
   end
   
