@@ -5,7 +5,7 @@
         <li><a href="/home/home1" title="Home">Home</a><i class="fa fa-chevron-right"></i></li>
         <li><a href='/home/land?lat=<%= @lat %>&lon=<%=@lon%>&city=<%=@property.city %>' title="Mumbai"><%= @property.city %></a><i class="fa fa-chevron-right"></i></li>
         <li><a href="/home/land1?id=<%= @property.id %>" title="Land">land</a><i class="fa fa-chevron-right"></i></li>
-        <li class="active">Lorem Ipsum</li>
+        
       </ol>
     </div>
     
@@ -26,9 +26,14 @@
     <%#= gmaps4rails(@json) %>
         <%= gmaps({
             "map_options" => {"auto_zoom" => false, "zoom" => 10 },
-            "markers" => {"data" => @json },
+            "markers" => { :icon=> 'apartment.png', "data" => @json },
             
-          })
+            
+			
+		});
+            
+            
+   
       %>
 
       </div> 
@@ -263,5 +268,5 @@
 
                   });
                 </script>
-
-      
+                
+               

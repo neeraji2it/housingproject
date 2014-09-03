@@ -19,6 +19,7 @@ class HomeController < ApplicationController
     @properties = Property.where(:city => @property.city)
     @json = @property.to_gmaps4rails
     @images = Image.where(:property_id =>@property.id)
+  
   end
 
   

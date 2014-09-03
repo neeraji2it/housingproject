@@ -4,19 +4,19 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> 
 <html class="no-js"> <!--<![endif]-->
-    
-  <head>
-      <meta charset="utf-8">
-      <title>Welcome To Bangalore</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="/assets/style.css">
 
-      <style>
-          a.property-select{ color:#FFFFFF; background:#4BB285; border:1px #CCC solid; padding:10px 25px 10px 25px; font-size:16px;}
-          a.property-select:hover{ color:#FFFFFF; background:#333333; border:1px #CCC solid;}
-      </style>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome To Bangalore</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <style>
+      a.property-select{ color:#FFFFFF; background:#4BB285; border:1px #CCC solid; padding:10px 25px 10px 25px; font-size:16px;}
+      a.property-select:hover{ color:#FFFFFF; background:#333333; border:1px #CCC solid;}
+    </style>
   </head>
 
   <body data-spy="scroll" data-target=".main-nav" data-offset="70">
@@ -24,81 +24,136 @@
       <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
       <nav class="main-nav"></nav>      
     </div>
-    
+
     <div class="all">
-        <div class="slider-wrapper fullscreen">
-            <!--<div class="slogo">
-                <a href="#"><img src="img/icon-happycake.png" class="logo"></a>
-            </div>-->
-            <div class="slide_bg" data-stellar-background-ratio="0.3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                <h1 style="color:#FFF; margin-top:100px;"><a href="/"><img src="/assets/logo.png" class="logo"></a></h1>
-                                <h4 style="color:#FFF;">Choose Project Type</h4>
-                                
-                                <div class="project-container">
-                                   
-                                  <div class="project-type">
-                                        <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Agriculture Lands</a></div>
-                                    </div>
-                                  
-                    
-                                 <div class="project-type">
-                                        <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Farm Land</a></div>
-                                    </div>       
-                                  
-                                  
-                                    <div class="project-type">
-                                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Commercial Land</a></div>
-                                    </div>
-                                  
-                                    <div class="project-type">
-                                        <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Apartments</a></div>
-                                    </div>
-                                    <div class="project-type">
-                                        <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Barren Land</a></div>
-                                    </div>
-                                    <div class="project-type">
-                                        <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Residential Plots</a></div>
-                                    </div>
-                                   
-                                </div>
-                                
-                                <div class="project-type">
-                                        <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Joint Venture</a></div>
-                                </div><br>
-                                <br>
-                          
-                              <div class="project-type">
-                                        <div class="text-label" ><a href="<%= jointventure_home_index_path %>" class="property-select">List your Property </a></div>
-                                    </div>
-                                
-                                
-                            </div>
-                          
-                          
-                           
-                          
-                          
-                        </div>
+      <div class="slider-wrapper fullscreen">
+        <!--<div class="slogo">
+            <a href="#"><img src="img/icon-happycake.png" class="logo"></a>
+        </div>-->
+        <div class="slide_bg" data-stellar-background-ratio="0.3">
+          <div class="container">
+            
+
+              <h1 style="color:#FFF; "><a href="/"><img src="/assets/logo.png"  class="logo"></a></h1>
+
+              <ul class="nav pull-right"> 
+                <table>
+                    <th>   
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Post Your Requirements</a></div>
+                  </div>
+                  </th>
+                  
+                  <th>
+                  <div class="project-type">
+                    <div class="text-label" ><a href="<%= jointventure_home_index_path %>" class="property-select">List your Property </a></div>
+                  </div> 
+                  </th>
+                  
+                  <th>   
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Joint Venture</a></div>
+                  </div>
+                  </th>
+                  
+                </table>
+              </ul>
+
+           <div class="row"  style= "padding: 340px 50px 0px 30px;">
+              <div class="col-md-12">
+                <div class="text-center">
+
+                  <h4 style="color:#FFF;">Choose Project Type</h4>
+
+                  <div class="project-container">
+
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Agriculture Lands</a></div>
                     </div>
+
+
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Farm Land</a></div>
+                    </div>       
+
+
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Commercial Land</a></div>
+                    </div>
+
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Apartments</a></div>
+                    </div>
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Barren Land</a></div>
+                    </div>
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Residential Plots</a></div>
+                    </div>
+
+                  </div>
+
+
+
+
                 </div>
+
+
+
+
+
+              </div>
             </div>
+          </div>
         </div>
-        
-       
-    </body>
+      </div>
+
+
+  </body>
 </html>
 
 
 
+<%#*<script type="text/javascript">%>
+  <%#*window.$zopim || (function(d, s) {%>
+    <%#*var z = $zopim = function(c) {%>
+      <%#*z._.push(c)%>
+    <%#*}, $ = z.s =%>
+            <%#*d.createElement(s), e = d.getElementsByTagName(s)[0];%>
+    <%#*z.set = function(o) {%>
+      <%#*z.set.%>
+              <%#*_.push(o)%>
+    <%#*};%>
+    <%#*z._ = [];%>
+    <%#*z.set._ = [];%>
+    <%#*$.async = !0;%>
+    <%#*$.setAttribute('charset', 'utf-8');%>
+    <%#*$.src = '//v2.zopim.com/?2NcXUI7XaPYipgSTiex5u4kDA6xDG3JY';%>
+    <%#*z.t = +new Date;%>
+    <%#*$.%>
+            <%#*type = 'text/javascript';%>
+    <%#*e.parentNode.insertBefore($, e)%>
+  <%#*})(document, 'script');%>
+<%#*</script>%>
+
+<!--Start of Zopim Live Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
 _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-$.src='//v2.zopim.com/?2NcXUI7XaPYipgSTiex5u4kDA6xDG3JY';z.t=+new Date;$.
+$.src='//v2.zopim.com/?2OWSpb300a7QhdmgX06eHgaNLPzM1JQD';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script>
+<!--End of Zopim Live Chat Script-->
 
+
+
+<style>
+  .logo {
+position: absolute;
+top: 0;
+left: 0;
+} 
+
+
+</style>
