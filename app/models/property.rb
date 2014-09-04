@@ -17,15 +17,6 @@ class Property < ActiveRecord::Base
     "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} "
     end
   
-    
-  
-  
-  #def validate_on_create
-  #
-  #    dimensions = Paperclip::Geometry.from_file(self.image.queued_for_write[:original])
-  #    self.errors.add(:image, "Please upload a file at least 880 pixels wide") if dimensions.width < 90
-  #    self.errors.add(:image, "Please upload a file at least 390 pixels tall") if dimensions.height < 51
-  #end
 
 
   def self.search(search)
@@ -35,5 +26,8 @@ class Property < ActiveRecord::Base
       find(:all)
     end
   end
+  
+  
+  
   
 end

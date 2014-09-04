@@ -30,6 +30,9 @@ class HomeController < ApplicationController
     end
   end
   
+  
+  
+  
     
   def about_us
   end
