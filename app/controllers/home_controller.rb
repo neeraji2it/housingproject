@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   
   def land
     @properties = Property.where(:city => params[:city]).order(:price)
-    @json2 = @properties.to_gmaps4rails
+    @json = @properties.to_gmaps4rails
     @city = params[:city]
   end
   
