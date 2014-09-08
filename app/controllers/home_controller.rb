@@ -4,6 +4,16 @@ class HomeController < ApplicationController
     
   end
   
+  def requirement
+    if request.post?
+      Contact.send_contact(params[:selectreq],params[:selectcity], params[:username], params[:email], params[:usrtel], params[:req]).deliver
+      redirect_to '/'
+    else
+      render :partial => "requirement"
+    end
+  end
+  
+  
   def show
     
   end

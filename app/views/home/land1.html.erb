@@ -5,53 +5,28 @@
         <li><a href="/home/home1" title="Home">Home</a><i class="fa fa-chevron-right"></i></li>
         <li><a href='/home/land?lat=<%= @lat %>&lon=<%=@lon%>&city=<%=@property.city %>' title="Mumbai"><%= @property.city %></a><i class="fa fa-chevron-right"></i></li>
         <li><a href="/home/land1?id=<%= @property.id %>" title="Land">land</a><i class="fa fa-chevron-right"></i></li>
-        
+
       </ol>
     </div>
-    
+
     <div class="left-column"> 
-    
-      
-      
-      
-      
-            
-      
       <div class="img_map">
-    <%#= gmaps4rails(@json) %>
+<%#= gmaps4rails(@json) %>
         <%= gmaps({
             "map_options" => {"auto_zoom" => false, "zoom" => 10 },
             "markers" => { :icon=> 'apartment.png', "data" => @json },
-                 
-			
-		});
-            
-            
-   
-      %>
 
+
+          });
+      %>
       </div> 
-      
-      
-      
-      
-      
-      
-      
-      
-      
     </div>	
-    
-       
+
+
     <div class="right-column">
       <div class="box-btn">
         <div class="col-xs-7 col-sm-6 col-md-6 col-lg-6" style="width: 45%">
-          <a class="btn-login btn_back" href="/home/land" title="Back to Results"><i class="fa fa-arrow-circle-left"></i>Back to Results</a>
- 
-          
-          
-          
-          
+          <%= link_to "<i class='fa fa-arrow-circle-left'></i>Back".html_safe, "#", :onclick => "history.back()", :class => "btn-login btn_back" %>
         </div>	
         <div style="width: -1%;">
           <%= link_to "Gallery", gallery_home_path(@property), :class => "btn-login btn_back", :style => 'position: relative; float: left;' %>
@@ -233,29 +208,29 @@
                     <div class="clearF"></div>  
                   </div>    
                 </footer>
-  
-  
-  
-  
-  
-  
- <script>
-        $(function() {
-          $("#dialog").dialog();
-        });
-      </script>
 
-      <div id="dialog" title="Quick Contact">
-        <%= form_for :chat, :url => '/chat', :method => 'post', :class => 'form' do |f|   %>
-          <%= f.text_field :name, :placeholder => "Name" %><br/>
-          <%= f.text_field :email, :placeholder => "Email"%>
-          <%= f.text_field :phone, :maxlength =>'10',  :placeholder => "Phone"%><br/>
-          <%= f.text_area :message, :placeholder => "Write a message!"%><br/>
-        
-          <%= f.submit 'Send', :title=>"Send"%>
-          <br/>
-        <% end  %>
-      </div>
+
+
+
+
+
+                <script>
+                  $(function() {
+                    $("#dialog").dialog();
+                  });
+                </script>
+
+                <div id="dialog" title="Quick Contact">
+                  <%= form_for :chat, :url => '/chat', :method => 'post', :class => 'form' do |f|   %>
+                    <%= f.text_field :name, :placeholder => "Name" %><br/>
+                    <%= f.text_field :email, :placeholder => "Email"%>
+                    <%= f.text_field :phone, :maxlength =>'10',  :placeholder => "Phone"%><br/>
+                    <%= f.text_area :message, :placeholder => "Write a message!"%><br/>
+
+                    <%= f.submit 'Send', :title=>"Send"%>
+                    <br/>
+                  <% end  %>
+                </div>
 
 
 
@@ -266,5 +241,4 @@
 
                   });
                 </script>
-                
-               
+

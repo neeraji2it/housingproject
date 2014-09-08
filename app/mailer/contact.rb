@@ -4,6 +4,16 @@ class Contact < ActionMailer::Base
     @name = name.capitalize!
     @email = email
     @mobile = mobile
-        mail(:to =>"rkaniradha@gmail.com", :subject => " housing customer waiting to contact you")
+    mail(:to =>"rkaniradha@gmail.com", :subject => " housing customer waiting to contact you")
+  end
+  
+  def send_contact(a, b, c, d, e, f)
+    @a=a
+    @b=b
+    @c=c
+    @d=d
+    @e=e
+    @f=f
+    mail(:to =>"rkaniradha@gmail.com", :subject => "User Requirements")
   end
 end

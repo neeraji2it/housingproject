@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
  
 
+  get 'requirements/new'
+
   devise_for :admins
   resources :uploads
 
@@ -20,16 +22,17 @@ Rails.application.routes.draw do
       get :location_search
       get :main_home
       get :jointventure
-      end
+      match :requirement, via: [:get, :post]
+    end
     
     member do
       get :gallery
-   end
+    end
   end
 
   resources :contact
   resources :chat
- resources :contactus
+  resources :contactus
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

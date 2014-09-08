@@ -15,3 +15,37 @@
 //= require jquery_nested_form
 //= require_tree .
 
+function hide_popup(){
+    var popups = ["", "2", "3", "4"]
+    for(i=0; i<popups.length; i++){
+        if(jQuery('#popup_box'+popups[i])){
+            jQuery('#popup_body'+popups[i]).html("");
+            jQuery('#popup_box'+popups[i]).hide();
+        }
+    }
+
+    //    if(jQuery('#popup_box2')){
+    //        jQuery('#popup_body2').html("");
+    //        jQuery('#popup_box2').hide();
+    //    }
+    //    if(jQuery('#popup_box3')){
+    //        jQuery('#popup_body3').html("");
+    //        jQuery('#popup_box3').hide();
+    //    }
+    
+    if(jQuery('#overlay')){
+        jQuery('#overlay').hide();
+    }
+}
+
+
+function signup(){
+    jQuery.ajax({
+        url: "/home/requirement",
+        success: function(data) {
+            jQuery('#popup_body').html(data);
+            jQuery('#overlay').show();
+            jQuery('#popup_box').show();
+        }
+    });
+}
