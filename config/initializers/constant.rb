@@ -3,6 +3,8 @@ Bangalore = ["80 Ft. Road","Agara","Airport","Anekal","Anepalya","Ashok Nagar","
 mumbaiLOCATIONS =["Agripada","Alibag","Altamount Road","Ambarnath","Ambivali","Andheri East","Andheri West","Anu Shakti Nagar","Aarey Road","Agashi","Altamount Road","Amboli","Andheri-Kurla Road", "Asangaon","Atgaon","August Kranti Marg","Ayodhya Nagar","Badlapur East","Badlapur West","Bandra West","Bellasis Road","Bhandup East","Bhandup West","Bhayandar East","Bhayandar West","Bhivpuri","Bhiwandi","Bhuleshwar","Boisar","Borivali East","Borivali West","Byculla East","Byculla West","Babulnath Road", "Bandra Kurla Complex","Bangur Nagar","Bari Wada","Behram Baug","Beverly park","Bhulabhai Desai Road",
   "Borli Panchatan","Breach Candy"]
   
+#STATE = ["Andhrapradesh","Karnataka","Tamilnadu"]
+
   CITES = ["Mumbai","Hosur","Bangalore","Hyderabad","Chennai","Chittoor","Kanakapur","Mysore","Coorg","Chikmagalur","Anantapur"]
 	
 	
@@ -10,7 +12,6 @@ mumbaiLOCATIONS =["Agripada","Alibag","Altamount Road","Ambarnath","Ambivali","A
 	
 
 	
-
 	
 
 	

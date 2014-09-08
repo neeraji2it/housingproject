@@ -44,7 +44,7 @@ class HomeController < ApplicationController
   end
   
   def gallery
-    @property = Pgroperty.find(params[:id])
+    @property = Property.find(params[:id])
     @images = Image.where(:property_id =>@property.id)
   end
   
