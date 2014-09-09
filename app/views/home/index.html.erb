@@ -4,9 +4,8 @@
       <h1>Choose A State to Explore</h1>
     </div>
     <div class="box-city">
-      <div class="row">
-        <ul class="ch-grid" style="margin-left: 73px;">
-
+      <div class="row" style="<%= params[:state] ? params[:state] == 'KA' ? 'left: -90px;position: relative;' : params[:state]=='AP' ? 'left: 100px;position: relative;' : 'left: 200px;position: relative;' : 'position: relative;left: 100px;'%>">
+        <ul class="ch-grid">
           <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
             <div class="ch-item">
               <div class="ch-info">
@@ -14,7 +13,7 @@
               </div>
             </div>
           </li>
-          <% @states = [["Tamilnadu","TN"],["Karnataka","KA"],["Andra Pradesh","AP"]] %>
+          <% @states = [["Tamilnadu","TN"],["Karnataka","KA"],["Andhra Pradesh","AP"]] %>
           <% @cities = params[:state] == 'KA' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.295","76.639"],["Coorg","12.300","75.9293"],["Chikmagalur","13.31","75.77"]] : params[:state] == 'AP' ? [["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"],["Hyderabad","17.41","78.52"]] : [["Chennai","13.060","80.24"],["Hosur","12.73","77.83"]] %>
           <% @sts = params[:state].present? ? @cities : @states %>
           <% @sts.each_with_index do |name, index| %>
@@ -26,14 +25,6 @@
                   </div>
                   <div class="ch-info-back <%= params[:state] %> ch-img-<%= index+1 %>" onclick="javascript: location.href = <%= "'#{params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1])}'" %>">
                   </div>
-
-
-
-
-
-
-
-
                 </div>
               </div>
             </li>
@@ -50,7 +41,7 @@
     <div class="box-welcome">
       <div>&nbsp;</div>
       <h1>Housing Experience</h1>
-   
+      <p>SVR Farms is a real estate portal which allows you to search for lands, commercial lands, agriculture lands,  apartments for sale. Take virtual tours of each room in the flat using the photographs we’ve meticulously collected.</p>            
     </div>
 
   </div>
@@ -68,4 +59,6 @@
   <div class="clearF"></div>
 </div>
 </article>
+
+
 
