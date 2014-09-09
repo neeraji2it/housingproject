@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
 
-  get 'requirements/new'
+  #get 'requirements/new'
 
   devise_for :admins
   resources :uploads
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       get :main_home
       get :jointventure
       match :requirement, via: [:get, :post]
+      match :list_property, via: [:get, :post]
     end
     
     member do

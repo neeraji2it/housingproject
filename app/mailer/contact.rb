@@ -14,6 +14,7 @@ class Contact < ActionMailer::Base
     @d=d
     @e=e
     @f=f
-    mail(:to =>"rkaniradha@gmail.com", :subject => "User Requirements")
+    mail(:to =>"svrforms@gmail.com", :subject => "User Requirements")
   end
+  
 end

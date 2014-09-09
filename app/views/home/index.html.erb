@@ -5,7 +5,8 @@
     </div>
     <div class="box-city">
       <div class="row">
-        <ul class="ch-grid">
+        <ul class="ch-grid" style="margin-left: 94px;">
+
           <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
             <div class="ch-item">
               <div class="ch-info">
@@ -13,18 +14,26 @@
               </div>
             </div>
           </li>
-          <% @states = [["Karnataka","KA"],["Andra Pradesh","AP"],["Tamilnadu","TN"]] %>
-          <% @cities = params[:state] == 'Karnataka' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.295","76.639"],["Coorg","12.300","75.9293"],["Chikmagalur","13.31","75.77"]] : params[:state] == 'Andra Pradesh' ? [["Hyderabad","17.41","78.52"],["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"]] : [["Hosur","12.73","77.83"],["Chennai","13.060","80.24"]] %>
+          <% @states = [["Tamilnadu","TN"],["Karnataka","KA"],["Andra Pradesh","AP"]] %>
+          <% @cities = params[:state] == 'KA' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.295","76.639"],["Coorg","12.300","75.9293"],["Chikmagalur","13.31","75.77"]] : params[:state] == 'AP' ? [["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"],["Hyderabad","17.41","78.52"]] : [["Chennai","13.060","80.24"],["Hosur","12.73","77.83"]] %>
           <% @sts = params[:state].present? ? @cities : @states %>
           <% @sts.each_with_index do |name, index| %>
             <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
               <div class="ch-item">
                 <div class="ch-info">
                   <div class="ch-info-front">
-                    <h3><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[0]), :style => 'color: white;font-size: 15px;' %></h3>
+                    <h3><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1]), :style => 'color: white;font-size: 15px;' %></h3>
                   </div>
-                  <div class="ch-info-back ch-img-<%= index+2 %>" onclick="javascript: location.href = <%= "'#{params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[0])}'" %>">
+                  <div class="ch-info-back <%= params[:state] %> ch-img-<%= index+1 %>" onclick="javascript: location.href = <%= "'#{params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1])}'" %>">
                   </div>
+
+
+
+
+
+
+
+
                 </div>
               </div>
             </li>
@@ -41,7 +50,7 @@
     <div class="box-welcome">
       <div>&nbsp;</div>
       <h1>Housing Experience</h1>
-      <p>Living on campus at HBU is an integral part of your educational experience. Our on-campus housing provides living and learning environments with opportunities to grow spiritually, develop interpersonal skills, increase understanding of diverse cultures and learn self-discipline in organizing time for study, work and social activities.</p>
+   
     </div>
 
   </div>

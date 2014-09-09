@@ -14,6 +14,19 @@ class HomeController < ApplicationController
   end
   
   
+  
+  def list_property
+    if request.post?
+      Contact.send_contact(params[:selectreq],params[:selectcity], params[:username], params[:email], params[:usrtel], params[:req]).deliver
+      redirect_to '/'
+    else
+     render :partial => "list_property"
+    end
+  end
+  
+  
+  
+  
   def show
     
   end

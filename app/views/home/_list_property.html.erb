@@ -2,17 +2,18 @@
   <div class="login-wrapper">
     <div class="login-content">
       <a class="close" onclick="hide_popup();">x</a>
-      <div class="sign"><h3>Post Requirement</h3></div>
-      <%= form_tag({:action => "requirement", :controller => "home"}) do  %>
+      <div class="sign"><h3>List Your Property</h3></div>
+      <%= form_tag({:action => "list_property", :controller => "home"}) do  %>
         <label for="selectreq">
           <select name="selectreq" required>
-            <option selected disabled value="selected">Select a Requirement</option>
+            <option selected disabled value="selected">Select a Property</option>
             <option>Agriculture Lands</option>
             <option>Farm Land</option>	
             <option>Commercial Land</option>
             <option>Apartments</option>
             <option>Barren Land</option>
             <option>Residential Plots</option>
+                                  
           </select>
         </label>
         <label for="selectcity">
@@ -35,7 +36,7 @@
           <textarea type="textarea" name="req" placeholder="Requirements" required="required"></textarea>
         </label>
         <!--	<input type="text" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />-->
-        <button type="submit">Post Requirements</button>
+        <button type="submit">Post property</button>
       <% end %>
     </div>
   </div>
