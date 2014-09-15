@@ -52,19 +52,19 @@
   <dd><%= @property.land_status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:document) %>:</strong></dt>
   <dd> <a href="<%= @property.document.url %>"><b> download attachment</b></a></dd>
-  
-   <dt><strong><%= model_class.human_attribute_name(:image)%>:</strong></dt>
+
+  <dt><strong><%= model_class.human_attribute_name(:image)%>:</strong></dt>
   <dd><%= image_tag(@property.images.first.image.url(:original)) %></dd>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              properties_path, :class => 'btn'  %>
+    properties_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_property_path(@property), :class => 'btn' %>
+    edit_property_path(@property), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              property_path(@property),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+    property_path(@property),
+    :method => 'delete',
+    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    :class => 'btn btn-danger' %>
 </div>
