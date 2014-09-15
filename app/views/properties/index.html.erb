@@ -1,3 +1,9 @@
+<%#*<div style="float:right;">%>
+  <%#= link_to t('.AddNew', :default => t("helpers.links.AddNew")),
+  new_property_path,
+  :class => 'btn btn-primary' %>
+<%#*</div>%>
+
 <%- model_class = Property -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
@@ -6,6 +12,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:consultant) %></th>
       <th><%= model_class.human_attribute_name(:type_of_land) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
@@ -50,6 +57,7 @@
     <% end %>
   </tbody>
 </table>
+
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
   new_property_path,
