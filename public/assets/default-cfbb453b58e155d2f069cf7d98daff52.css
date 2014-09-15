@@ -424,7 +424,7 @@ html body .landpage .btn-login { border-top-color: #91b0c1; }
     .box-features h4 { font-size: 22px; }
     .box-features { margin-bottom: 0px; }
     .ch-item:hover .ch-info-front { -webkit-transform: translate3d(0, 180px, 0) rotate3d(1, 0, 0, -90deg); -moz-transform: translate3d(0, 180px, 0) rotate3d(1, 0, 0, -90deg); -o-transform: translate3d(0, 180px, 0) rotate3d(1, 0, 0, -90deg); -ms-transform: translate3d(0, 180px, 0) rotate3d(1, 0, 0, -90deg); transform: translate3d(0, 180px, 0) rotate3d(1, 0, 0, -90deg); opacity: 0; }
-    .ch-grid { mbackground-image:"bg.jpg;argin-bottom: 15px; }
+    .ch-grid { background-image:"bg.jpg;argin-bottom: 15px;" }
     .left-column .right-column { width: 40%; }
     .box-serching { width: 60%; }
     .space-remov { padding-left: 15px; }

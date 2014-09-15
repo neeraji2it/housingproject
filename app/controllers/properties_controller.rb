@@ -3,30 +3,26 @@ class PropertiesController < ApplicationController
   before_filter :admin_login_required
   before_action :set_property, only: [:show, :edit, :update, :destroy]
 
-  # GET /properties
-  # GET /properties.json
+ 
   def index
     @properties = Property.all
   end
 
-  # GET /properties/1
-  # GET /properties/1.json
+ 
   def show
   end
 
-  # GET /properties/new
   def new
     @property = Property.new
     1.times{@property.images.build}
   end
 
-  # GET /properties/1/edit
+ 
   def edit
 
   end
 
-  # POST /properties
-  # POST /properties.json
+ 
   def create
     @property = Property.new(property_params)
     1.times{@property.images.build} if @property.images.blank?
@@ -41,8 +37,7 @@ class PropertiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /properties/1
-  # PATCH/PUT /properties/1.json
+ 
   def update
     respond_to do |format|
       if @property.update(property_params)

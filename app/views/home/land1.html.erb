@@ -40,6 +40,7 @@
 <%= ((current_user and @property.document.url.present?) ? (link_to "Download", @property.document.url, :class => 'btn-login btn-back', :style => 'float: right;') : (@property.document.present? ? (link_to "Download", "#", :onclick => 'alerte()', :class => 'btn-login btn-back', :style => 'float: right;') : (link_to "Download", "#", :onclick => "property()", :class => 'btn-login btn-back', :style => 'float: right;'))) %>
         </div>
       </div>   
+      
       <div class="land_img">
 <% if @property.video_url.present? %>
           <iframe width="385" src="http://www.youtube.com/embed/<%= @property.video_url.split("?v=")[1].split("&")[0].gsub( /(fo+)bar/, '\1baz' ) %>" frameborder="0"></iframe>
@@ -47,6 +48,7 @@
           <%= image_tag("video.jpeg", :width => 385) %> 
 <% end %>
       </div>
+      
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -221,6 +223,7 @@
 
 
                 <script src="/assets/jquery.bxslider.min.js"></script>
+                
                 <script type="text/javascript">
                   $(document).ready(function() {
                     $('.bxslider').bxSlider();
