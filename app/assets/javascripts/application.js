@@ -38,7 +38,6 @@ function hide_popup(){
     }
 }
 
-
 function signup(){
     jQuery.ajax({
         url: "/home/requirement",

@@ -2,21 +2,21 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
   <head>
     <meta charset="utf-8">
-    <title>Welcome To SVR Group</title>
+    <title>Welcome To SVR Group	</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/style-1.css">
+
     <style>
-      a.property-select{ color:#FFFFFF; background:#4BB285; border:1px #CCC solid; padding:10px 25px 10px 25px; font-size:16px;}
+      a.property-select{ color:#FFFFFF; background:#4BB285; border:1px #CCC solid; padding:10px 25px 10px 25px; font-size:13px;}
       a.property-select:hover{ color:#FFFFFF; background:#333333; border:1px #CCC solid;}
     </style>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body data-spy="scroll" data-target=".main-nav" data-offset="70">
@@ -25,153 +25,168 @@
       <nav class="main-nav"></nav>      
     </div>
 
-    <div class="all">
-      <div class="slider-wrapper fullscreen">
-        <!--<div class="slogo">
-            <a href="#"><img src="img/icon-happycake.png" class="logo"></a>
-        </div>-->
-        <div class="slide_bg" data-stellar-background-ratio="0.3">
-          <div class="container">
 
-            <h1 style="color:#FFF; "><a href="/"><img src="/assets/logo.png" width="180" height="180" class="logo"></a></h1>
-            <ul class="nav pull-right"> 
-              <table>
-                <th>   
-                <div class="project-type">
-                  <div class="text-label">
-                    <a href="#" class="property-select" onclick="javascript: signup();">Post Your Requirements</a>
+    <div class="slider-wrapper fullscreen">
+      <div class="slide_bg" data-stellar-background-ratio="0.3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center">
+                <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/logo.png" class="logo_new"></a></h1>
+
+
+
+                <div class="project-container">
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>"" class="property-select">Agriculture Lands</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Farm Land</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Commercial Lands</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Industrial Land</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Barren Land</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Residential Plots</a></div>
+
+                  </div>
+                  <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Contact</a></div>
+
+                  </div>
+
+                </div>
+
+                <div id="sliderFrame">
+                  <div id="slider">
+                    <a href="" target="_blank">
+                      <img src="/assets/img/agriculture.jpg" alt="Agriculture Lands" />
+                    </a>
+                    <img src="/assets/img/file0001811490083_small.jpg" alt="Farm Lands" />
+                    <img src="/assets/img/Gratiot-County-2013-130.jpg" alt="Commercial Lands" />
+                    <img src="/assets/img/420667.jpeg" alt="Industrial Land" />
+                    <img src="/assets/img/residential.jpeg" alt="Residential Land"  />
+                  </div>
+                  <div id="htmlcaption" style="display: none;">
+
                   </div>
                 </div>
-                </th>
 
-                <th>
-                <div class="project-type">
-                  <div class="text-label" ><a href="#" class="property-select" onclick="javascript: signup1();">List your Property </a></div>
+
+
+
+                <div class="postreq"> 
+                  <div class="project-type">
+                    <div class="text-label">
+                      <a href="#" class="property-select" id="sign-up" onclick="javascript: signup();">Post Requirements</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="list_prop">
+                  <div class="project-type">
+                    <div class="text-label">
+                      <a href="#" class="property-select" id="sign-up1" onclick="javascript: signup1();">List Property</a></div>
+                  </div>
+                </div>
+                <div class="join_venture">
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Join Venture</a></div>
+
+                  </div>
                 </div> 
-                </th>
-
-                <th>   
-                <div class="project-type">
-                  <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Joint Venture</a></div>
-                </div>
-                </th>
-
-              </table>
-            </ul>
-
-            <div class="row"  style= "padding: 350px 50px 0px 30px;">
-              <div class="col-md-12">
-                <div class="text-center">
-
-                  <h4 style="color:#FFF;">Choose Property Type</h4>
-
-                  <div class="project-container">
-
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Agriculture Lands</a></div>
-                    </div>
+                
+                
+                <div class="btn btn-facebook"><i class="fa fa-facebook"></i> </div>
+                <div class="btn btn-twitter">	<i class="fa fa-twitter"></i> </div>
+                <div class="btn btn-google">	<i class="fa fa-google-plus"></i> </div>
+              </div>   
 
 
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Farm Land</a></div>
-                    </div>       
 
-
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Commercial Land</a></div>
-                    </div>
-
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Apartments</a></div>
-                    </div>
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Barren Land</a></div>
-                    </div>
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Residential Plots</a></div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div id='overlay' style='filter:alpha(opacity=50);' onclick="hide_popup();"></div>
-      <div align='center' id='popup_box'>
-        <div style='float: right; margin-top: -40px;margin-right:-40px'></div>
-        <div id='popup_body' style='float:right'></div>
-      </div>
+
+
+
+
+    <script src="/assets/slider.js"></script>
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+                      window.$zopim || (function(d, s) {
+                        var z = $zopim = function(c) {
+                          z._.push(c)
+                        }, $ = z.s =
+                                d.createElement(s), e = d.getElementsByTagName(s)[0];
+                        z.set = function(o) {
+                          z.set.
+                                  _.push(o)
+                        };
+                        z._ = [];
+                        z.set._ = [];
+                        $.async = !0;
+                        $.setAttribute('charset', 'utf-8');
+                        $.src = '//v2.zopim.com/?2OWSpb300a7QhdmgX06eHgaNLPzM1JQD';
+                        z.t = +new Date;
+                        $.
+                                type = 'text/javascript';
+                        e.parentNode.insertBefore($, e)
+                      })(document, 'script');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    
+    <style>
+      #overlay{
+        display: none;
+        background-color: #000000;
+        height:500px;
+        left:0;
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index: 1000;
+        width: 100000px;
+        height: 941px;
+        opacity: 0.5;
+      }
+      
+      .overlay1{
+        display: none;
+        background-color: #000000;
+        height:500px;
+        left:0;
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index: 1000;
+        width: 100000px;
+        height: 941px;
+        opacity: 0.5;
+      }
+
+      #popup_box{
+        display:none;
+        height:auto;
+        width: 450px;
+        left:50%;
+        margin: -220px 0 0 -250px;
+        padding:15px;
+        position:fixed;
+        top:50%;
+        z-index:2000;
+        font-size: 12px;
+      }
+    </style>
   </body>
 </html>
-
-
-
-
-
-<!--Start of Zopim Live Chat Script-->
-<script type="text/javascript">
-  window.$zopim || (function(d, s) {
-    var z = $zopim = function(c) {
-      z._.push(c)
-    }, $ = z.s =
-            d.createElement(s), e = d.getElementsByTagName(s)[0];
-    z.set = function(o) {
-      z.set.
-              _.push(o)
-    };
-    z._ = [];
-    z.set._ = [];
-    $.async = !0;
-    $.setAttribute('charset', 'utf-8');
-    $.src = '//v2.zopim.com/?2OWSpb300a7QhdmgX06eHgaNLPzM1JQD';
-    z.t = +new Date;
-    $.
-            type = 'text/javascript';
-    e.parentNode.insertBefore($, e)
-  })(document, 'script');
-</script>
-<!--End of Zopim Live Chat Script-->
-
-
-
-<style>
-  .logo {
-    position: absolute;
-    top: -14px;
-    left: -13px;
-  } 
-
-
-  #overlay{
-    display: none;
-    background-color: #000000;
-    height:500px;
-    left:0;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index: 1000;
-    width: 100000px;
-    height: 941px;
-    opacity: 0.5;
-  }
-
-  #popup_box{
-    display:none;
-    height:auto;
-    width: 450px;
-    left:50%;
-    margin: -220px 0 0 -250px;
-    padding:15px;
-    position:fixed;
-    top:50%;
-    z-index:2000;
-    font-size: 12px;
-  }
-
-
-</style>
