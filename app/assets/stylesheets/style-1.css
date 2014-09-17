@@ -64,7 +64,7 @@ Copyright (c) 2013 Daniel Eden
 .single-project-wrapper{height:280px;width:100%;background-color:#D4DEE6;position:relative}
 .single-project-wrapper .slogo{position:absolute;top:-15px;left:50%;margin-left:-65px;width:130px;height:130px;background:#4BB285;color:#fff;text-align:center;line-height:130px;z-index:888;transform:skewY(-5deg);-webkit-transform:skewY(-5deg);-moz-transform:skewY(-5deg);-o-transform:skewY(-5deg);-ms-transform:skewY(-5deg)}
 .single-project-wrapper .slogo .logo{transform:skewY(5deg);-webkit-transform:skewY(5deg);-moz-transform:skewY(5deg);-o-transform:skewY(5deg);-ms-transform:skewY(5deg);  }
-.single-project-wrapper .slide_bg{width:100%;height:100%;position:absolute;top:0;left:0;z-index:555;background:url(/assets/img/slide-bg.png) 50% 0 no-repeat;background-size:cover}
+.single-project-wrapper .slide_bg{width:100%;height:100%;position:absolute;top:0;left:0;z-index:555;background:url(/assets/img/slide-bg.png) 50% 0 repeat;background-size:cover}
 .single-project-wrapper .slide_bg .group-text{color:#fff;text-align:center}
 .single-project-wrapper .slide_bg .group-text h3{margin:0;padding:0;font-size:42px;text-transform:uppercase;font-weight:300;line-height:1.4;letter-spacing:3px}
 .single-project-wrapper .slide_bg .group-text h2{margin:0;padding:0;font-size:70px;text-transform:uppercase;font-weight:300;line-height:1.4;letter-spacing:6px}
@@ -414,6 +414,7 @@ Copyright (c) 2013 Daniel Eden
 .carousel-pana{line-height:32px}
 .carousel-pana .next,.carousel-pana .prev{margin:0 10px}
 .carousel-pana .item{display:none}.testimonials .quote p{font-size:22px}}
+
 @media (max-width:480px){.newsletter .newsletter-header .newsletter-title span{display:none}.profile-facts{text-align:center}.profile-facts .chart{margin-bottom:20px}}
 
 .main-services{ background:#4C4C4C; height:72px;}
@@ -621,7 +622,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 	/*social icons*/
 	.btn-facebook {
 		position:relative;
-		top:-50px;
+		top:-10px;
 	
 		float:left;
   color: #000;
@@ -659,7 +660,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 .btn-twitter {
   color: #000;
   position:relative;
-		top:-51px;
+		top:-10px;
 		float:left;
 		
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -697,7 +698,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 .btn-google {
 	color: #000;
   position:relative;
-		top:-51px;
+		top:-10px;
 		float:left;
  background-color: #c33219; /* fallback color */
 	background: -moz-linear-gradient(top, #e64522, #c33219);

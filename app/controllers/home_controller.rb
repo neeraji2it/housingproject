@@ -14,8 +14,7 @@ class HomeController < ApplicationController
     end
   end
   
-  
-  
+    
   def list_property
     if request.post?
       Contact.send_contact(params[:selectreq],params[:selectcity], params[:username], params[:email], params[:usrtel], params[:req]).deliver

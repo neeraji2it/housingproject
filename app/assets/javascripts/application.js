@@ -50,7 +50,6 @@ function signup(){
 }
 
 
-
 function signup1(){
     jQuery.ajax({
         url: "/home/list_property",

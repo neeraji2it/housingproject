@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/assets/style-1.css">
-
     <style>
       a.property-select{ color:#FFFFFF; background:#4BB285; border:1px #CCC solid; padding:10px 25px 10px 25px; font-size:13px;}
       a.property-select:hover{ color:#FFFFFF; background:#333333; border:1px #CCC solid;}
@@ -58,7 +57,6 @@
                   </div>
                   <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
              
-
                 </div>
 
                 <div id="sliderFrame">
@@ -79,33 +77,43 @@
 
 
 
-                <div class="postreq"> 
-                  <div class="project-type">
-                    <div class="text-label">
-                      <a href="#" class="property-select" id="sign-up" onclick="javascript: signup();">Post Requirements</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="list_prop">
-                  <div class="project-type">
-                    <div class="text-label">
-                      <a href="#" class="property-select" id="sign-up1" onclick="javascript: signup1();">List Property</a></div>
-                  </div>
-                </div>
-                <div class="join_venture">
-                  <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Join Venture</a></div>
+                <div class="jsa">
+                  <table>
+              
+                    <th>
+                                          <div class="project-type">
+                          <div class="text-label">
+                            <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
+                          </div>
+                        </div>
+                                       
+                      </th>
 
-                  </div>
-                </div> 
+                      <th>
+                        
+                        <div class="project-type">
+                          <div class="text-label">
+                            <a href="#" class="property-select" onclick="javascript: signup1();">List Property</a></div>
+                        </div>
                 
+                      </th>
+
+                      <th> 
+
+                         
+                          <div class="project-type">
+                            <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Join Venture</a></div>
+                          </div>
+               
+                      </th>
+                  
+                  </table>
+              </div>
                 
-                <div class="btn btn-facebook"><i class="fa fa-facebook"></i> </div>
-                <div class="btn btn-twitter">	<i class="fa fa-twitter"></i> </div>
-                <div class="btn btn-google">	<i class="fa fa-google-plus"></i> </div>
+                <div class="btn btn-facebook"> <a  href="http://www.facebook.com">   <i class="fa fa-facebook"></i> </a></div>
+                <div class="btn btn-twitter">	<a  href="http://www.twitter.com"> <i class="fa fa-twitter"></i> </a></div>
+                <div class="btn btn-google"><a  href="https://plus.google.com"> 	<i class="fa fa-google-plus"></a></i> </div>
               </div>   
-
-
 
             </div>
           </div>
@@ -113,7 +121,11 @@
       </div>
     </div>
 
-
+    <div id='overlay' style='filter:alpha(opacity=50);' onclick="hide_popup();"></div>
+      <div align='center' id='popup_box'>
+        <div style='float: right; margin-top: -40px;margin-right:-40px'></div>
+        <div id='popup_body' style='float:right'></div>
+      </div>
 
 
 
@@ -144,6 +156,13 @@
     <!--End of Zopim Live Chat Script-->
     
     <style>
+      .jsa{
+        
+        position:absolute;
+        left:380px;
+        top: 630px; 
+        
+      }
       #overlay{
         display: none;
         background-color: #000000;
@@ -176,11 +195,11 @@
         display:none;
         height:auto;
         width: 450px;
-        left:50%;
+        left:34%;
         margin: -220px 0 0 -250px;
         padding:15px;
         position:fixed;
-        top:50%;
+        top:5%;
         z-index:2000;
         font-size: 12px;
       }
