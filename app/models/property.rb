@@ -4,10 +4,11 @@ class Property < ActiveRecord::Base
   validates_presence_of :location, :city, :description, :mobile
   #validates_presence_of :type_of_land, :title, :price, :area, :person_type,:city, :location, :description, :name,
   #  :email, :mobile, :electricity_type,:boundary_status,:drainage_status,:inleave_rode,:shed_status,:borewell_status, :land_status
-  acts_as_gmappable
+acts_as_gmappable
   has_many :images , :dependent => :destroy
   accepts_nested_attributes_for :images, :allow_destroy => true, :reject_if=>:all_blank
-  
+
+  # geocoded_by :location
   
   def gmaps4rails_address
     "#{self.location}, #{self.city}"
@@ -18,6 +19,19 @@ class Property < ActiveRecord::Base
     end
   
 
+    acts_as_gmappable
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   def self.search(search)
     if search

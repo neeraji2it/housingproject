@@ -14,10 +14,10 @@
       <th><%= model_class.human_attribute_name(:rate) %></th>
       <th><%= model_class.human_attribute_name(:area) %></th>
       <th><%= model_class.human_attribute_name(:person_type) %></th>
-      
-       <th><%= model_class.human_attribute_name(:state) %></th>
-      
-     
+
+      <th><%= model_class.human_attribute_name(:state) %></th>
+
+
       <th><%= model_class.human_attribute_name(:location) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
@@ -47,14 +47,15 @@
 
         <td>
           <%= link_to "show", property_path(property),:class => "btn btn-success" %>
-          <%= link_to "Edit", edit_property_path(property), :class => 'btn btn-primary' %>
-          <%= link_to "Destroy", property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}, :class => "btn btn-mini btn-danger" %>
+          <% if current_admin %>
+            <%= link_to "Edit", edit_property_path(property), :class => 'btn btn-primary' %>
+            <%= link_to "Destroy", property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}, :class => "btn btn-mini btn-danger" %>
+          <% end %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
   new_property_path,

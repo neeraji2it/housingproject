@@ -1,42 +1,95 @@
 <div class="container">
-  <div class="row">
+  <div class="row" style="width: 50%;float: left;">
     <div class="col-lg-12">
       <div class="page-header" style="border: none;">
         <h1>Contact Us</h1>
       </div>
-       <caption>Get in Touch</caption>
-    
+      <caption>Get in Touch</caption>
+
       <%= form_for @contactus, :url => contactus_path do |f| %>
- 
-      <div class="control-group">
-        <%= f.label :name, :class => 'control-label' %>
-        <div class="controls">
-          <%= f.text_field :name, :class => 'text_field' %>
-        </div>
-      </div>
 
-      <div class="control-group">
-        <%= f.label :email, :class => 'control-label' %>
-        <div class="controls">
-          <%= f.email_field :email, :class => 'text_field' %>
+        <div class="control-group">
+          <%= f.label :name, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :name, :class => 'text_field' %>
+          </div>
         </div>
-      </div>
 
-      <div class="control-group">
-        <%=f.label :subject,:class => 'control-label'%>
-        <div class ="controls">
-          <%=f.text_field :subject, :class => 'text_field'%>
+        <div class="control-group">
+          <%= f.label :email, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.email_field :email, :class => 'text_field' %>
+          </div>
         </div>
-      </div>
-      
-      <div class="control-group">
-        <%=f.label :message,:class => 'control-label'%>
-        <div class ="controls">
-          <%=f.text_area :message, :class => 'text_area'%>
+
+        <div class="control-group">
+          <%=f.label :subject,:class => 'control-label'%>
+          <div class ="controls">
+            <%=f.text_field :subject, :class => 'text_field'%>
+          </div>
         </div>
-      </div>
-      <%= f.submit "Send" ,:class=>"btn btn-primary arrow-right" ,:style=>"margin-left:90px;" %>
+
+        <div class="control-group">
+          <%=f.label :message,:class => 'control-label'%>
+          <div class ="controls">
+            <%=f.text_area :message, :class => 'text_area'%>
+          </div>
+        </div>
+        <%= f.submit "Send" ,:class=>"btn btn-primary arrow-right" ,:style=>"margin-left:90px;" %>
       <%  end %>
     </div>
   </div>
+  <div id="googleMap" class="map1"  style="width:500px;height:380px;top: 135px;"></div>
+
+
+  <h2>SVR GROUP Developers and Builders</h2>
+  <div class="row-fluid">
+    <p> #1063,22nd 'B' main,22nd Cross, 2nd Sector</p>
+    <p>HSR Layout,Bangalore 560102,Karnataka,India. </p>
+    <p>WWW.svrgroups.co.in </p>
+  </div>
+
 </div>
+
+
+
+
+
+<script
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+  var myCenter = new google.maps.LatLng(12.900, 77.6300);
+
+  function initialize()
+  {
+    var mapProp = {
+      center: myCenter,
+      zoom: 11,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+    var marker = new google.maps.Marker({
+      position: myCenter,
+      animation: google.maps.Animation.BOUNCE
+    });
+
+    marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+
+
+
+
+
+
+
+

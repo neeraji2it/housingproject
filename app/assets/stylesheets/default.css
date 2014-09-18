@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 /* CSS Document */
 @import 'bootstrap.min.css';
@@ -351,7 +352,7 @@ ul.list-privacy li a:hover { color: #a5c140; text-decoration: none; }
 .ch-img-10 { background-image: url(/assets/img-city10.png); }
 .ch-img-11 { background-image: url(/assets/img-city11.png); }
 .ch-img-12 { background-image: url(/assets/img-city12.png); }*/
-.ch-info h3 { color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 18px; margin: 0 15px; padding: 70px 0 0 0; height: 160px; font-family: 'RobotoRegular'; }
+.ch-info h3 { color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 18px; margin: 0 15px; padding: 70px 0 0 0; height: 160px; font-family: 'helvetica'; }
 .ch-item:hover .ch-info-front { -webkit-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg); -moz-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg); -o-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg); -ms-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg); transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg); opacity: 0; }
 .ch-item:hover .ch-info-back { -webkit-transform: rotate3d(1, 0, 0, 0deg); -moz-transform: rotate3d(1, 0, 0, 0deg); -o-transform: rotate3d(1, 0, 0, 0deg); -ms-transform: rotate3d(1, 0, 0, 0deg); transform: rotate3d(1, 0, 0, 0deg); opacity: 1; }
 input[type="submit"].btn-login { margin: 0px; font-size: 12px; text-transform: none; display: inline-block; padding: 5px 12px; }
