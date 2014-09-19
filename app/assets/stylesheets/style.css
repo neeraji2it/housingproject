@@ -497,7 +497,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 #slider {
 	background:#fff url(loading.gif) no-repeat 50% 50%;
 	position:relative;
-	top:-100px;
+	top:-90px;
 	left:-62px;
 	margin:0 auto; /*center-aligned*/
     transform: translate3d(0,0,0);

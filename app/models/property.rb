@@ -4,7 +4,7 @@ class Property < ActiveRecord::Base
   validates_presence_of :location, :city, :description, :mobile
   #validates_presence_of :type_of_land, :title, :price, :area, :person_type,:city, :location, :description, :name,
   #  :email, :mobile, :electricity_type,:boundary_status,:drainage_status,:inleave_rode,:shed_status,:borewell_status, :land_status
-acts_as_gmappable
+  acts_as_gmappable
   has_many :images , :dependent => :destroy
   accepts_nested_attributes_for :images, :allow_destroy => true, :reject_if=>:all_blank
 
@@ -15,23 +15,8 @@ acts_as_gmappable
   end
   
   def gmaps4rails_infowindow
-    "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} "
-    end
-  
-
-    acts_as_gmappable
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} <br /><a href='/home/land1?id=#{self.id}' class='btn'>Learn More..</a>"
+  end
 
   def self.search(search)
     if search
@@ -40,8 +25,4 @@ acts_as_gmappable
       find(:all)
     end
   end
-  
-  
-  
-  
 end

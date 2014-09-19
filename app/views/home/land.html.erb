@@ -8,20 +8,13 @@
   </div>
 
   <div class="left-column"> 
-
-
-
-
-
-
-
     <div class="right-column">    
       <p class="remove-spacing">
         <button type="button" class="bars-btn"><span> <i class="fa fa-bars"></i></span></button>
         <span class="text-results"><%= @properties.count %> Results</span>
       </p>
 
-      <div class="box-result results-collapse contentResult" style='z-index: 1000;display: none;'>
+      <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
         <select class="price-area" title="Price/Area"><option>Sorted by: Price/Area (low to high)<br></option></select>     
         <ul class="list-low-high">        	
           <% @properties.each do |property| %>
@@ -77,12 +70,5 @@
     $(".gmaps4rails_map").css("width", "100%");
 
   });
-
-  $(document).ready(function() {
-    $(".bars-btn").click(function() {
-      $(".box-result").toggle();
-    });
-  });
-
 </script>
 
