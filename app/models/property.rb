@@ -15,8 +15,9 @@ class Property < ActiveRecord::Base
   end
   
   def gmaps4rails_infowindow
-    "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} <br /><a href='/home/land1?id=#{self.id}' class='btn'>Learn More..</a>"
+    "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} <br /><a href='/properties/#{self.id}' class='btn'>Property</a>"
   end
+          
 
   def self.search(search)
     if search
