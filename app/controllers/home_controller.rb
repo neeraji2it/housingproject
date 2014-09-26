@@ -33,21 +33,20 @@ class HomeController < ApplicationController
   end
   
   def land
-    @properties = Property.where(:city => params[:city]).order(:price)
-    @json2 = @properties.to_gmaps4rails
+      @properties = Property.where(:city => params[:city]).order(:price)
     @city = params[:city]
-  end
+    @json = @properties.to_gmaps4rails
+      end
   
   def land1
     @property = Property.find(params[:id])
     @properties = Property.where(:city => @property.city)
     @json = @property.to_gmaps4rails
     @images = Image.where(:property_id =>@property.id)
-  
-  end
+    end
 
   
-  def location_search
+    def location_search
     @properties = Property.all
     if params[:search].present? and (!params[:search][:location].blank?)
       @properties = Property.location(params[:search][:location])

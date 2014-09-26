@@ -4,16 +4,26 @@ class Property < ActiveRecord::Base
   validates_presence_of :location, :city, :description, :mobile
   #validates_presence_of :type_of_land, :title, :price, :area, :person_type,:city, :location, :description, :name,
   #  :email, :mobile, :electricity_type,:boundary_status,:drainage_status,:inleave_rode,:shed_status,:borewell_status, :land_status
-  acts_as_gmappable
-  has_many :images , :dependent => :destroy
+
+    acts_as_gmappable :check_process=> false, :msg => "Errrrrrrror"
+   has_many :images , :dependent => :destroy
   accepts_nested_attributes_for :images, :allow_destroy => true, :reject_if=>:all_blank
 
   # geocoded_by :location
   
-  def gmaps4rails_address
-    "#{self.location}, #{self.city}"
-  end
+  geocoded_by :address
+
+def address
+  [location, city, state].compact.join(', ')
+end
   
+  
+  
+  
+def gmaps4rails_address
+  "#{self.location}, #{self.city}"
+end
+
   def gmaps4rails_infowindow
     "<b>City:&nbsp;</b>#{self.city}<br /><b>Location:&nbsp;</b> #{self.location} <br /><a href='/properties/#{self.id}' class='btn'>Property</a>"
   end

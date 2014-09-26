@@ -13,62 +13,71 @@
         <button type="button" class="bars-btn"><span> <i class="fa fa-bars"></i></span></button>
         <span class="text-results"><%= @properties.count %> Results</span>
       </p>
-
       <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
+
         <select class="price-area" title="Price/Area"><option>Sorted by: Price/Area (low to high)<br></option></select>     
         <ul class="list-low-high">        	
           <% @properties.each do |property| %>
-
-            <li>
-              <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <% image = property.try(:images).try(:first).try(:image).try(:url) %>
-                <%= link_to image_tag(image), :action => 'land1', :id => property.id %>
-              </div> 
-              <div class="pen-heading col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <%= property.location %> 
-                <p><i class="fa fa-map-marker"></i> 
-                  <%= property.inleave_rode %>
-                </p>
-              </div>
-              <div class="pen-heading col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                <%= property.area %>
-                <p>Sqft</p>
-              </div>
-              <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <i class="fa fa-inr"></i> 
-                <%= property.price %>
-                <p><i class="fa fa-inr"></i><%= property.rate %>/ sqft</p>
-              </div>               
-            </li>
+            <%= link_to land1_home_index_path(:id => property.id) do %>
+              <li class="show">
+                <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <% image = property.try(:images).try(:first).try(:image).try(:url) %>
+                  <%= image_tag(image) %>
+                </div> 
+                <div class="pen-heading col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <%= property.location %> 
+                  <p><i class="fa fa-map-marker"></i> 
+                    <%= property.inleave_rode %>
+                  </p>
+                </div>
+                <div class="pen-heading col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <%= property.area %>
+                  <p>Sqft</p>
+                </div>
+                <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <i class="fa fa-inr"></i> 
+                  <%= property.price %>
+                  <p><i class="fa fa-inr"></i><%= property.rate %>/ sqft</p>
+                </div>               
+              </li>
+            <% end %>
           <% end %>
         </ul>
       </div>
-
     </div>
 
 
-
-
     <div class="img_map">
-      <%= gmaps4rails(@json2) %>
-    </div>  
+      <%= gmaps({
+          "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 11 ,"type" => "SATELLITE" },
+          "markers" => { :icon=> 'apartment.png', "data" => @json },
 
 
-
-
-
+        });
+    %>
+    </div> 
 
   </div>	
   <div class="clearF"></div>        	
 </article>
-<%#= render :partial => 'layouts/footer' %>
 
 
+<style>
 
-<script>
-  $(document).click(".bars-btn", function() {
-    $(".gmaps4rails_map").css("width", "100%");
 
-  });
-</script>
+  div.map_container_renamed #map {
+    width: 900px;
+    height: 500px;
+  }
 
+  div.map_container_renamed {
+    padding: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc #ccc #999 #ccc;
+    -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+    -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+    box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+    width: 420px;
+  }
+</style>

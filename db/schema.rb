@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140915054650) do
+ActiveRecord::Schema.define(version: 20140924074040) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -80,8 +80,7 @@ ActiveRecord::Schema.define(version: 20140915054650) do
     t.string   "name"
     t.string   "email"
     t.string   "mobile"
-    t.decimal  "lattitude",                        precision: 10, scale: 0
-    t.decimal  "longitude",                        precision: 10, scale: 0
+    t.float    "longitude",             limit: 24
     t.integer  "view_count"
     t.integer  "contact_count"
     t.string   "electricity_type"

@@ -7,6 +7,7 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome To SVR Group	</title>
+         <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
@@ -19,6 +20,7 @@
   </head>
 
   <body data-spy="scroll" data-target=".main-nav" data-offset="70">
+
     <div class="mt-sidebar"> 
       <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
       <nav class="main-nav"></nav>      
@@ -52,7 +54,7 @@
 
                   </div>
                   <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
-             
+
                 </div>
 
                 <div id="sliderFrame">
@@ -62,9 +64,9 @@
                     </a>
                     <img src="/assets/img/agriculture.jpg" alt="Farm Lands" />
                     <img src="/assets/img/commercial.jpg" alt="Commercial Lands" />
-                    <img src="/assets/img/industrial.jpeg" alt="Industrial Land" />
+                    <img src="/assets/img/industrial.jpg" alt="Industrial Land" />
                     <img src="/assets/img/residential.jpg" alt="Residential Land"  />
-                     <img src="/assets/img/barren.jpg" alt="Barren Land"  />
+                    <img src="/assets/img/barrenland.jpg" alt="Barren Land"  />
                   </div>
                   <div id="htmlcaption" style="display: none;">
 
@@ -76,37 +78,37 @@
 
                 <div class="jsa">
                   <table>
-              
+
                     <th>
-                                          <div class="project-type">
-                          <div class="text-label">
-                            <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
-                          </div>
-                        </div>
-                                       
-                      </th>
+                    <div class="project-type">
+                      <div class="text-label">
+                        <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
+                      </div>
+                    </div>
 
-                      <th>
-                        
-                        <div class="project-type">
-                          <div class="text-label">
-                            <a href="/properties/new" class="property-select">List Property</a></div>
-                        </div>
-                
-                      </th>
+                    </th>
 
-                      <th> 
+                    <th>
 
-                         
-                          <div class="project-type">
-                            <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Joint Venture</a></div>
-                          </div>
-               
-                      </th>
-                  
+                    <div class="project-type">
+                      <div class="text-label">
+                        <a href="/properties/new" class="property-select">List Property</a></div>
+                    </div>
+
+                    </th>
+
+                    <th> 
+
+
+                    <div class="project-type">
+                      <div class="text-label"><a href="<%= home_index_path %>" class="property-select">Joint Venture</a></div>
+                    </div>
+
+                    </th>
+
                   </table>
-              </div>
-                
+                </div>
+
                 <div class="btn btn-facebook"> <a  href="http://www.facebook.com">   <i class="fa fa-facebook"></i> </a></div>
                 <div class="btn btn-twitter">	<a  href="http://www.twitter.com"> <i class="fa fa-twitter"></i> </a></div>
                 <div class="btn btn-google"><a  href="https://plus.google.com"> 	<i class="fa fa-google-plus"></a></i> </div>
@@ -114,51 +116,99 @@
 
             </div>
           </div>
+      
+<%#= stylesheet_link_tag 'default.css' %>
+      
+           
+      <div class="clearF"></div>
+        </div>
+
+
+<div class="topbar">     
+  <center>
+          <table>
+            <tr>
+                  
+       
+              <td> <a href="/" title="HOME">Home</a></td>
+              <td> <a href="/home/about_us" title="ABOUT US">About us</a></td>
+              <td> <a href="/home/privacy_policy" title="SERVICES">Services</a></td>
+              <td><a href="/home/help" title="Help">FAQ</a></td>
+              <td><a href="/contactus/new" title="CONTACT US">Contact us</a></td>
+        
+   
+      </div>
+               </tr>
+          </table>
+  </center>  
+          </div>        
+<div class="copyright">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <p  style="color: white;">&copy; Copyright 2013. All Right Reserved.</p>
+  </div>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">          
+              
+    <a href="#" title="Privacy policy" style="color:#fff; ">Privacy policy |</a>
+      <a href="#" title="Terms &amp; conditions" style="color:#fff;">Terms &amp; conditions</a>                    
+    
+  </div>       
+  <div class="clearF"></div>  
+</div>  
+  
         </div>
       </div>
+      
     </div>
 
+    
+    
+    
+    
+    
+    
     <div id='overlay' style='filter:alpha(opacity=50);' onclick="hide_popup();"></div>
-      <div align='center' id='popup_box'>
-        <div style='float: right; margin-top: -40px;margin-right:-40px'></div>
-        <div id='popup_body' style='float:right'></div>
-      </div>
+    <div align='center' id='popup_box'>
+      <div style='float: right; margin-top: -40px;margin-right:-40px'></div>
+      <div id='popup_body' style='float:right'></div>
+    </div>
 
+
+  
 
 
     <script src="/assets/slider.js"></script>
 
     <!--Start of Zopim Live Chat Script-->
     <script type="text/javascript">
-                      window.$zopim || (function(d, s) {
-                        var z = $zopim = function(c) {
-                          z._.push(c)
-                        }, $ = z.s =
-                                d.createElement(s), e = d.getElementsByTagName(s)[0];
-                        z.set = function(o) {
-                          z.set.
-                                  _.push(o)
-                        };
-                        z._ = [];
-                        z.set._ = [];
-                        $.async = !0;
-                        $.setAttribute('charset', 'utf-8');
-                        $.src = '//v2.zopim.com/?2OWSpb300a7QhdmgX06eHgaNLPzM1JQD';
-                        z.t = +new Date;
-                        $.
-                                type = 'text/javascript';
-                        e.parentNode.insertBefore($, e)
-                      })(document, 'script');
+      window.$zopim || (function(d, s) {
+        var z = $zopim = function(c) {
+          z._.push(c)
+        }, $ = z.s =
+                d.createElement(s), e = d.getElementsByTagName(s)[0];
+        z.set = function(o) {
+          z.set.
+                  _.push(o)
+        };
+        z._ = [];
+        z.set._ = [];
+        $.async = !0;
+        $.setAttribute('charset', 'utf-8');
+        $.src = '//v2.zopim.com/?2OWSpb300a7QhdmgX06eHgaNLPzM1JQD';
+        z.t = +new Date;
+        $.
+                type = 'text/javascript';
+        e.parentNode.insertBefore($, e)
+      })(document, 'script');
     </script>
     <!--End of Zopim Live Chat Script-->
-    
+
     <style>
       .jsa{
-        
+
         position:absolute;
         left:380px;
         top: 630px; 
-        
+
       }
       #overlay{
         display: none;
@@ -171,9 +221,9 @@
         z-index: 1000;
         width: 100000px;
         height: 941px;
-        opacity: 0.5;
+        opacity: 0.7;
       }
-      
+
       .overlay1{
         display: none;
         background-color: #000000;
@@ -185,7 +235,7 @@
         z-index: 1000;
         width: 100000px;
         height: 941px;
-        opacity: 0.5;
+        opacity: 0.7;
       }
 
       #popup_box{
@@ -198,7 +248,40 @@
         position:fixed;
         top:5%;
         z-index:2000;
+        font-size: 15px;
+      }
+      
+      
+
+      .topbar {
+        background: linear-gradient(to bottom, #2a9e61 0%, #3aba82 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border-bottom: 1px solid #cbcbcb;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+      }
+
+     
+      ul li{
+        list-style-type:none;
+      }
+      .copyright {
+        background-color: #2e2e2e;
         font-size: 12px;
+        padding: 8px 0;
+        width: 100%;
+        position:absolute;
+        
+       top:761px;
+      }
+
+      .copyright p {
+        padding-bottom: 0;
+        padding:5px;
+      }  
+      td{
+        padding:10px;
       }
     </style>
   </body>

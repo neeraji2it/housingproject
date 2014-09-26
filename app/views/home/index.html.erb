@@ -4,6 +4,7 @@
       <h1>Choose A State to Explore</h1>
     </div>
     <div class="box-city">
+               
       <div class="row" style="<%= params[:state] ? params[:state] == 'KA' ? ' ' : params[:state]=='AP' ? 'left: 100px;position: relative;' : ' ' : 'position: relative;left: 100px;'%>">
         <ul class="ch-grid">
           <% @states = [["Tamilnadu","TN"],["Karnataka","KA"],["Andhra Pradesh","AP"]] %>
@@ -22,7 +23,7 @@
               <div class="ch-item">
                 <div class="ch-info">
                   <div class="ch-info-front">
-                    <h3><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1]), :style => 'color: white;font-size: 15px;' %></h3>
+                    <h3><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1]), :style => 'color: white;font-size: 14px;' %></h3>
                   </div>
                   <div class="ch-info-back <%= params[:state] %> ch-img-<%= index+1 %>" onclick="javascript: location.href = <%= "'#{params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1])}'" %>">
                   </div>
@@ -32,6 +33,7 @@
           <% end %>
         </ul>
       </div>
+      
       <div class="clearF"></div>
       <p><a href="#" class="btn-login btn-more-cities">More Cities</a> </p>
     </div>

@@ -4,7 +4,7 @@
       <div class="page-header" style="border: none;">
         <h1>Contact Us</h1>
       </div>
-      <caption>Get in Touch</caption>
+      <h3>  Get in Touch   </h3> 
 
       <%= form_for @contactus, :url => contactus_path do |f| %>
 
@@ -18,7 +18,7 @@
         <div class="control-group">
           <%= f.label :email, :class => 'control-label' %>
           <div class="controls">
-            <%= f.email_field :email, :class => 'text_field' %>
+            <%= f.text_field :email, :class => 'text_field' %>
           </div>
         </div>
 
@@ -37,16 +37,21 @@
         </div>
         <%= f.submit "Send" ,:class=>"btn btn-primary arrow-right" ,:style=>"margin-left:90px;" %>
       <%  end %>
+
+      <div class='addrs' >
+        <h3 >
+        <b>SVR GROUP Developers and Builders</b>
+        </h3><br/>
+        <p> #1063,22nd 'B' main,22nd Cross, 2nd Sector</p>
+        <p>HSR Layout,Bangalore 560102,Karnataka,India. </p>
+        <p>www.svrgroups.co.in </p>
+        <p>Ph:91-9845959397</p>
+      </div>
+
     </div>
   </div>
-  <div class='addrs' style= "position: relative; top: 125px; left: 0px;color:blue;">
-    <h3 ><b>SVR GROUP Developers and Builders</b></h3><br/>
-    <p> #1063,22nd 'B' main,22nd Cross, 2nd Sector</p>
-    <p>HSR Layout,Bangalore 560102,Karnataka,India. </p>
-    <p>www.svrgroups.co.in </p>
-    <p>Ph:91-9845959397</p>
-  </div>
-  <div id="googleMap" class="map1"  style="width:500px;height:380px;top: 135px;"></div>
+
+  <div id="googleMap" class="map1"  style="width:600px;height:500px;top: 135px;"></div>
 </div>
 
 <script
@@ -54,21 +59,24 @@
 </script>
 
 <script>
-  var myCenter = new google.maps.LatLng(12.910, 77.6400);
+  var myCenter = new google.maps.LatLng(12.908633, 77.647517);
 
   function initialize()
   {
     var mapProp = {
       center: myCenter,
-      zoom: 11,
+      zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
+  
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
     var marker = new google.maps.Marker({
+     
       position: myCenter,
-      animation: google.maps.Animation.BOUNCE
+      animation: google.maps.Animation.BOUNCE,
+       
     });
 
     marker.setMap(map);
@@ -85,12 +93,12 @@
 <style>
   .addrs{
     position:relative;
-    top:-370px;
+    top:11px;
     left:25px;
   }
   
   p {
-    margin: -15px;
+    margin: -10px;
     padding-bottom: 15px;
 }
   
