@@ -16,15 +16,15 @@
       <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
 
         <select class="price-area" title="Price/Area"><option>Sorted by: Price/Area (low to high)<br></option></select>     
-       
-        
+               
         <ul class="list-low-high">        	
           <% @properties.each do |property| %>
+            <%= link_to land1_home_index_path(:id => property.id) do %>
                        <li>
                 <div class="pen-heading col-xs-3 col-sm-3 col-md-3 col-lg-3">
                             
-                  <% image = property.try(:images).try(:first).try(:image).try(:url) %>
-                <%= link_to image_tag(image), :action => 'land1', :id => property.id %>
+                   <% image = property.try(:images).try(:first).try(:image).try(:url) %>
+                  <%= image_tag(image) %>
                                   </div> 
                 <div class="pen-heading col-xs-4 col-sm-4 col-md-4 col-lg-4">
                   <%= property.location %> 
@@ -43,6 +43,7 @@
                 </div>               
               </li>
               <% end %>
+              <%end%>
         </ul>
         
         
