@@ -1,11 +1,11 @@
 class PropertiesController < ApplicationController
   include ApplicationHelper
   #before_filter :admin_login_required
-  before_action :set_property, only: [:show, :edit, :update, :destroy]
+    before_action :set_property, only: [:show, :edit, :update, :destroy]
 
  
   def index
-    @properties = Property.all
+  @properties = Property.all
   end
 
  
