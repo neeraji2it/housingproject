@@ -49,6 +49,7 @@ class HomeController < ApplicationController
     end
     @city = params[:city]
     @json = @properties.to_gmaps4rails
+  
   end
   
   def land1

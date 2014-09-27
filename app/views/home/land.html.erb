@@ -13,7 +13,8 @@
         <button type="button" class="bars-btn"><span> <i class="fa fa-bars"></i></span></button>
         <span class="text-results"><%= @properties.count %> Results</span>
       </p>
-      <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
+      
+        <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
         <%= select_tag :price, options_for_select([["select"],["sortable Sorted by: Price (Low to High)","low"],["sortable Sorted by: Price (High to Low)","high"],["location ascending order","lasc"],["Location desending order","lsdc"]]),:class => "price-area",:onchange => "show_this(this.value);" %>    
           <div id ="asc_dsc">
             <%= render :partial => "asc_dsc" %>
@@ -24,12 +25,18 @@
       <div class="img_map">
         <%= gmaps({
             "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 11 ,"type" => "SATELLITE" },
-            "markers" => { :icon=> 'apartment.png', "data" => @json },
+            "markers" => { "picture" => "/assets/img-city1.png", "data" => @json },
+                                
           });
       %>
       </div> 
-
-    </div>	
+    </div>
+    
+    
+    
+    
+    
+    
     <div class="clearF"></div>        	
   </article>
 

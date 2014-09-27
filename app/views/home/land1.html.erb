@@ -12,10 +12,15 @@
     <div class="left-column">
       <div class="img_map">
         <%= gmaps({
-            "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 15,"type" => "SATELLITE" },
-            "markers" => { :icon=> 'apartment.png', "data" => @json },
-
-
+            "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 15,
+              "type" => "SATELLITE",              
+              styles: [{
+                   featureType: "transit.station.bus",
+                   elementType: "geometry.fill",
+                   stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
+               }]
+              },
+            "markers" => { :icon=> 'apartment.png',"data" => @json },
           });
       %>
       </div> 
@@ -163,15 +168,14 @@
                                   </h4>
                                 </div>
                                 <div id="collapse4" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <h3>Nearby Properties</h3>
-                                    <ul >
-                                      <% for property in @property.nearbys(100) %>
-                                        <li><%= link_to property.address, property%> (<%= property.distance.round(2) %> miles)</li>
-                                      <% end %>
-                                    </ul> 
-
-                                  </div>
+                <div class="panel-body">
+                  <h3>Nearby Properties</h3>
+                  <ul>
+                    <% for property in @property.nearbys(100) %>
+                      <li><%= property.address %> (<%= property.distance.round(2) %> miles)</li>
+                    <% end %>
+                  </ul> 
+                </div>
                                 </div>
                               </div>                        
                             </div>
