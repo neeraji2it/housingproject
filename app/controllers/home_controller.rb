@@ -36,10 +36,10 @@ class HomeController < ApplicationController
   def land
     if params[:price] == "low"
       @properties = Property.where(:city => params[:city]).order("price asc")
-            
+      
     elsif params[:price] == "high"
       @properties = Property.where(:city => params[:city]).order("price desc")
-      elsif params[:price] == "lasc"
+    elsif params[:price] == "lasc"
       @properties = Property.where(:city => params[:city]).order("location asc")
     elsif params[:price] == "lsdc"
       @properties = Property.where(:city => params[:city]).order("location desc")
@@ -49,7 +49,6 @@ class HomeController < ApplicationController
     end
     @city = params[:city]
     @json = @properties.to_gmaps4rails
-  
   end
   
   def land1
@@ -84,6 +83,14 @@ class HomeController < ApplicationController
     @property = Property.find(params[:id])
     @images = Image.where(:property_id =>@property.id)
   end
+  
+  
+    def image_slide
+    @property = Property.find(params[:id])
+    @images = Image.where(:property_id =>@property.id)
+  end
+  
+  
   
   def main_home
     render :layout => false
