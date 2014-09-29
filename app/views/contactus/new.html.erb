@@ -60,7 +60,6 @@
 
 <script>
   var myCenter = new google.maps.LatLng(12.908633, 77.647517);
-
   function initialize()
   {
     var mapProp = {
@@ -68,13 +67,13 @@
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-
-  
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
     var marker = new google.maps.Marker({
      
       position: myCenter,
+      title: 'SVR GROUP Developers and Builders'
+     
       <%#*animation: google.maps.Animation.BOUNCE,%>
     });
 
