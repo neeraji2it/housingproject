@@ -4,7 +4,7 @@
       <div class="page-header" style="border: none;">
         <h1>Contact Us</h1>
       </div>
-      <h3>  Get in Touch   </h3> 
+      <h3> <b> Get in Touch </b>  </h3> 
 
       <%= form_for @contactus, :url => contactus_path do |f| %>
 
@@ -40,7 +40,7 @@
 
       <div class='addrs' >
         <h3 >
-        <b>SVR GROUP Developers and Builders</b>
+        <b style="color:green;">SVR GROUP Developers and Builders</b>
         </h3><br/>
         <p> #1063,22nd 'B' main,22nd Cross, 2nd Sector</p>
         <p>HSR Layout,Bangalore 560102,Karnataka,India. </p>
@@ -65,7 +65,7 @@
   {
     var mapProp = {
       center: myCenter,
-      zoom: 13,
+      zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
@@ -75,8 +75,7 @@
     var marker = new google.maps.Marker({
      
       position: myCenter,
-      animation: google.maps.Animation.BOUNCE,
-       
+      <%#*animation: google.maps.Animation.BOUNCE,%>
     });
 
     marker.setMap(map);
@@ -84,11 +83,6 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-
-
-
-
-
 
 <style>
   .addrs{
