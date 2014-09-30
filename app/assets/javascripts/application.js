@@ -49,14 +49,3 @@ function signup(){
     });
 }
 
-
-function signup1(){
-    jQuery.ajax({
-        url: "/home/list_property",
-        success: function(data) {
-            jQuery('#popup_body').html(data);
-            jQuery('#overlay').show();
-            jQuery('#popup_box').show();
-        }
-    });
-}
