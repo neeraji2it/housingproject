@@ -15,10 +15,10 @@
             "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 15,
               "type" => "SATELLITE",              
               styles: [{
-                   featureType: "transit.station.bus",
-                   elementType: "geometry.fill",
-                   stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
-               }]
+                  featureType: "transit.station.bus",
+                  elementType: "geometry.fill",
+                  stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
+                }]
               },
             "markers" => { :icon=> 'apartment.png',"data" => @json },
           });
@@ -60,7 +60,7 @@
           <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
               <div class="row price">							
-         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">&nbsp;&nbsp;&nbsp;Price
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">&nbsp;&nbsp;&nbsp;Price
                   <p>&nbsp;&nbsp;&nbsp;<strong><i class="fa fa-inr"></i></strong><%= @property.price %></p>
                   <div class="text-listed-by"> listed By<p><%= @property.person_type %></p></div>
                 </div>
@@ -168,14 +168,14 @@
                                   </h4>
                                 </div>
                                 <div id="collapse4" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <h3>Nearby Properties</h3>
-                  <ul>
-                    <% for property in @property.nearbys(100) %>
-                      <li><%= property.address %> (<%= property.distance.round(2) %> miles)</li>
-                    <% end %>
-                  </ul> 
-                </div>
+                                  <div class="panel-body">
+                                    <h3>Nearby Properties</h3>
+                                    <ul>
+                                      <% for property in @property.nearbys(100) %>
+                                        <li><%= property.address %> (<%= property.distance.round(2) %> miles)</li>
+                                      <% end %>
+                                    </ul> 
+                                  </div>
                                 </div>
                               </div>                        
                             </div>
@@ -195,28 +195,28 @@
                           </h4>
                         </div>
                         <div id="collapsefour" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p class="remove-spacing f11">When you call, don't forget to mention that you found  this on</p>
-                      <p class="f11"><a href="#" title="" target="_blank">www.lipsum.com</a></p>
-                      <div class="land_fom">
-                        <div class="user-box crow">
-                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2"><%=  image_tag("img_user.png", :alt => 'img_user.png')%></div>
-                          <div class="user_name col-xs-7 col-sm-7 col-md-7 col-lg-8">Lorem Ipsum <i class="fa fa-check-circle"></i> </div>
-                        </div>
-                        <div class="user_details">
-                          <%= form_for :contact, :url => '/contact', :method => 'post' do |f|   %>
-                            <p> <%= f.text_field :name, :class=>"form-control" ,:placeholder=>"Name", :title=>"Name"%> </p>
-                            <p> <%= f.text_field :email, :class=>"form-control", :placeholder=>"E-mail", :title=>"E-mail"%> </p>
-                            <p> <%= f.text_field :mobile, :class=>"form-control", :placeholder=>"Phone", :title=>"Phone"%> </p>
+                          <div class="panel-body">
+                            <p class="remove-spacing f11">When you call, don't forget to mention that you found  this on</p>
+                            <p class="f11"><a href="#" title="" target="_blank">www.lipsum.com</a></p>
+                            <div class="land_fom">
+                              <div class="user-box crow">
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2"><%=  image_tag("img_user.png", :alt => 'img_user.png')%></div>
+                                <div class="user_name col-xs-7 col-sm-7 col-md-7 col-lg-8">Lorem Ipsum <i class="fa fa-check-circle"></i> </div>
+                              </div>
+                              <div class="user_details">
+                                <%= form_for :contact, :url => '/contact', :method => 'post' do |f|   %>
+                                  <p> <%= f.text_field :name, :class=>"form-control" ,:placeholder=>"Name", :title=>"Name"%> </p>
+                                  <p> <%= f.text_field :email, :class=>"form-control", :placeholder=>"E-mail", :title=>"E-mail"%> </p>
+                                  <p> <%= f.text_field :mobile, :class=>"form-control", :placeholder=>"Phone", :title=>"Phone"%> </p>
 
-                            <p class="top-spacing">
-                              <%= f.submit 'send', :class=>"btn-send", :title=>"Send"%>
-                              <a class="btn-login btn-close" href="/home/land1" title="Close"> Close </a> 
-                            </p>
-                          <% end  %>
-                        </div>
-                      </div>							
-                    </div>
+                                  <p class="top-spacing">
+                                    <%= f.submit 'send', :class=>"btn-send", :title=>"Send"%>
+                                    <a class="btn-login btn-close" href="/home/land1" title="Close"> Close </a> 
+                                  </p>
+                                <% end  %>
+                              </div>
+                            </div>							
+                          </div>
                         </div>
                       </div>                        
                     </div>
@@ -290,11 +290,9 @@
 </script>
 
 <style>
-
-
   div.map_container_renamed #map {
-    width: 890px;
-    height: 460px;
+    width: 100%;
+    height: 650px;
   }
 
   div.map_container_renamed {
@@ -305,6 +303,5 @@
     -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
     -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
     box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-    width: 420px;
   }
 </style>

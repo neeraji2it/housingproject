@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924074040) do
+ActiveRecord::Schema.define(version: 20141001063748) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -104,8 +104,8 @@ ActiveRecord::Schema.define(version: 20140924074040) do
     t.boolean  "gmaps"
     t.float    "latitude",              limit: 24
     t.string   "video_url"
-    t.string   "state"
     t.string   "consultant"
+    t.string   "state"
   end
 
   create_table "users", force: true do |t|
