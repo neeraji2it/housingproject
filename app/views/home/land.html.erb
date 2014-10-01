@@ -13,65 +13,65 @@
         <button type="button" class="bars-btn"><span> <i class="fa fa-bars"></i></span></button>
         <span class="text-results"><%= @properties.count %> Results</span>
       </p>
-      
-        <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
+
+      <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
         <%= select_tag :price, options_for_select([["select"],["sortable Sorted by: Price (Low to High)","low"],["sortable Sorted by: Price (High to Low)","high"],["location ascending order","lasc"],["Location desending order","lsdc"]]),:class => "price-area",:onchange => "show_this(this.value);" %>    
-          <div id ="asc_dsc">
-            <%= render :partial => "asc_dsc" %>
-          </div>
+        <div id ="asc_dsc">
+          <%= render :partial => "asc_dsc" %>
         </div>
       </div>
-
-      <div class="img_map">
-        <%= gmaps({
-            "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 11 ,"type" => "SATELLITE" },
-            "markers" => { "data" => @json },
-                                
-          });
-      %>
-      </div> 
     </div>
-    
-    
-    
-    
-    
-    
-    <div class="clearF"></div>        	
-  </article>
+
+    <div class="img_map">
+      <%= gmaps({
+          "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 11 ,"type" => "SATELLITE" },
+          "markers" => { "data" => @json },
+
+        });
+    %>
+    </div> 
+  </div>
+
+
+
+
+
+
+  <div class="clearF"></div>        	
+</article>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-  <style>
-    div.map_container_renamed #map {
-      width: 900px;
-      height: 650px;
-    }
+<style>
+  div.map_container_renamed #map {
+    width: 100%;
+    height: 650px;
+  }
 
-    div.map_container_renamed {
-      padding: 6px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #ccc #ccc #999 #ccc;
-      -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-      -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-      box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-      width: 420px;
-    }
-  </style>
+  div.map_container_renamed {
+    padding: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc #ccc #999 #ccc;
+    -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+    -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+    box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+    width: 70%;
+  }
+</style>
 
-  <script>
-    function show_this(price) {
-      var city = '<%= @city %>';
-      $.ajax({
-        url: "/home/land",
-        type: "get",
-        dataType: "script",
-        data: {
-          price: price,
-          city: city
-        },
-        success: function(data) {
-        }
-      });
-    }
-  </script>
+<script>
+  function show_this(price) {
+    var city = '<%= @city %>';
+    $.ajax({
+      url: "/home/land",
+      type: "get",
+      dataType: "script",
+      data: {
+        price: price,
+        city: city
+      },
+      success: function(data) {
+      }
+    });
+  }
+</script>
