@@ -16,6 +16,10 @@
         </div>
         <div class="navbar-collapse collapse">              
           <ul id="navigation">
+            <li>
+              <%= link_to t('.new', :default => t("helpers.links.new")), new_property_path, :class => 'btn-login' %>
+            </li>
+            
             <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => 'btn-login' %></li>
           </ul>  
         </div>                  

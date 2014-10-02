@@ -32,3 +32,7 @@
 .gm-style img, .gmnoprint img{
     max-width: none;
 }
+
+.border {      
+    border: 1px solid #CCC; 
+}

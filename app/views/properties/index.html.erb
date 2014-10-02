@@ -3,60 +3,70 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th>S.No</th>
-      <th><%= model_class.human_attribute_name(:consultant) %></th>
-      <th><%= model_class.human_attribute_name(:type_of_land) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:price) %></th>
-      <th><%= model_class.human_attribute_name(:rate) %></th>
-      <th><%= model_class.human_attribute_name(:area) %></th>
-      <th><%= model_class.human_attribute_name(:person_type) %></th>
-
-      <th><%= model_class.human_attribute_name(:state) %></th>
 
 
-      <th><%= model_class.human_attribute_name(:location) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:mobile) %></th>
-
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @properties.each_with_index do |property, index| %>
+<div class="table-responsive">
+  <table class="table table-condensed table-striped">
+    <thead>
       <tr>
-        <td><%=  index + 1%></td>
-        <td><%= property.consultant %></td>
-        <td><%= property.type_of_land %></td>
-        <td><%= property.title %></td>
-        <td><%= property.price %></td>
-        <td><%= property.rate %></td>
-        <td><%= property.area %></td>
-        <td><%= property.person_type %></td>
-        <td><%= property.city %></td>
-        <td><%= property.location %></td>
-        <td><%= property.description %></td>
-        <td><%= property.name %></td>
-        <td><%= property.email %></td>
-        <td><%= property.mobile %></td>
+        <th>S.No</th>
+        <th><%= model_class.human_attribute_name(:consultant) %></th>
+        <th><%= model_class.human_attribute_name(:type_of_land) %></th>
+        <th><%= model_class.human_attribute_name(:title) %></th>
+        <th><%= model_class.human_attribute_name(:price) %></th>
+        <th><%= model_class.human_attribute_name(:rate) %></th>
+        <th><%= model_class.human_attribute_name(:area) %></th>
+        <th><%= model_class.human_attribute_name(:person_type) %></th>
 
-        <td>
-          <%= link_to "show", property_path(property),:class => "btn btn-success" %>
-          <% if current_admin %>
-            <%= link_to "Edit", edit_property_path(property), :class => 'btn btn-primary' %>
-            <%= link_to "Destroy", property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}, :class => "btn btn-mini btn-danger" %>
-          <% end %>
-        </td>
+        <th><%= model_class.human_attribute_name(:state) %></th>
+
+
+        <th><%= model_class.human_attribute_name(:location) %></th>
+        <th><%= model_class.human_attribute_name(:description) %></th>
+        <th><%= model_class.human_attribute_name(:name) %></th>
+        <th><%= model_class.human_attribute_name(:email) %></th>
+        <th><%= model_class.human_attribute_name(:mobile) %></th>
+
+        <th><%=t '.actions', :default => t("helpers.actions") %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @properties.each_with_index do |property, index| %>
+        <tr>
+          <td><%=  index + 1%></td>
+          <td><%= property.consultant %></td>
+          <td><%= property.type_of_land %></td>
+          <td><%= property.title %></td>
+          <td><%= property.price %></td>
+          <td><%= property.rate %></td>
+          <td><%= property.area %></td>
+          <td><%= property.person_type %></td>
+          <td><%= property.city %></td>
+          <td><%= property.location %></td>
+          <td><%= property.description %></td>
+          <td><%= property.name %></td>
+          <td><%= property.email %></td>
+          <td><%= property.mobile %></td>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-  new_property_path,
-  :class => 'btn btn-primary' %>
+          <td>
+            <span>
+              <span>
+                <%= link_to "show", property_path(property),:class => "btn btn-xs btn-success" %> <br/><br/>
+              </span>
+
+            <% if current_admin %>
+              <span>
+                 <%= link_to "Edit", edit_property_path(property), :class => 'btn btn-xs btn-primary' %> <br/><br/>
+              </span>
+
+              <span>
+                <%= link_to "Destroy", property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}, :class => "btn btn-xs btn-danger" %>
+              </span>
+              </span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

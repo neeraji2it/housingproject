@@ -9,7 +9,7 @@ en:
       cancel: "Cancel"
       confirm: "Are you sure?"
       destroy: "Delete"
-      new: "New"
+      new: "Add Property"
       edit: "Edit"
     titles:
       edit: "Edit %{model}"

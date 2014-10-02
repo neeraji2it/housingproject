@@ -14,14 +14,9 @@ class HomeController < ApplicationController
     end
   end
   
-   
-  
-  
-  
   def show
     
   end
-  
   
   def land
     if params[:price] == "low"

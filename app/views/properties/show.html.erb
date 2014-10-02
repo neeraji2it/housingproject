@@ -51,7 +51,7 @@
   <dt><strong><%= model_class.human_attribute_name(:land_status) %>:</strong></dt>
   <dd><%= @property.land_status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:document) %>:</strong></dt>
-  <dd> <a href="<%= @property.document.url %>"><b> download attachment</b></a></dd>
+  <dd><a href="<%= @property.document.url %>"><b style="color:#595959;"> download attachment</b></a></dd>
 
   <dt><strong><%= model_class.human_attribute_name(:image)%>:</strong></dt>
   <dd><%= image_tag(@property.images.first.image.url(:original)) %></dd>
