@@ -242,11 +242,6 @@ stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
     </div>           
 
 
-
-
-
-
-
     <div id="dialog" title="Quick Contact">
       <%= form_for :chat, :url => '/chat', :method => 'post', :class => 'form' do |f|   %>
         <%= f.text_field :name, :placeholder => "Name" %><br/>
@@ -313,7 +308,6 @@ stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
   function calcRoute() {
     var origin = new google.maps.LatLng(41.850033, -87.6500523);
     var destination = new google.maps.LatLng(42.850033, -85.6500523);
-    var destination1 = new google.maps.LatLng(45.850033, -82.6500523);
     var request = {
       origin: origin,
       destination: destination,
