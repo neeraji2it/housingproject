@@ -1,21 +1,21 @@
 
 <div id ="property_1">
- 
-    <div class="control-group">
+
+  <div class="control-group">
     <%= f.label :Consultant, :class => 'control-label' %>
     <div class="controls">
       <%= f.select :consultant, options_for_select([["Select" ,""],["Owner","Owner"],["Broker","Broker"]], @property.consultant), :class => 'dropdownvisible'  %>
     </div>
   </div>
-  
-  
+
+
   <div class="control-group">
     <%= f.label :type_of_land, :class => 'control-label' %>
     <div class="controls">
       <%= f.select :type_of_land, options_for_select([["Select" ,""],["Agricultural","Agricultural"],["Residential","Residential"],["Industrial","Industrial"],["Commercial","Commercial"]], @property.type_of_land), :class => 'dropdownvisible'  %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
@@ -47,28 +47,28 @@
     </div>
   </div>
 
-  
-   <%#*<div class="control-group">%>
-    <%#= f.label :state, :class => 'control-label' %>
-    <%#*<div class="controls">%>
-     <%#= f.select :state,options_for_select([["Select" ,""],["Andhrapradesh","Andhrapradesh"],["Karnataka","Karnataka"],["Tamilnadu","Tamilnadu"]], @property.state),:class => 'text_field'   %>
-    <%#*</div>%>
-  <%#*</div>%>  
-  
+
+<%#*<div class="control-group">%>
+<%#= f.label :state, :class => 'control-label' %>
+<%#*<div class="controls">%>
+<%#= f.select :state,options_for_select([["Select" ,""],["Andhrapradesh","Andhrapradesh"],["Karnataka","Karnataka"],["Tamilnadu","Tamilnadu"]], @property.state),:class => 'text_field'   %>
+<%#*</div>%>
+<%#*</div>%>  
+
   <div class="control-group">
     <%= f.label :city, :class => 'control-label' %>
     <div class="controls">
-      <%#= f.text_field :city, :class => 'text_field' %>
-     <%= f.select :city, CITES, {} %>
+<%#= f.text_field :city, :class => 'text_field' %>
+      <%= f.select :city, CITES, {} %>
     </div>
   </div>
-  
-  
+
+
   <div class="control-group">
     <%= f.label :location, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :location, :class => 'text_field' %>
-           </div>
+    </div>
   </div>
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
@@ -76,14 +76,14 @@
       <%= f.text_field :description, :class => 'text_field' %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
-        <div class="controls">
+    <div class="controls">
       <%= f.text_field :name, :class => 'text_field' %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :email, :class => 'control-label' %>
     <div class="controls">
@@ -98,7 +98,7 @@
       <%= f.text_field :mobile, :class => 'text_field',:maxlength =>'10' %>
     </div>
   </div>
-  
+
 </div>
 
 <div id ="property_2">
@@ -111,14 +111,14 @@
       <%= f.select :electricity_type, options_for_select([["Select" ,""],[" 1-Phase Electricity ","1-Phase Electricity "],["2-Phase Electricity ","2-Phase Electricity "],[" 3-Phase Electricity "," 3-Phase Electricity "]], @property.electricity_type),:class => 'text_field'  %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :present_land_status, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :present_land_status, :class => 'text_field' %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :boundary_status, :class => 'control-label' %>
     <div class="controls">
@@ -149,14 +149,14 @@
       <%= f.select :borewell_status, options_for_select([["Select" ,""],["No Borewell","No Borewell"],["Borewell Available","Borewell Available"],["Govt Pipeline Available","Govt Pipeline Available"],["Well Available","Well Available"],["River Borewell","River Borewell"]], @property.borewell_status),:class => 'text_field' %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :land_status, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :land_status, :class => 'text_field'  %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :video_url, :class => 'control-label' %>
     <div class="controls">
@@ -170,10 +170,10 @@
       <%= f.file_field :document, :class => 'text_field' %>
     </div>
   </div>
-  
+
   <div class="control-group">
     <div class="control-group">
-     
+
       <label class="control-label" for="address">
         Upload images
       </label>
@@ -183,7 +183,7 @@
           <%= image.file_field :image %>
           <%= image.link_to_remove image_tag("/assets/remove.png") %>
         <% end %>
-        
+
       </div>
     </div>
     <div class="controls">
@@ -191,6 +191,48 @@
     </div>
   </div>
   
+  <div class="control-group">
+    <%= f.label :airport_lat, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :airport_lat, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :airport_lng, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :airport_lng, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :bus_lat, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bus_lat, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :bus_lng, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bus_lng, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :train_lat, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :train_lat, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :train_lng, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :train_lng, :class => 'text_field' %>
+    </div>
+  </div>
+
 </div>
 <div class="form-actions">
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -200,5 +242,5 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
       properties_path, :class => 'btn btn-primary' %>
   </center> 
-  
+
 </div>

@@ -28,18 +28,43 @@ class HomeController < ApplicationController
       @properties = Property.where(:city => params[:city]).order("location asc")
     elsif params[:price] == "lsdc"
       @properties = Property.where(:city => params[:city]).order("location desc")
-      
     else
       @properties = Property.where(:city => params[:city]).order(:price)
     end
     @city = params[:city]
-    @json = @properties.to_gmaps4rails
+#    @json = @properties.to_gmaps4rails
+    @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
+      marker.lat property.latitude
+      marker.lng property.longitude
+      marker.infowindow "<b>City: </b> #{property.city}<br/> <b>Location: </b>#{ property.location}<br/> <a href='/home/land1?id=#{property.id}' class='btn' target='_blank'>Property</a>".html_safe
+    end
   end
   
   def land1
     @property = Property.find(params[:id])
     @properties = Property.where(:city => @property.city)
-    @json = @property.to_gmaps4rails
+    
+    property = @property.dup
+    
+    property_for_bus = @property.dup
+    property_for_bus.longitude = property_for_bus.bus_lng
+    property_for_bus.latitude = property_for_bus.bus_lat
+    
+    property_for_train = @property.dup
+    property_for_train.longitude = property_for_train.train_lng
+    property_for_train.latitude = property_for_train.train_lat
+    
+    property_for_airport = @property.dup
+    property_for_airport.longitude = property_for_airport.airport_lng
+    property_for_airport.latitude = property_for_airport.airport_lat
+    
+    @managed_property = [ property, property_for_bus, property_for_train, property_for_airport ].compact
+    
+#    @json = @managed_property.to_gmaps4rails
+    @hash = Gmaps4rails.build_markers(@managed_property) do |property, marker|
+      marker.lat property.latitude
+      marker.lng property.longitude
+    end
     @images = Image.where(:property_id =>@property.id)
   end
 
@@ -50,10 +75,6 @@ class HomeController < ApplicationController
       @properties = Property.location(params[:search][:location])
     end
   end
-  
-  
-  
-  
     
   def about_us
   end
@@ -85,6 +106,5 @@ class HomeController < ApplicationController
   def jointventure
     render :layout => false
   end
-
 
 end

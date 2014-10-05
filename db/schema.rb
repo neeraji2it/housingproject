@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001063748) do
+ActiveRecord::Schema.define(version: 20141002124254) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20141001063748) do
     t.string   "location"
     t.text     "description"
     t.string   "name"
+    t.boolean  "gmaps"
     t.string   "email"
     t.string   "mobile"
     t.float    "longitude",             limit: 24
@@ -101,11 +102,16 @@ ActiveRecord::Schema.define(version: 20141001063748) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "gmaps"
     t.float    "latitude",              limit: 24
     t.string   "video_url"
     t.string   "consultant"
     t.string   "state"
+    t.float    "airport_lat",           limit: 24
+    t.float    "airport_lng",           limit: 24
+    t.float    "bus_lat",               limit: 24
+    t.float    "bus_lng",               limit: 24
+    t.float    "train_lat",             limit: 24
+    t.float    "train_lng",             limit: 24
   end
 
   create_table "users", force: true do |t|

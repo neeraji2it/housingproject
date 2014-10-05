@@ -5,32 +5,32 @@
         <li><a href="/home/main_home" title="Home">Home</a><i class="fa fa-chevron-right"></i></li>
         <li><a href='/home/land?lat=<%= @lat %>&lon=<%=@lon%>&city=<%=@property.city %>' title="Mumbai"><%= @property.city %></a><i class="fa fa-chevron-right"></i></li>
         <li><a href="/home/land1?id=<%= @property.id %>" title="Land">land</a><i class="fa fa-chevron-right"></i></li>
-
       </ol>
     </div>
 
     <div class="left-column">
-      <div class="img_map">
-        <%= gmaps({
-            "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 15,
-              "type" => "SATELLITE",              
-              styles: [{
-                  featureType: "transit.station.bus",
-                  elementType: "geometry.fill",
-                  stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
-                }]
-              },
-            "markers" => { :icon=> 'apartment.png',"data" => @json },
-          });
-      %>
-      </div> 
+<%#*<div class="img_map">%>
+<%#= gmaps({
+"map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 15,
+"type" => "SATELLITE",              
+styles: [{
+featureType: "transit.station.bus",
+elementType: "geometry.fill",
+stylers: [{ hue: "#cc6666" }, { lightness: -20 }, { saturation: 50 }]
+}]
+},
+"markers" => { :icon=> 'apartment.png',"data" => @json },
+});
+%>#
+<%#*</div>%> 
 
-
+      <div style='width: 800px;'  class="img_map">
+        <div id="map" style='width:800px; height: 400px;'></div>
+      </div>
     </div>	
 
 
     <div class="right-column">
-
       <div class="box-btn">
         <a href='#' onclick='history.go(-1);
             return false;' class = "btn-login btn_back" ><i class='fa fa-arrow-circle-left'></i>Back</a>
@@ -41,7 +41,7 @@
       </div>   
 
       <div class="land_img">
-        <% if @property.video_url.present? %>
+        <% if !@property.video_url.blank? %>
           <iframe width="385" src="http://www.youtube.com/embed/<%= @property.video_url.split("?v=")[1].split("&")[0].gsub( /(fo+)bar/, '\1baz' ) %>" frameborder="0"></iframe>
         <% else %>
           <%= image_tag("video.jpeg", :width => 385) %> 
@@ -130,16 +130,14 @@
                             <div class="panel panel-default">
                               <div class="panel-heading">
                                 <h4 class="panel-title panal-icon icon_bus">
-
-
-
-
                                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1" title="Bus Station">Bus Station</a>
                                 </h4>
                               </div>
                               <div id="collapse1" class="panel-collapse collapse in">
-                                <div class="panel-body">None found</div>
-
+                                <div class="panel-body">
+                                  <% @distance1 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.bus_lat,@property.bus_lng]).round(3) %>
+                                  <%= @distance1.present? ? ("#{@distance1} miles") : ("None Found") %>
+                                </div>
                               </div>
                               <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -148,7 +146,10 @@
                                   </h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
-                                  <div class="panel-body">None found</div>
+                                  <div class="panel-body">
+                                    <% @distance2 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.train_lat,@property.train_lng]).round(3) %>
+                                    <%= @distance2.present? ? ("#{@distance2} miles") : ("None Found") %>
+                                  </div>
                                 </div>
                               </div>
                               <div class="panel panel-default">
@@ -158,7 +159,10 @@
                                   </h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse">
-                                  <div class="panel-body">None found</div>
+                                  <div class="panel-body">
+                                    <% @distance3 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.airport_lat,@property.airport_lng]).round(3) %>
+                                    <%= @distance3.present? ? ("#{@distance3} miles") : ("None Found") %>
+                                  </div>
                                 </div>
                               </div>
                               <div class="panel panel-default">
@@ -260,11 +264,7 @@
   </br>
   </br>
   </br></br></br></br></br>
-
-
 </body>
-
-
 
 <script>
   $(function() {
@@ -305,3 +305,32 @@
     box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
   }
 </style>
+
+<script type="text/javascript">
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+  var directionsService = new google.maps.DirectionsService();
+
+  function calcRoute() {
+    var origin = new google.maps.LatLng(41.850033, -87.6500523);
+    var destination = new google.maps.LatLng(42.850033, -85.6500523);
+    var destination1 = new google.maps.LatLng(45.850033, -82.6500523);
+    var request = {
+      origin: origin,
+      destination: destination,
+      travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function(response, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
+      }
+    });
+  }
+
+  calcRoute();
+
+  var handler = Gmaps.build('Google');
+  var mapOptions = {mapTypeId: google.maps.MapTypeId.SATELLITE};
+  handler.buildMap({provider: mapOptions, internal: {id: 'map'}}, function() {
+    directionsDisplay.setMap(handler.getMap());
+  });
+</script>

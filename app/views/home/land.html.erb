@@ -20,21 +20,12 @@
           <%= render :partial => "asc_dsc" %>
         </div>
       </div>
-    </div>
-
-    <div class="img_map">
-      <%= gmaps({
-          "map_options" =>  { :container_class => "map_container_renamed", "auto_zoom" => false, "zoom" => 11 ,"type" => "SATELLITE" },
-          "markers" => { "data" => @json }
-
-        });
-    %>
     </div> 
+
+    <div style='width: 800px;'  class="img_map">
+      <div id="map" style='width:800px; height: 400px;'></div>
+    </div>
   </div>
-
-
-
-
 
 
   <div class="clearF"></div>        	
@@ -74,4 +65,24 @@
       }
     });
   }
+</script>
+
+<script type="text/javascript">
+  var locations = <%= raw @hash.to_json %>;
+  var handler = Gmaps.build('Google');
+  handler.buildMap({internal: {id: 'map'}}, function() {
+    markers = handler.addMarkers(
+    locations
+    );
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    var polygons = handler.addPolygons(
+            [
+              locations
+            ],
+            {strokeColor: '#FF0000'}
+    );
+    handler.bounds.extendWith(polygons);
+    handler.fitMapToBounds();
+  });
 </script>
