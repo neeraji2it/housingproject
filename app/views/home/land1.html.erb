@@ -9,12 +9,8 @@
     </div>
 
     <div class="left-column">
-      <%= link_to "airport", land1_home_index_path(:id => params[:id], type: "airport") %>
-      <%= link_to "bus", land1_home_index_path(:id =>params[:id], type: "bus") %>
-      <%= link_to "train", land1_home_index_path(:id => params[:id], type: "train") %>
-
-      <div style='width: 800px;'  class="img_map">
-        <div id="map" style='width:800px; height: 400px;'></div>
+      <div style='width: 912px;'  class="img_map">
+        <div id="map" style='width:912px; height: 590px;'></div>
       </div>
     </div>	
 
@@ -104,6 +100,8 @@
                         </div>
                       </div>
                     </div>
+                      
+                      
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
@@ -121,12 +119,16 @@
                                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1" title="Bus Station">Bus Station</a>
                                 </h4>
                               </div>
+                              
                               <div id="collapse1" class="panel-collapse collapse in">
-                                <div class="panel-body">
+                               <%= link_to land1_home_index_path(:id => params[:id], type: "airport") do %>
+                                <div class="panel-body" id="bus_option">
                                   <% @distance1 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.bus_lat,@property.bus_lng]).round(3) %>
                                   <%= @distance1.present? ? ("#{@distance1} miles") : ("None Found") %>
                                 </div>
+                                <% end %>
                               </div>
+                              
                               <div class="panel panel-default">
                                 <div class="panel-heading">
                                   <h4 class="panel-title panal-icon icon_train">
@@ -134,12 +136,15 @@
                                   </h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
-                                  <div class="panel-body">
+                                  <%= link_to land1_home_index_path(:id => params[:id], type: "bus") do %>
+                                  <div class="panel-body" id="train_option">
                                     <% @distance2 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.train_lat,@property.train_lng]).round(3) %>
                                     <%= @distance2.present? ? ("#{@distance2} miles") : ("None Found") %>
                                   </div>
+                                  <% end %>
                                 </div>
                               </div>
+                              
                               <div class="panel panel-default">
                                 <div class="panel-heading">
                                   <h4 class="panel-title panal-icon icon_ariports">
@@ -147,12 +152,15 @@
                                   </h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse">
-                                  <div class="panel-body">
+                                  <%= link_to land1_home_index_path(:id => params[:id], type: "train") do %>
+                                  <div class="panel-body"  id="airport_option">
                                     <% @distance3 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.airport_lat,@property.airport_lng]).round(3) %>
                                     <%= @distance3.present? ? ("#{@distance3} miles") : ("None Found") %>
                                   </div>
+                                  <% end %>
                                 </div>
                               </div>
+                              
                               <div class="panel panel-default">
                                 <div class="panel-heading">
                                   <h4 class="panel-title panal-icon icon_custom">
