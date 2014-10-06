@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     member do
       get :gallery
       get :image_slide
+      get :map_options
     end
   end
 

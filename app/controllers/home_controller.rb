@@ -106,5 +106,9 @@ class HomeController < ApplicationController
   def jointventure
     render :layout => false
   end
+  
+  def map_options
+    @property = Property.find(params[:id])
+  end
 
 end
