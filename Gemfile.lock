@@ -194,7 +194,7 @@ DEPENDENCIES
   devise
   devise-encryptable
   geocoder
-  gmaps4rails
+  gmaps4rails (= 2.1.1)
   jbuilder (~> 2.0)
   jquery-rails
   less-rails

@@ -59,7 +59,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'geocoder'
 
-gem 'gmaps4rails'
+gem 'gmaps4rails', '2.1.1'
 
 gem 'rvm-capistrano'
 gem 'capistrano-ext'
