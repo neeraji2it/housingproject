@@ -37,16 +37,16 @@
     background-color: #FFF;
     color: #000;
 }
-a#bus_option, a#train_option, a#airport_option:link{
+a#bus_option:link, a#train_option:link, a#airport_option:link{
     background-color: #FFF;
     color: #000;}
 
-a#bus_option, a#train_option, a#airport_option:hover{
+a#bus_option:hover, a#train_option:hover, a#airport_option:hover{
     background-color: #FFF;
     color: #000;}
-a#bus_option, a#train_option, a#airport_option:visited{
+a#bus_option:visited, a#train_option:visited, a#airport_option:visited{
     background-color: #FFF;
     color: #000;}
-a#bus_option, a#train_option, a#airport_option:active{
+a#bus_option:active, a#train_option:active, a#airport_option:active{
     background-color: #FFF;
     color: #000;}
