@@ -36,4 +36,17 @@
 #bus_option, #train_option, #airport_option {
     background-color: #FFF;
     color: #000;
-  }
+}
+a#bus_option, a#train_option, a#airport_option:link{
+    background-color: #FFF;
+    color: #000;}
+
+a#bus_option, a#train_option, a#airport_option:hover{
+    background-color: #FFF;
+    color: #000;}
+a#bus_option, a#train_option, a#airport_option:visited{
+    background-color: #FFF;
+    color: #000;}
+a#bus_option, a#train_option, a#airport_option:active{
+    background-color: #FFF;
+    color: #000;}
