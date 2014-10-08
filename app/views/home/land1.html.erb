@@ -5,6 +5,9 @@
         <li><a href="/home/main_home" title="Home">Home</a><i class="fa fa-chevron-right"></i></li>
         <li><a href='/home/land?lat=<%= @lat %>&lon=<%=@lon%>&city=<%=@property.city %>' title="Mumbai"><%= @property.city %></a><i class="fa fa-chevron-right"></i></li>
         <li><a href="/home/land1?id=<%= @property.id %>" title="Land">land</a><i class="fa fa-chevron-right"></i></li>
+        <li id="dialog_show">
+          <a href="#" title="Land">Quick Contact</a><i class="fa fa-chevron-right"></i>
+        </li>
       </ol>
     </div>
 
@@ -121,7 +124,7 @@
                               </div>
 
                               <div id="collapse1" class="panel-collapse collapse in">
-                                <%= link_to land1_home_index_path(:id => params[:id], type: "airport") do %>
+                                <%= link_to land1_home_index_path(:id => params[:id], type: "bus") do %>
                                   <div class="panel-body" id="bus_option">
                                     <% @distance1 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.bus_lat,@property.bus_lng]).round(3) %>
                                     <%= @distance1.present? ? ("#{@distance1} miles") : ("None Found") %>
@@ -136,7 +139,7 @@
                                   </h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
-                                  <%= link_to land1_home_index_path(:id => params[:id], type: "bus") do %>
+                                  <%= link_to land1_home_index_path(:id => params[:id], type: "train") do %>
                                     <div class="panel-body" id="train_option">
                                       <% @distance2 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.train_lat,@property.train_lng]).round(3) %>
                                       <%= @distance2.present? ? ("#{@distance2} miles") : ("None Found") %>
@@ -152,7 +155,7 @@
                                   </h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse">
-                                  <%= link_to land1_home_index_path(:id => params[:id], type: "train") do %>
+                                  <%= link_to land1_home_index_path(:id => params[:id], type: "airport") do %>
                                     <div class="panel-body"  id="airport_option">
                                       <% @distance3 = Geocoder::Calculations.distance_between([@property.latitude,@property.longitude], [@property.airport_lat,@property.airport_lng]).round(3) %>
                                       <%= @distance3.present? ? ("#{@distance3} miles") : ("None Found") %>
@@ -262,6 +265,7 @@
     $("#dialog").dialog();
   });
 </script>
+
 <script src="/assets/jquery.bxslider.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
@@ -333,4 +337,10 @@
   handler.buildMap({provider: mapOptions, internal: {id: 'map'}}, function() {
     directionsDisplay.setMap(handler.getMap());
   });
+</script>
+
+<script>
+  $(document).on("click", "#dialog_show", function(){
+    $("#dialog").dialog();
+  })
 </script>
