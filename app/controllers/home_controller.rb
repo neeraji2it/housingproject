@@ -36,7 +36,7 @@ class HomeController < ApplicationController
     @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
       marker.lat property.latitude
       marker.lng property.longitude
-      marker.infowindow "<b>City: </b> #{property.city}<br/> <b>Location: </b>#{ property.location}<br/> <a href='/home/land1?id=#{property.id}' class='btn' target='_blank'>Property</a>".html_safe
+      marker.infowindow "<div style='min-width: 220px; min-height: 100px;'> <b>City: </b> #{property.city}<br/> <b>Location: </b>#{ property.location}<br/> <a href='/home/land1?id=#{property.id}' class='btn' target='_blank'>Property</a></div>".html_safe
     end
   end
   
