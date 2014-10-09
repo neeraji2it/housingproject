@@ -69,7 +69,7 @@
 <script type="text/javascript">
   var locations = <%= raw @hash.to_json %>;
   var handler = Gmaps.build('Google');
-  var mapOptions = {mapTypeId: google.maps.MapTypeId.SATELLITE};
+  var mapOptions = {mapTypeId: google.maps.MapTypeId.MAP};
   handler.buildMap({provider: mapOptions, internal: {id: 'map'}}, function() {
     markers = handler.addMarkers(
     locations
