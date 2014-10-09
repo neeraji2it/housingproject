@@ -622,7 +622,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 	/*social icons*/
 	.btn-facebook {
 		position:relative;
-		top:-10px;
+		top:0px;
 	
 		float:left;
   color: #000;
@@ -660,7 +660,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 .btn-twitter {
   color: #000;
   position:relative;
-		top:-10px;
+		top:0px;
 		float:left;
 		
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -698,7 +698,7 @@ a.popwindow:hover{ color:#FFF; text-decoration:none; }
 .btn-google {
 	color: #000;
   position:relative;
-		top:-10px;
+		top:0px;
 		float:left;
  background-color: #c33219; /* fallback color */
 	background: -moz-linear-gradient(top, #e64522, #c33219);

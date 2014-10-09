@@ -6,6 +6,8 @@
     <div class="navbar-collapse collapse">              
    
             <ul id="navigation">
+            
+                <li><%= link_to "HOME",  main_home_home_index_path,:class => 'btn-login' %></li>
         <% if current_user %>
           <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn-login' %></li>
         <% else %>

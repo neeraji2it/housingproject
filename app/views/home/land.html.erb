@@ -9,12 +9,18 @@
 
   <div class="left-column"> 
     <div class="right-column">    
-      <p class="remove-spacing">
-        <button type="button" class="bars-btn"><span> <i class="fa fa-bars"></i></span></button>
-        <span class="text-results"><%= @properties.count %> Results</span>
-      </p>
+    
+      
+       <div class="bars-btn">
+        <center>
+          <span class="text-results">
+            <%= @properties.count %>
+            <b>Results</b>
+          </span>
+        </center>
+      </div>
 
-      <div class="box-result results-collapse contentResult" style='z-index: 1000;'>
+      <div class="box-result results-collapse contentResult" >
         <%= select_tag :price, options_for_select([["Select"],["Sortable Sorted by: Price (Low to High)","low"],["Sortable Sorted by: Price (High to Low)","high"],["Location Ascending Order","lasc"],["Location Desending Order","lsdc"]]),:class => "price-area",:onchange => "show_this(this.value);" %>    
         <div id ="asc_dsc">
           <%= render :partial => "asc_dsc" %>
