@@ -34,19 +34,18 @@
         <tr>
           <td><%=  index + 1%></td>
           <td><%= property.consultant %></td>
-          <td><%= property.type_of_land.capitalize %></td>
-          <td><%= property.title.capitalize %></td>
+          <td><%= property.type_of_land.titleize %></td>
+          <td><%= property.title.titleize %></td>
           <td><%= property.price %></td>
           <td><%= property.rate %></td>
           <td><%= property.area %></td>
           <td><%= property.person_type %></td>
-          <td><%= property.city.capitalize %></td>
-          <td><%= property.location.capitalize %></td>
-          <td><%= property.description.capitalize %></td>
-          <td><%= property.name.capitalize %></td>
+          <td><%= property.city.titleize %></td>
+          <td><%= property.location.titleize %></td>
+          <td><%= property.description.titleize %></td>
+          <td><%= property.name.titleize %></td>
           <td><%= property.email %></td>
           <td><%= property.mobile %></td>
-
           <td>
             <span>
               <span>
@@ -57,7 +56,6 @@
               <span>
                  <%= link_to "Edit", edit_property_path(property), :class => 'btn btn-xs btn-primary' %> <br/><br/>
               </span>
-
               <span>
                 <%= link_to "Destroy", property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}, :class => "btn btn-xs btn-danger" %>
               </span>

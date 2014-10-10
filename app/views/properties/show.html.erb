@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:type_of_land) %>:</strong></dt>
   <dd><%= @property.type_of_land %></dd>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @property.title.capitalize %></dd>
+  <dd><%= @property.title.titleize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @property.price %></dd>
   <dt><strong><%= model_class.human_attribute_name(:rate) %>:</strong></dt>
@@ -21,9 +21,9 @@
   <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
   <dd><%= @property.city %></dd>
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
-  <dd><%= @property.location.capitalize %></dd>
+  <dd><%= @property.location.titleize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @property.description.capitalize %></dd>
+  <dd><%= @property.description.titleize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @property.name.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
