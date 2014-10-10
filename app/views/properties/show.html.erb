@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:type_of_land) %>:</strong></dt>
   <dd><%= @property.type_of_land %></dd>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @property.title %></dd>
+  <dd><%= @property.title.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @property.price %></dd>
   <dt><strong><%= model_class.human_attribute_name(:rate) %>:</strong></dt>
@@ -21,11 +21,11 @@
   <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
   <dd><%= @property.city %></dd>
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
-  <dd><%= @property.location %></dd>
+  <dd><%= @property.location.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @property.description %></dd>
+  <dd><%= @property.description.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @property.name %></dd>
+  <dd><%= @property.name.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
   <dd><%= @property.email %></dd>
   <dt><strong><%= model_class.human_attribute_name(:mobile) %>:</strong></dt>
@@ -37,7 +37,7 @@
   <dt><strong><%= model_class.human_attribute_name(:electricity_type) %>:</strong></dt>
   <dd><%= @property.electricity_type %></dd>
   <dt><strong><%= model_class.human_attribute_name(:present_land_status) %>:</strong></dt>
-  <dd><%= @property.present_land_status %></dd>
+  <dd><%= @property.present_land_status.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:boundary_status) %>:</strong></dt>
   <dd><%= @property.boundary_status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:drainage_status) %>:</strong></dt>
@@ -49,10 +49,9 @@
   <dt><strong><%= model_class.human_attribute_name(:borewell_status) %>:</strong></dt>
   <dd><%= @property.borewell_status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:land_status) %>:</strong></dt>
-  <dd><%= @property.land_status %></dd>
+  <dd><%= @property.land_status.capitalize %></dd>
   <dt><strong><%= model_class.human_attribute_name(:document) %>:</strong></dt>
   <dd><a href="<%= @property.document.url %>"><b style="color:#595959;"> download attachment</b></a></dd>
-
   <dt><strong><%= model_class.human_attribute_name(:image)%>:</strong></dt>
   <dd><%= image_tag(@property.images.first.image.url(:original)) %></dd>
 </dl>

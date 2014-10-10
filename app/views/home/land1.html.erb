@@ -85,7 +85,7 @@
 
                     <%= link_to image_tag(@property.images.first.image.url(:original)),  image_slide_home_path(@property ) %>
                     <h3>Description</h3>
-                    <%= @property.description %>
+                    <%= @property.description.titleize %>
 
                     <i class="fa fa-bolt"></i> <%= @property.electricity_type %> </div>
                   <%if @property.present_land_status.scan(/no/) == ["no"] %> 
@@ -175,7 +175,7 @@
                                     <h3>Nearby Properties</h3>
                                     <ul>
                                       <% for property in @property.nearbys(100) %>
-                                        <li><%= property.address %> (<%= property.distance.round(2) %> miles)</li>
+                                        <li><%= property.address.titleize %> (<%= property.distance.round(2) %> miles)</li>
                                       <% end %>
                                     </ul> 
                                   </div>
