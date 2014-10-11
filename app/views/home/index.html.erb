@@ -1,7 +1,12 @@
 <div class="home-bnr">
   <div class="container">
     <div class="content-banner">
-      <h1>Choose A State to Explore</h1>
+       <% if params[:state].present? %>
+      <h1>Choose A City to Explore</h1>
+      <%else%>
+        <h1>Choose A State to Explore</h1>
+    
+      <% end %>
     </div>
     <div class="box-city">
                
@@ -23,9 +28,9 @@
               <div class="ch-item">
                 <div class="ch-info">
                   <div class="ch-info-front">
-                    <h3><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1]), :style => 'color: white;font-size: 14px;' %></h3>
+                    <h3><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2], :type => params[:type]) : home_index_path(:state => name[1], :type => params[:type]), :style => 'color: white;font-size: 14px;' %></h3>
                   </div>
-                  <div class="ch-info-back <%= params[:state] %> ch-img-<%= index+1 %>" onclick="javascript: location.href = <%= "'#{params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2]) : home_index_path(:state => name[1])}'" %>">
+                  <div class="ch-info-back <%= params[:state] %> ch-img-<%= index+1 %>" onclick="javascript: location.href = <%= "'#{params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2], :type => params[:type]) : home_index_path(:state => name[1], :type => params[:type])}'" %>">
                   </div>
                 </div>
               </div>
@@ -35,14 +40,38 @@
       </div>
       
       <div class="clearF"></div>
-      <p><a href="#" class="btn-login btn-more-cities">More Cities</a> </p>
+      <% if params[:state].present? %>
+       <p><a href="#" class="btn-login btn-more-cities">More Cities</a> </p>
+      <% else %>
+       <%#*<p><a href="#" class="btn-login btn-more-cities">More States</a> </p>%>
+      <% end %>
     </div>
   </div>
 </div>
 
   <div class="container">
-      <h1>Housing Experience</h1>
-      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>            
+    <% if params[:type]== "agriculture" %>
+      <h1>Agriculture Land Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+      <% elsif params[:type]== "farm" %>
+      <h1>Farm Land Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+       <% elsif params[:type]== "commercial" %>
+      <h1>Commercial Land Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+       <% elsif params[:type]== "industrial" %>
+      <h1>Industrial Land Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+       <% elsif params[:type]== "barren" %>
+      <h1>BarrenLand Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+       <% elsif params[:type]== "residential" %>
+      <h1>Residential Land Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+       <% elsif params[:type]== "jointventure" %>
+      <h1>joint venture Experience</h1>
+      <p>SVR Farms is a Real Estate Portal Which allows You to Search for Lands, Commercial Lands, Agriculture Lands,  Apartments for Sale. Take Virtual Tours of each Room in the flat using the Photographs We have meticulously Collected.</p>     
+      <%end%>
   </div>
 
   <div class="clearF"></div><br/><br/><br/><br/>
