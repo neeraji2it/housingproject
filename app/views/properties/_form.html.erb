@@ -12,7 +12,7 @@
   <div class="control-group">
     <%= f.label :type_of_land, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :type_of_land, options_for_select([["Select" ,""],["Agricultural","Agricultural"],["Residential","Residential"],["Industrial","Industrial"],["Commercial","Commercial"]], @property.type_of_land), :class => 'dropdownvisible'  %>
+      <%= f.select :type_of_land, options_for_select([["Select" ,""],["Agricultural","Agricultural"],["Residential","Residential"],["Industrial","Industrial"],["Commercial","Commercial"],["FarmLand","FarmLand"],["BarrenLand","BarrenLand"]], @property.type_of_land), :class => 'dropdownvisible'  %>
     </div>
   </div>
 

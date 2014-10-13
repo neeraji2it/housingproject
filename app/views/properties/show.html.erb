@@ -58,9 +58,9 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-    properties_path, :class => 'btn'  %>
+    main_home_home_index_path, :class => 'btn btn-success'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-    edit_property_path(@property), :class => 'btn' %>
+    edit_property_path(@property), :class => 'btn btn-primary' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
     property_path(@property),
     :method => 'delete',
