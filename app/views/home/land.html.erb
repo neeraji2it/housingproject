@@ -21,7 +21,7 @@
       </div>
 
       <div class="box-result results-collapse contentResult" >
-        <%= select_tag :price, options_for_select([["Select"],["Sortable Sorted by: Price (Low to High)","low"],["Sortable Sorted by: Price (High to Low)","high"],["Location Ascending Order","lasc"],["Location Desending Order","lsdc"]]),:class => "price-area",:onchange => "show_this(this.value);" %>    
+        <%= select_tag :price, options_for_select([["Select"],["Sortable Sorted by: Price (Low to High)","low"],["Sortable Sorted by: Price (High to Low)","high"],["Location Ascending Order","lasc"],["Location Descending Order","lsdc"]]),:class => "price-area",:onchange => "show_this(this.value);" %>    
         <div id ="asc_dsc">
           <%= render :partial => "asc_dsc" %>
         </div>

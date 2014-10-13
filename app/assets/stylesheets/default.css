@@ -241,7 +241,7 @@ html body ul#navigation li a.btn-login, .btn-login, input[type="submit"].btn-sen
 }
 .btn_back { padding: 2px 7px; text-align: center; text-transform: none; }
 .btn-login fa fa-chevron-right { padding-left: 0px; }
-input[type="submit"].btn-send { margin: 0px; font-size: 12px; text-transform: none; padding: 2px 23px; font-family: Tahoma, Geneva, sans-serif; }
+input[type="submit"].btn-send { margin: 0px; font-size: 12px; text-transform: none; padding: 1px 23px; width: 89px; height: 27px; font-family: Tahoma, Geneva, sans-serif; }
 input[type="submit"].btn-send:hover { color: #3e3e3e; }
 a.btn-close { text-transform: none; font-size: 12px; padding: 5px 23px; }
 .btn-more-cities { padding: 6px 25px; border: 1px solid rgba(0, 0, 0, 0.3); font-size: 14px; font-family: "Open Sans", Tahoma, Arial; letter-spacing: 1px; border-radius: 10px; margin-left: 15px; }

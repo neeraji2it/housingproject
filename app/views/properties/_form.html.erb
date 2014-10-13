@@ -238,9 +238,21 @@
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   <center>
-    <%= f.submit :style=>"margin-left:90px; background-color: #3BAAF5; font-size: 12px; border-radius: 5px;" %>
+    <%= f.submit :class => "btncreate" %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-      properties_path, :class => 'btn btn-primary' %>
+      properties_path, :class => "btn btncreate" %>
   </center> 
 
 </div>
+
+<style>
+  .btncreate {
+    background-color: #2d6ca2 !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+    height: 33px !important;
+    margin-left: 90px !important;
+    width: 137px !important;
+    margin-right: -86px;
+  }
+</style>

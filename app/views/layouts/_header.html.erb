@@ -9,10 +9,10 @@
             
                 <li><%= link_to "HOME",  main_home_home_index_path,:class => 'btn-login' %></li>
         <% if current_user %>
-          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn-login' %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn-login' %></li>
         <% else %>
           <li><%= link_to "LOGIN", new_user_session_path,:class => 'btn-login' %></li>
-          <li><%= link_to "SIGNUP", new_user_registration_path,:class =>'btn-login' %> </li>
+          <li><%= link_to "SIGN UP", new_user_registration_path,:class =>'btn-login' %> </li>
         <% end %>
       </ul>  
     </div>                  
