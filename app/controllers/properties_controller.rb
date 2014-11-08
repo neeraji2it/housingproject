@@ -4,7 +4,9 @@ class PropertiesController < ApplicationController
    before_action :set_property, only: [:show, :edit, :update, :destroy]
  
   def index
-   @properties = Property.all
+  # @properties = Property.all
+   @properties = Property.all.page(params[:page]).per(10)
+   #     @properties = Property.all.paginate(page: params[:page], per_page: 5)
   end
  
   def show
