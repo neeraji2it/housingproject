@@ -4,12 +4,16 @@ Rails.application.routes.draw do
   #get 'requirements/new'
 
   devise_for :admins
+
+  
+  devise_for :users,:controllers => {:registrations => 'users'}
+
   resources :uploads
 
   resources :properties
 
 
-  devise_for :users
+#  devise_for :users
   resources :home do
     collection do
       get :home1

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
  # protect_from_forgery with: :exception
   layout :admin_layout
-  
+  before_filter :admin_login
   def after_sign_in_path_for(resource_or_scope)
    if current_admin
       properties_path
@@ -23,6 +23,14 @@ end
        return 'application'
      end
    end
+   
+   def admin_login
+   if !current_admin && params[:controller] == "devise/registrations"
+   
+   redirect_to new_admin_session_path
+   end
+   end
+   
    
    def admin_login_required
      unless current_admin
