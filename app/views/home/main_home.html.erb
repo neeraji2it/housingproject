@@ -131,7 +131,7 @@
             </div>
           </div>
 
-<%#= stylesheet_link_tag 'default.css' %>
+
 
 
           <div class="clearF"></div>
@@ -155,7 +155,24 @@
               </tr>
             </table>
           </center>  
-        </div>        
+        </div>  
+      
+      
+   <center>
+  <%= device_test%>
+  
+  <% for_device_type :desktop do %>
+  <h2>Desktop app</h2>
+  <% end %>
+  
+   <% for_device_type :mobile do %>
+  <h2>Mobile app</h2>
+  <% end %>
+
+</center>
+      
+      
+      
         <div class="copyright">
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <p  style="color: white;">&copy; Copyright 2013. All Rights Reserved.</p>

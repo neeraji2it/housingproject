@@ -24,6 +24,9 @@ gem "kaminari"
 
 gem 'google-analytics-rails'
 
+gem 'mobvious'
+gem 'mobvious-rails'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

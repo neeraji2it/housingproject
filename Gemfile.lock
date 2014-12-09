@@ -97,6 +97,13 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.4.0)
+    mobileesp_converted (0.2.3)
+    mobvious (0.3.2)
+      mobileesp_converted (~> 0.2.0)
+      rack (>= 1.1.0)
+    mobvious-rails (0.1.2)
+      activesupport
+      mobvious
     multi_json (1.10.1)
     mysql2 (0.3.16)
     nested_form (0.3.2)
@@ -212,6 +219,8 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
+  mobvious
+  mobvious-rails
   mysql2
   nested_form
   nifty-generators

@@ -101,6 +101,8 @@ class HomeController < ApplicationController
   
     def main_home
       render :layout => false
+      @device = request.env['mobvious.device_type']
+      
     end
   
   
