@@ -3,7 +3,9 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
+<% if device_type == :desktop %>
+  
+  
   <head>
     <meta charset="utf-8">
     <title>Welcome To SVR Group	</title>
@@ -21,6 +23,16 @@
 
   <body data-spy="scroll" data-target=".main-nav" data-offset="70">
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="mt-sidebar"> 
       <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
       <nav class="main-nav"></nav>      
@@ -161,13 +173,7 @@
    <center>
   <%= device_test%>
   
-  <% for_device_type :desktop do %>
-  <h2>Desktop app</h2>
-  <% end %>
-  
-   <% for_device_type :mobile do %>
-  <h2>Mobile app</h2>
-  <% end %>
+
 
 </center>
       
@@ -315,5 +321,27 @@
       padding:10px;
     }
   </style>
+  
+ 
+  
+  
+  
+  
+  
+  
 </body>
+
+
+
+
+ <% else %>
+<h2> Mobile</h2>
+
+<%end%>
+
+  
+  
+  
+
+
 </html>
