@@ -80,6 +80,18 @@ class HomeController < ApplicationController
   def about_us
   end
   
+  def aboutus_mobile
+    render :layout => false
+  end
+  
+  def services_mobile
+    render :layout => false
+  end
+  
+  def contactus_mobile
+    render :layout => false
+     end
+  
   def privacy_policy
   end
   

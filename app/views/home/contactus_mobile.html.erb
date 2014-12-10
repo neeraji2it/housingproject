@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+	<head>
+    
+    
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        
+        
+        <link rel="stylesheet" href="/assets/device.css"/>
+        
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        
+        
+		<title>SVR FARMS - Contact Us</title>
+        
+        
+           <script src="/assets/jquery.min.js"></script>
+        
+        
+		<script>
+	
+	
+			$(function() {
+			
+			
+			 	var pull 		= $('#pull');
+			 
+			 
+				var	menu 		= $('nav ul');
+			
+
+				$(pull).on('click', function(e) {
+				
+				
+					e.preventDefault();
+				
+				
+					menu.slideToggle();
+				
+				
+				});
+
+
+				$(window).resize(function(){
+				
+				
+        			var w = $(window).width();
+				
+				
+        			if(w > 320 && menu.is(':hidden')) {
+					
+					
+        				menu.removeAttr('style');
+					
+					
+        			}
+				
+				
+    			});
+			
+			
+			});
+		
+		
+	</script>
+    <script
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+    <style>
+			
+			
+                body{
+					
+                        /*background:url(images/bgh.png) no-repeat;
+						
+						
+                        background-size:100% 100%;*/	
+						
+                        
+                    }
+					
+					
+            </style>
+	</head>
+
+	<body>
+    	
+        	
+		<div class="container">
+        
+        
+			<nav class="clearfix">
+    
+    
+				<ul class="clearfix">
+        	
+        
+					<li><a href="#">Menu1</a></li>
+            
+            
+					<li><a href="#">Menu2</a></li>
+            
+            
+					<li><a href="#">Menu3</a></li>
+            
+            
+					<li><a href="#">Menu4</a></li>
+            
+            
+					<li><a href="#">Menu5</a></li>
+            
+            
+					<li><a href="#">Menu6</a></li>	
+            
+            
+				</ul>
+        
+        
+				<a href="#" id="pull">SVR FARMS</a>
+        
+        		</nav>
+      	<div class="text-mobile">
+                <h1>Contact Us</h1>
+                <div class="half-width">
+                	<h2>Get in Touch</h2>
+                    <form name="contact" id="contact">
+                            <input type="text" placeholder="Name" id="name" name="name" />
+                            <input type="email" placeholder="Email" id="email" name="email" />
+                            <input type="text" placeholder="Subject" id="subject" name="subject" />
+                            
+                            <textarea placeholder="Message" name="msg" id="msg"></textarea>
+                            <button type="submit" name="submit">Send</button>
+                    </form>
+                      <h2 style="font-size: 100%;
+margin-top: 29%;
+color:#363;
+font-weight: bold;">SVR GROUP Developers and Builders</h2>
+                      
+<p style="color:#000;text-align:center">
+#1063,22nd 'B' main,22nd Cross, 2nd Sector<br />
+HSR Layout,Bangalore 560102,Karnataka,India.<br />
+www.svrgroups.co.in<br />
+Ph:91-9845959397</p>
+                </div>
+              
+              
+      <div class="half-width">
+       <div id="googleMap" class="map1"  style="width:100%;height:500px;top: 0;"></div>
+</div>
+      
+     
+          </div>
+
+   
+        <div class="property-btn">
+              <hr />
+                
+                            <span style="padding:10px;">Got a Property? list for Free</span>
+                            
+                            
+                            <br />
+                            
+                            
+                          <a href="/properties/new" class="property-select">
+                            
+                            
+                                <button>List your Property</button>
+                                
+                                
+                            </a>
+                            
+        		
+            </div>
+       
+       
+       
+       
+       
+       		<footer>
+            
+            
+               
+          
+                
+
+                	<ol>
+                    
+                    
+	<li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
+                        
+                        
+                        <li><a href="/home/services_mobile">Services</a></li>
+                        
+                        
+                          <li><a href="/home/contactus_mobile">Contact us</a> </li>
+                        
+                        
+                         <li><a href="">Privacy Policy</a> </li>
+                        
+                        
+                    </ol>
+                
+            
+        	</footer>
+            
+            
+            <div class="copyright">
+            
+           		 Copyright 2014. All Rights Reserved.
+                                  
+            </div>
+	</div>
+      <script>
+  var myCenter = new google.maps.LatLng(12.908633, 77.647517);
+  function initialize()
+  {
+    var mapProp = {
+      center: myCenter,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+    var marker = new google.maps.Marker({
+     
+      position: myCenter,
+      title: 'SVR GROUP Developers and Builders'
+     
+    });
+
+    marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+ </body>
+</html>
