@@ -169,13 +169,7 @@
           </center>  
         </div>  
       
-      
-   <center>
-  <%= device_test%>
-  
 
-
-</center>
       
       
       
@@ -332,10 +326,284 @@
 </body>
 
 
+ <% else %> 
+
+<head>
+    
+    
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        
+        
+        <link rel="stylesheet" href="/assets/device.css">
+      
+        
+           
+        
+        
+		<title>SVR FARMS - HOUSING</title>	
+            <script type='text/javascript' src='/assets/sitepress-multilingual-cms/res/js/sitepress.js'></script>
+
+        
+        <script  type='text/javascript' src="/assets/jquery.min.js"></script>
+        
+        
+		<script>
+	
+	
+			$(function() {
+			
+			
+			 	var pull 		= $('#pull');
+			 
+			 
+				var	menu 		= $('nav ul');
+			
+
+				$(pull).on('click', function(e) {
+				
+				
+					e.preventDefault();
+				
+				
+					menu.slideToggle();
+				
+				
+				});
 
 
- <% else %>
-<h2> Mobile</h2>
+				$(window).resize(function(){
+				
+				
+        			var w = $(window).width();
+				
+				
+        			if(w > 320 && menu.is(':hidden')) {
+					
+					
+        				menu.removeAttr('style');
+					
+					
+        			}
+				
+				
+    			});
+			
+			
+			});
+		
+		
+	</script>
+    
+    
+	</head>
+
+	<body>
+    	
+        	
+		<div class="container">
+        
+        
+			<nav class="clearfix">
+    
+    
+				<ul class="clearfix">
+        
+        
+					<li><a href="index.html">Home</a></li>
+            
+            
+					<li><a href="login.html">Login</a></li>
+            
+            
+					<li><a href="signup.html">Sign UP</a></li>
+            
+            
+					<li><a href="">Menu4</a></li>
+            
+            
+					<li><a href="#">Menu5</a></li>
+            
+            
+					<li><a href="#">Menu6</a></li>	
+           
+            
+				</ul>
+        
+        
+				<a href="#" id="pull">SVR FARMS</a>
+        
+        
+			</nav>
+            
+            
+        <h1>Real Photos, Real Locations</h1>
+        
+        
+        	<div class="fluid1">
+            
+            
+           		 <a href="states.html">
+            
+                        <img src="/assets/agreeculture.jpg">
+                        
+                        
+                        <h2>Agriculture Lands</h2>
+                
+              	 </a>
+                 
+                 
+            </div>
+            
+            
+            <div class="fluid2">
+            
+            
+           		  <a href="states.html">
+           
+           
+                        <img src="/assets/farm-land.jpg">
+                        
+                        
+                        <h2>Farm Lands</h2>
+                    
+               	   </a>
+                   
+                   
+            </div>
+            
+            
+            <div class="fluid1">
+            
+            
+            	 <a href="states.html">
+    
+                        <img  src="/assets/commercial.jpg">
+                        
+               
+                        <h2>Commercial Lands</h2>
+                    
+             	 </a>
+                 
+                 
+            </div>
+            
+            
+            <div class="fluid2">
+            
+            
+               <a href="states.html">
+                
+                                        <img src="assets/industrial-land1.jpg">
+                        
+                        
+                         <h2>Industrial Lands</h2>
+                         
+                </a>
+                
+                
+            </div>
+            
+            
+             <div class="fluid1">
+          
+          
+                 <a href="states.html">
+                 
+                 
+                        <img   src="/assets/residential.jpg">
+                        
+                        
+                        <h2>Residential Lands</h2>
+                        
+                   </a>
+                                 
+            </div> 
+            
+            
+            <div class="fluid2">
+            
+            
+                <a href="states.html">
+                
+                
+                        <img  src="/assets/barren-land.jpg">
+                        
+                        
+                        <h2>Barren Lands</h2>
+                        
+                        
+                  </a>
+              
+              
+            </div>
+            
+            
+            <div class="property-btn">
+            
+                
+                            <span style="padding:10px;">Got a Property? list for Free</span>
+                            
+                            
+                            <br />
+                            
+                            
+                            <a href="list-property.html">
+                            
+                            
+                                <button>List your Property</button>
+                                
+                                
+                            </a>
+                            
+        		
+            </div>
+       
+       
+       		<footer>
+            
+            
+          
+                
+
+                	<ol>
+                    
+                    
+                    	<li><a href="about-us.html">About Us</a> </li>
+                        
+                        
+                        <li><a href="services.html">Services</a></li>
+                        
+                        
+                          <li><a href="contact-us.html">Contact us</a> </li>
+                        
+                        
+                         <li><a href="">Privacy Policy</a> </li>
+                        
+                        
+                    </ol>
+                    
+                    
+
+                
+            
+        	</footer>
+            
+            
+            <div class="copyright">
+            
+           		 Copyright 2014. All Rights Reserved.
+                 
+                 
+            </div>
+            
+            
+	</div>
+        
+        
+</body>
 
 <%end%>
 

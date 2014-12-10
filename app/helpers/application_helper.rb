@@ -1,15 +1,10 @@
 module ApplicationHelper
- include Mobvious::Rails::Helper
+  include Mobvious::Rails::Helper
 
   
-def device_test
-  no_device = "What!? That's nil "
-  if @device.nil?
-    no_device
-  else
+  def device_test
     "#{@device}"
-  end
-end  
+  end  
   
     
   
