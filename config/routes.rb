@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       get :aboutus_mobile
       get :services_mobile
       get :contactus_mobile
+     
       get :privacy_policy
       get :help
       get :requirement_mobile
