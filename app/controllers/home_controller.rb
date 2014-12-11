@@ -90,7 +90,12 @@ class HomeController < ApplicationController
   
   def contactus_mobile
     render :layout => false
-     end
+  end
+  
+  def requirement_mobile
+    render :layout => false
+  end
+    
   
   def privacy_policy
   end
