@@ -27,7 +27,7 @@ Rails.application.routes.draw do
      
       get :privacy_policy
       get :help
-      get :requirement_mobile
+   
       get :location_search
       get :main_home
       get :jointventure

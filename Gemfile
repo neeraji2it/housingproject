@@ -42,7 +42,7 @@ gem 'nifty-generators'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-
+gem 'bxslider-rails'
 
 # better rails console
 gem 'pry-rails'

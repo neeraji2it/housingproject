@@ -262,8 +262,10 @@ h1{font:100%/1.5em Arial, Helvetica, sans-serif bold; text-align:center}
 	
 	div a { text-decoration:none}
 .city1 img	{
-		max-width:100%;
-		height:auto;
+		width: 140px;
+                
+                height: 140px;
+	
 		border-radius: 50%;
 	}
 
