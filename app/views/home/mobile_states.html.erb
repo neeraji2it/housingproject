@@ -1,73 +1,55 @@
-<!DOCTYPE html>
-
 	<head>
-    
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-          
-        <link rel="stylesheet" href="/assets/device.css">
-      
-		<title>SVR FARMS - List Your Property</title>
-    
-        <script src="/assets/jquery.min.js"></script>
-        
-		<script>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+          <link rel="stylesheet" href="/assets/device.css">
+          <title>SVR FARMS - List Your Property</title>
+            <script src="/assets/jquery.min.js"></script>
+                <script>
 
-			$(function() {
+                $(function() {
 			
-			 	var pull 		= $('#pull');
+                        var pull 		= $('#pull');
 			 
-				var	menu 		= $('nav ul');
+                        var	menu 		= $('nav ul');
 			
-				$(pull).on('click', function(e) {
+                        $(pull).on('click', function(e) {
 				
-					e.preventDefault();
+                                e.preventDefault();
 				
-					menu.slideToggle();
+                                menu.slideToggle();
 				
-				});
+            });
 
-				$(window).resize(function(){
-				
-        			var w = $(window).width();
-				
-        			if(w > 320 && menu.is(':hidden')) {
-					
-        				menu.removeAttr('style');
-					
-        			}
-				
-    			});
-			
-			});
-		
-	</script>
+            $(window).resize(function() {
+
+              var w = $(window).width();
+
+              if (w > 320 && menu.is(':hidden')) {
+
+                menu.removeAttr('style');
+
+              }
+
+            });
+
+          });
+
+        </script>
     
 	</head>
 	<body style=" background:url(/assets/mobbgh.jpg) no-repeat; background-size:1200px 100%">
     	
 		<div class="container">
         
-			<nav class="clearfix">
-    
-    <a href="#" id="pull">SVR FARMS</a>
-    		<ul class="clearfix">
-               
-					<li><a href="/home/main_home">Home</a></li>
-                       
-					<li><a href="/home/aboutus_mobile">About Us</a></li>
-                       
-					<li><a href="/home/services_mobile">Services</a></li>
-                        
-					<li><a href="/contactus/new">Contact Us</a></li>
-            
-  	
-           
-            
-				</ul>
-        
-			</nav>
+                  <nav class="clearfix">
+                    <a href="#" id="pull">SVR FARMS</a>
+                    <ul class="clearfix">
+                      <li><a href="/home/main_home">Home</a></li>
+                      <li><a href="/home/aboutus_mobile">About Us</a></li>
+                      <li><a href="/home/services_mobile">Services</a></li>
+                      <li><a href="/contactus/new">Contact Us</a></li>
+                    </ul>
+                  </nav>
         
      <h1>Choose a State to Explore</h1>   
      
@@ -87,7 +69,7 @@
         
              <div class="col-states">
              
-                <a href="cities-ka.html">
+                <a href="/home/cities_ka">
                 
                     <img  src="/assets/img-city3.png" />
                     
@@ -99,7 +81,7 @@
         
             <div class="col-states">
             
-                <a href="cities-ap.html">
+              <a href="/home/cities_ap">
                 
                     <img  src="/assets/img-city4.png" />
                     
@@ -111,46 +93,33 @@
             
       </div>
       
-      <div class="property-btn">
+     <div class="property-btn">
+
+       <span style="padding:10px;">Got a Property? list for Free</span>
+
+       <br />
+
+       <a href="/properties/new" class="property-select">
+
+         <button>List your Property</button>
+
+
+       </a>
+
+     </div>
+
+     <footer>
+       <ol>
+         <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
+         <li><a href="/home/services_mobile">Services</a></li>
+         <li><a href="/contactus/new">Contact us</a> </li>
+         <li><a href="">Privacy Policy</a> </li>
+       </ol>
+     </footer>
             
-                            <span style="padding:10px;">Got a Property? list for Free</span>
-                            
-                            <br />
-                            
-                                <a href="/properties/new" class="property-select">
-                            
-                                <button>List your Property</button>
-                                
-                                
-                            </a>
-        		
-      </div>
-      
-       		<footer>
-                       
-                	<ol>
-                    
-                    
-                    	<li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
-                        
-                        
-                        <li><a href="/home/services_mobile">Services</a></li>
-                        
-                  
-                         <li><a href="home/contactus_mobile">Contact us</a> </li>
-                        
-                         <li><a href="">Privacy Policy</a> </li>
-                        
-                        
-                    </ol>
-            
-        	</footer>
-            
-            <div class="copyright">
-            
-           		 Copyright 2014. All Rights Reserved.
-            
-            </div>
+     <div class="copyright">
+       Copyright 2014. All Rights Reserved.
+     </div>
         
 		</div>
 

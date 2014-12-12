@@ -102,6 +102,17 @@ class HomeController < ApplicationController
     render :layout => false
   end
   
+  
+    def cities_ap
+    render :layout => false
+  end
+  
+   def cities_ka
+    render :layout => false
+  end
+  
+    
+    
   def privacy_policy
   end
   

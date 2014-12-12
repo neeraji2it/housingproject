@@ -1,35 +1,59 @@
+
 <head>
+
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
   <link rel="stylesheet" href="/assets/device.css"/>
-  <title>SVR FARMS - TN-Cities</title>
+
+
+  <title>SVR FARMS - KA-Cities</title>
+
+
   <script src="/assets/jquery.min.js"></script>
+
   <script>
+
 
     $(function() {
 
+
       var pull = $('#pull');
+
 
       var menu = $('nav ul');
 
+
       $(pull).on('click', function(e) {
 
+
         e.preventDefault();
+
 
         menu.slideToggle();
 
 
       });
 
+
       $(window).resize(function() {
+
 
         var w = $(window).width();
 
+
         if (w > 320 && menu.is(':hidden')) {
+
 
           menu.removeAttr('style');
 
+
         }
+
 
       });
 
@@ -39,12 +63,15 @@
 
   </script>
 
+
   <style>
 
 
     body{
 
       background:url(/assets/mobbgh.jpg) no-repeat;
+
+
       background-size:1200px 100%;
 
 
@@ -59,10 +86,7 @@
 
 <body>
 
-
   <div class="container">
-
-
     <nav class="clearfix">
       <a href="#" id="pull">SVR FARMS</a>
       <ul class="clearfix">
@@ -74,127 +98,17 @@
 
         <li><a href="/contactus/new">Contact Us</a></li>
       </ul>
-
-   </nav>
-
-
+    </nav>
     <br />
-
-
     <h1>Choose a City to Explore</h1>   <br />
-
-
-    <div class="city1">
-
-
-      <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img-city5.png"  />
-
-
-        <h2>Chennai</h2>
-
-
-      </a>
-
-
-    </div>
-
-    <div class="city1">
-
-
-      <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img-city8.png"  />
-
-
-        <h2>Hosur</h2>
-
-
-      </a>
-
-
-    </div>
-
-
-    <div class="city1">
-
-
-      <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img/denkanikottai.jpeg"/>
-
-
-        <h2>Denkanikottai</h2>
-
-
-      </a>
-
-
-    </div>
-
-    <div class="city1" >
-
-
-      <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img/thally.jpg"/>
-
-
-        <h2>Thally</h2>
-
-
-      </a>
-
-
-    </div>
-
-    <div class="city1">
-
-
-      <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img/bagalur.jpg" />
-
-
-        <h2>Begalur</h2>
-
-
-      </a>
-
-
-    </div>
-
-
-    <div class="city1">
-
-
-      <a href="<%=land_home_index_path%>">
-
-        <img src="/assets/img/kela.jpeg"/>
-
-        <h2>Kelamangalam</h2>
-
-
-      </a>
-
-
-    </div>
-
-
-    <div class="city1" >
-      <a href="<%=land_home_index_path%>">
-        <img  src="/assets/img/shoolagiri.jpg"/>
-        <h2>Shoolagiri</h2>
-      </a>	
-    </div>
-
-
+    <% @cities = params[:state] == 'KA' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.3106457","76.6356898"],["Coorg","12.300","75.9293"],["Chikkaballpur","13.43","77.72"],["Gauribidanur","13.59","77.52"],["Kolar","13.13","78.13"],["Bhagepalli","13.78","77.79"]] : params[:state] == 'AP' ? [["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"],["Hindupur","13.83","77.49"],["Madanapalli","13.55","78.50"],["Penukonda","14.08","77.58"]] : [["Chennai","13.060","80.24"],["Hosur","12.73","77.83"],["Denkanikottai","12.53","77.79"],["Thally","12.58","77.66"],["Bagalur","12.85","77.83"],["Kelamangalam","12.60","77.85"],["Shoolagiri","12.66","78.01"]] %>
+    <% @sts = @cities %>
+    <% @sts.each_with_index do |name, index| %>
+      <div class="city1">
+        <%= image_tag("/assets/img-city#{index+1}.png") %>
+        <h2><%= link_to name[0], land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2], :type => params[:type]) %></h2>
+      </div>
+    <% end %>
 
 
     <br />   <br />   <br />   <br />
@@ -203,11 +117,10 @@
     <div class="property-btn">
       <span style="padding:10px; color:#000;">We are adding 100's of Property a day</span>
       <br />
-      <a href="/properties/new">
-        <button>Post Your Requirement</button>
+      <a href="/properties/new" class="property-select">    
+        <button>List Your Property</button>
       </a>
-    </div>
-
+    </div>            
     <footer>
       <ol>
         <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
@@ -216,11 +129,13 @@
         <li><a href="">Privacy Policy</a> </li>
       </ol>
     </footer>
-
-
     <div class="copyright">
       Copyright 2014. All Rights Reserved.
     </div>
   </div>
+
 </body>
+
+
+
 

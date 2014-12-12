@@ -1,35 +1,50 @@
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
   <link rel="stylesheet" href="/assets/device.css"/>
   <title>SVR FARMS - TN-Cities</title>
   <script src="/assets/jquery.min.js"></script>
   <script>
 
+
     $(function() {
+
 
       var pull = $('#pull');
 
+
       var menu = $('nav ul');
+
 
       $(pull).on('click', function(e) {
 
+
         e.preventDefault();
+
 
         menu.slideToggle();
 
 
       });
 
+
       $(window).resize(function() {
+
 
         var w = $(window).width();
 
+
         if (w > 320 && menu.is(':hidden')) {
+
 
           menu.removeAttr('style');
 
+
         }
+
 
       });
 
@@ -39,12 +54,15 @@
 
   </script>
 
+
   <style>
 
 
     body{
 
       background:url(/assets/mobbgh.jpg) no-repeat;
+
+
       background-size:1200px 100%;
 
 
@@ -67,15 +85,11 @@
       <a href="#" id="pull">SVR FARMS</a>
       <ul class="clearfix">
         <li><a href="/home/main_home">Home</a></li>
-
         <li><a href="/home/aboutus_mobile">About Us</a></li>
-
         <li><a href="/home/services_mobile">Services</a></li>
-
         <li><a href="/contactus/new">Contact Us</a></li>
       </ul>
-
-   </nav>
+    </nav>
 
 
     <br />
@@ -83,116 +97,48 @@
 
     <h1>Choose a City to Explore</h1>   <br />
 
-
     <div class="city1">
-
-
       <a href="<%=land_home_index_path%>">
+        <img  src="/assets/img-city8.png"  />
 
-
-        <img src="/assets/img-city5.png"  />
-
-
-        <h2>Chennai</h2>
-
+        <h2>Anantapur</h2>
 
       </a>
-
-
     </div>
 
     <div class="city1">
-
-
       <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img-city8.png"  />
-
-
-        <h2>Hosur</h2>
-
-
+        <img src="/assets/img-city9.png" />
+        <h2>Chittoor</h2>
       </a>
-
-
     </div>
 
 
     <div class="city1">
-
-
       <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img/denkanikottai.jpeg"/>
-
-
-        <h2>Denkanikottai</h2>
-
-
+        <img  src="/assets/hindupur.jpeg"/>
+        <h2>Hindupur</h2>
       </a>
-
-
     </div>
 
     <div class="city1" >
-
-
       <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img/thally.jpg"/>
-
-
-        <h2>Thally</h2>
-
-
+        <img src="/assets/madanapalle.jpeg"/>
+        <h2>Madanapalli</h2>
       </a>
-
-
     </div>
 
-    <div class="city1">
 
-
-      <a href="<%=land_home_index_path%>">
-
-
-        <img src="/assets/img/bagalur.jpg" />
-
-
-        <h2>Begalur</h2>
-
-
-      </a>
-
-
-    </div>
 
 
     <div class="city1">
-
-
       <a href="<%=land_home_index_path%>">
-
-        <img src="/assets/img/kela.jpeg"/>
-
-        <h2>Kelamangalam</h2>
-
-
+        <img src="/assets/penukonda.jpeg"/>
+        <h2>Penukonda</h2>
       </a>
-
-
     </div>
 
 
-    <div class="city1" >
-      <a href="<%=land_home_index_path%>">
-        <img  src="/assets/img/shoolagiri.jpg"/>
-        <h2>Shoolagiri</h2>
-      </a>	
-    </div>
 
 
 
@@ -203,10 +149,11 @@
     <div class="property-btn">
       <span style="padding:10px; color:#000;">We are adding 100's of Property a day</span>
       <br />
-      <a href="/properties/new">
+      <a href="/properties/new" class="property-select">    
         <button>Post Your Requirement</button>
       </a>
     </div>
+
 
     <footer>
       <ol>
@@ -217,10 +164,10 @@
       </ol>
     </footer>
 
-
     <div class="copyright">
       Copyright 2014. All Rights Reserved.
     </div>
-  </div>
-</body>
 
+  </div>
+
+</body>
