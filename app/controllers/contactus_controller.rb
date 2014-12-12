@@ -2,6 +2,7 @@ class ContactusController < ApplicationController
 #before_action :set_Contactus, :except=>["new","create","index"]
 def new
   @contactus = Contactus.new
+
 end
 
 def index

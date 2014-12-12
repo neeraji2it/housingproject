@@ -1,87 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
 
 	<head>
     
-    
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
         
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        
-        
-        <link rel="stylesheet" href="/assets/device.css"/>
-        
-        
+          
+        <link rel="stylesheet" href="/assets/device.css">
+      
 		<title>SVR FARMS - List Your Property</title>
-        
-        
+    
         <script src="/assets/jquery.min.js"></script>
         
-        
 		<script>
-	
-	
+
 			$(function() {
-			
 			
 			 	var pull 		= $('#pull');
 			 
-			 
 				var	menu 		= $('nav ul');
 			
-
 				$(pull).on('click', function(e) {
-				
 				
 					e.preventDefault();
 				
-				
 					menu.slideToggle();
-				
 				
 				});
 
-
 				$(window).resize(function(){
-				
 				
         			var w = $(window).width();
 				
-				
         			if(w > 320 && menu.is(':hidden')) {
-					
 					
         				menu.removeAttr('style');
 					
-					
         			}
-				
 				
     			});
 			
-			
 			});
-		
 		
 	</script>
     
-    
 	</head>
-
 	<body style=" background:url(/assets/mobbgh.jpg) no-repeat; background-size:1200px 100%">
-    	        	
+    	
 		<div class="container">
-        
         
 			<nav class="clearfix">
     
-    
     <a href="#" id="pull">SVR FARMS</a>
-    
-                    				<ul class="clearfix">
+    		<ul class="clearfix">
         
         
 					<li><a href="/home/main_home">Home</a></li>
@@ -91,119 +62,76 @@
             
             
 					<li><a href="/home/services_mobile">Services</a></li>
+                        
+					<li><a href="contactus/new">Contact Us</a></li>
             
-            
-					<li><a href="/home/contactus_mobile">Contact Us</a></li>
-            
-            
-            
-            
-					<li><a href="/home/requirement_mobile">Post Requirement</a></li>	
+  	
            
             
 				</ul>
         
-        
-				
-        
-        
 			</nav>
-        
         
      <h1>Choose a State to Explore</h1>   
      
-     
         <div class="align-states">
-        
         
             <div class="col-states">
             
-            
-                <a href="cities.html">	
+                <a href="cities-tn.html">	
                 
-                
-                    <img src="images/states/img-city5.png" />
+                    <img src="/assets/img-city5.png" />
                     
-                    
-                    <h4> Tamil Nadu</h4>
-                    
+                    <h4>Tamil Nadu</h4>
                     
                 </a>
-                
                 
             </div>
         
              <div class="col-states">
              
-             
-                <a href="cities.html">
+                <a href="cities-ka.html">
                 
-                
-                    <img  src="images/states/img-city3.png" />
-                    
+                    <img  src="/assets/img-city3.png" />
                     
                      <h4> Karnataka</h4>
                      
-                     
                  </a>
-                 
                  
             </div>
         
             <div class="col-states">
             
-            
-                <a href="cities.html">
+                <a href="cities-ap.html">
                 
-                
-                    <img  src="images/states/img-city4.png" />
-                    
+                    <img  src="/assets/img-city4.png" />
                     
                     <h4> Andhra</h4>
                     
-                    
                 </a>
-                
                 
             </div>
             
-            
       </div>
-      
       
       <div class="property-btn">
             
-                
                             <span style="padding:10px;">Got a Property? list for Free</span>
-                            
                             
                             <br />
                             
-                            
-                           <a href="/properties/new" class="property-select">
-                            
+                                <a href="/properties/new" class="property-select">
                             
                                 <button>List your Property</button>
                                 
                                 
                             </a>
-                            
-                            
         		
       </div>
-       
-       
+      
        		<footer>
-            
-            
-               
-          
-                
-
+                       
                 	<ol>
-                    
-                    
-                 	<ol>
                     
                     
                     	<li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
@@ -212,18 +140,14 @@
                         <li><a href="/home/services_mobile">Services</a></li>
                         
                   
-                         <li><a href="/home/contactus_mobile">Contact us</a> </li>
+                         <li><a href="contactus/new">Contact us</a> </li>
                         
                          <li><a href="">Privacy Policy</a> </li>
                         
                         
                     </ol>
-                        
-                        
-                    </ol>
             
         	</footer>
-            
             
             <div class="copyright">
             
@@ -231,11 +155,7 @@
             
             </div>
         
-        
 		</div>
-
 
 	</body>
 
-
-</html>

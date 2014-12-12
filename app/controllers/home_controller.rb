@@ -82,16 +82,21 @@ class HomeController < ApplicationController
   
   def aboutus_mobile
     render :layout => false
+     @device = request.env['mobvious.device_type']
   end
   
   def services_mobile
     render :layout => false
+      @device = request.env['mobvious.device_type']
   end
   
   def contactus_mobile
     render :layout => false
   end
   
+  def mobile_states
+    render :layout => false
+  end
 
   
   
