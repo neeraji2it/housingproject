@@ -22,7 +22,8 @@ Rails.application.routes.draw do
       get :land2
       get :about_us
       get :aboutus_mobile
-      get :services_mobile
+      get :services_mobile 
+      get :cities_result
       get :contactus_mobile
       get :mobile_states
       get :privacy_policy

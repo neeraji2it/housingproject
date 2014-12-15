@@ -1,0 +1,164 @@
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+  <link rel="stylesheet" href="/assets/device.css">
+
+  <title>SVR FARMS - Cities</title>
+
+
+  <script src="/assets/jquery.min.js"></script>
+
+  <style>
+    .border{border:5px solid #000;padding:20px;}
+  </style>
+  <script>
+
+
+    $(function() {
+
+
+      var pull = $('#pull');
+
+
+      var menu = $('nav ul');
+
+
+      $(pull).on('click', function(e) {
+
+
+        e.preventDefault();
+
+
+        menu.slideToggle();
+
+
+      });
+
+
+      $(window).resize(function() {
+
+
+        var w = $(window).width();
+
+
+        if (w > 320 && menu.is(':hidden')) {
+
+
+          menu.removeAttr('style');
+
+
+        }
+
+
+      });
+
+
+    });
+
+
+  </script>
+
+
+</head>
+
+<div class="container">
+
+
+  <nav class="clearfix">
+
+    <a href="#" id="pull">SVR FARMS</a>
+    <ul class="clearfix">
+      <li>
+        <a href="<%= root_path(:device_type => :mobile)%>">
+          Home
+        </a>
+      </li>
+      <li><a href="/home/aboutus_mobile">About Us</a></li>
+      <li><a href="/home/services_mobile">Services</a></li>
+      <li><a href="/contactus/new">Contact Us</a></li>
+    </ul>
+
+
+
+
+  </nav>
+
+
+  <div class="results">        
+    <h1><%= @properties.count %> Results Found</h1> 
+    <a href="details.html" title="Details of the Land">
+
+      <table >
+        
+        <% if @properties.present? %>
+       <%@properties.each do |p|%>
+     <tr border="2">
+        <tr >
+          <td rowspan="2">
+            <% image = p.try(:images).try(:first).try(:image).try(:url) %>
+            <%= image_tag(image) %>
+          </td>
+          <td>
+            <% if p.location.present? %>
+              <%= p.location %>
+            <% end %>
+          </td>
+             
+          <td>
+            <% if p.area.present? %>
+             <i class="fa fa-inr"></i>
+              <%= p.area %>
+            <% end %>
+          </td>        
+
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-map-marker"></i>
+          </td>
+
+          <td >
+            <i class="fa fa-inr"></i>
+           <% if p.price.present? %>
+              <%= p.price %>/Sqft
+            <% end %>
+          </td>
+        </tr>
+                </tr>
+               
+        <%end%>
+    <% end %>
+      
+      </table>
+
+
+    </a>
+    
+  </div>
+
+  <div class="property-btn">
+    <span style="padding:10px; color:#000;">We are adding 100's of Property a day</span>
+    <br />
+    <a href="/properties/new" class="property-select">
+      <button>List your Property</button>
+    </a>
+
+  </div>
+
+  <footer>
+    <ol>
+      <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
+      <li><a href="/home/services_mobile">Services</a></li>
+      <li><a href="/contactus/new">Contact us</a> </li>
+      <li><a href="">Privacy Policy</a> </li>
+    </ol>
+  </footer>
+  <div class="copyright">
+    Copyright 2014. All Rights Reserved.
+  </div>
+
+</div>

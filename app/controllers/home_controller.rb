@@ -102,6 +102,16 @@ class HomeController < ApplicationController
     render :layout => false
   end
   
+  def cities_result
+    @city = params[:city]
+    @properties = Property.where(:city => params[:city])
+#    @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
+#      marker.lat property.latitude
+#      marker.lng property.longitude
+#      marker.json({ :id => property.id })
+#    end
+     render :layout => false
+  end
   
     def cities_ap
     render :layout => false

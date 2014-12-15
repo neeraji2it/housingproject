@@ -44,7 +44,11 @@
                   <nav class="clearfix">
                     <a href="#" id="pull">SVR FARMS</a>
                     <ul class="clearfix">
-                      <li><a href="/home/main_home">Home</a></li>
+                           <li>
+                              <a href="<%= root_path(:device_type => :mobile)%>">
+                                            Home
+                                          </a>
+                      </li>
                       <li><a href="/home/aboutus_mobile">About Us</a></li>
                       <li><a href="/home/services_mobile">Services</a></li>
                       <li><a href="/contactus/new">Contact Us</a></li>
@@ -55,7 +59,7 @@
                     <h1>Choose A City to Explore</h1>
                   <%else%>
                     <h1>Choose A State to Explore</h1>
-                    <% end %>
+                  <% end %>
       
                   <% @states = [["Tamilnadu","TN"],["Karnataka","KA"],["Andhra Pradesh","AP"]] %>
                   <% @cities = params[:state] == 'KA' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.3106457","76.6356898"],["Coorg","12.300","75.9293"],["Chikkaballpur","13.43","77.72"],["Gauribidanur","13.59","77.52"],["Kolar","13.13","78.13"],["Bhagepalli","13.78","77.79"]] : params[:state] == 'AP' ? [["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"],["Hindupur","13.83","77.49"],["Madanapalli","13.55","78.50"],["Penukonda","14.08","77.58"]] : [["Chennai","13.060","80.24"],["Hosur","12.73","77.83"],["Denkanikottai","12.53","77.79"],["Thally","12.58","77.66"],["Bagalur","12.85","77.83"],["Kelamangalam","12.60","77.85"],["Shoolagiri","12.66","78.01"]] %>
@@ -63,12 +67,11 @@
                   <% @sts.each_with_index do |name, index| %>
                     <div class="city1">
                       <%= image_tag("/assets/img-city#{index+1}.png") %>
-                      <h2><%= link_to name[0], params[:state] ? land_home_index_path(:city => name[0], :lat => name[1], :lon => name[2], :type => params[:type]) : mobile_states_home_index_path(:state => name[1], :type => params[:type]) %></h2>
+                      <h2><%= link_to name[0], params[:state] ?  cities_result_home_index_path(:city => name[0], :lat => name[1], :lon => name[2], :type => params[:type]) : mobile_states_home_index_path(:state => name[1], :type => params[:type]) %></h2>
                     </div>
                   <% end %>
- 
-                    
-      
+        
+                          
      <div class="property-btn">
 
        <span style="padding:10px;">Got a Property? list for Free</span>
