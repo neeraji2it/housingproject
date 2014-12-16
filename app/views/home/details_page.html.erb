@@ -160,7 +160,6 @@
 
   <style >
 
-
     {
 
       background:url(/assets/mobbgh.jpg) no-repeat;
@@ -200,26 +199,7 @@
 
 
 
-  <div class="container">
-    <p style="position: absolute;
-       z-index: 9999999;
-       color: #fff;
-       margin-left: 15%;
-       margin-top: 22%;
-       font-size: 15px;
-       background: #000;
-       padding: 11px;
-       opacity: .5;
-       text-transform: uppercase;
-       font-weight: bold;
-       border-radius: 6px;">Details about the Land</p> 
-    <div id="slides">
-      <img src="/assets/img/file0001811490083_small.jpg" alt=""/>
-      <img src="/assets/img/agriculture.jpg" alt=""/>
-      <img src="/assets/img/commercial.jpg" alt=""/>
-      <img src="/assets/img/residential.jpg" alt=""/>
-    </div>
-  </div>
+ 
   <!-- End SlidesJS Required: Start Slides -->
 
   <!--toggle starts here-->
@@ -261,22 +241,12 @@
     </div>
   </div>
   <div id="button2" >
-
     <div class="fourty-width">
       <h2>Image</h2>
-      <!-- <img src="images/10460129_335119259985144_1538045294509414812_n.jpg" />-->
+    <%= link_to image_tag(@property.images.first.image.url(:original)),  image_slide_home_path(@property ) %>
       <h2>Description</h2>
-      <p> Adjacent To This Land 3 Farm Houses Are There Very Good Locality Clear Documents ...... Price 12 Lakhs/Acre Ideal For Investment,. Suitable For All Kinds Of Farming, Horticulture, Colleges, Industries Good Water Table Available </p>
+       <%= @property.description.titleize %>
     </div>
-
-    <div class="fourty-width">
-      <i class="fa fa-road"></i>Presently Used<br /><br /><br /><br />
-      <i class="fa fa-road"></i><br /><br /><br />
-      <i class="fa fa-arrows-h"></i><br /><br /><br />
-      <i class="fa fa-building-o"></i><br /><br /><br />
-      <i class="fa fa-road"></i>
-    </div>
-
   </div>
 </div>
 
@@ -348,16 +318,19 @@
 
 <div id="button4">
   <div class="half-width">
-    <form name="contact" id="contact" >
-      <input type="text" placeholder="Name" id="name" name="name" />
-      <input type="email" placeholder="Esmail" id="email" name="email" />
-      <input type="text" placeholder="Subject" id="subject" name="subject" />
-
-      <textarea placeholder="Message" name="msg" id="msg"></textarea>
-      <button type="submit" name="submit" onclick="validatePassword();">Send</button>
-    </form>
+    <%= form_for :contact, :url => '/contact', :method => 'post' do |f|   %>
+      <p> <%= f.text_field :name, :class=>"form-control" ,:placeholder=>"Name", :title=>"Name"%> </p>
+      <p> <%= f.text_field :email, :class=>"form-control", :placeholder=>"E-mail", :title=>"E-mail"%> </p>
+      <p> <%= f.text_field :mobile, :class=>"form-control", :placeholder=>"Phone", :title=>"Phone"%> </p>
+        <p class="top-spacing">
+        <%= f.submit 'Send', :style => "background-color: green;", :title=>"Send"%>
+            </p>
+    <% end  %>
   </div>
 </div>
+
+
+
 
 <!-- toggle ends here-->
 <div class="map-container">    
