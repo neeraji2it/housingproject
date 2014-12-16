@@ -91,56 +91,52 @@
   <div class="results">        
     <h1><%= @properties.count %> Results Found</h1> 
     
-<a href='/home/details_page?id=#{p.id}' title="Details of the land">
-           <table >
-        
-        <% if @properties.present? %>
-       <%@properties.each do |p|%> 
-             <%#= link_to details_page_home_index_path(:id => p.id)  do %>
-    
-     <tr border="2">
-        <tr >
-          <td rowspan="2">
-            <% image = p.try(:images).try(:first).try(:image).try(:url) %>
-            <%= image_tag(image) %>
-          </td>
-          <td>
-            <% if p.location.present? %>
-            <%= link_to details_page_home_index_path  do %>
-              <%= p.location %>
-            <% end %>
-            <%end%>
-          </td>
-             
-          <td>
-            <% if p.area.present? %>
-             <i class="fa fa-inr"></i>
-              <%= p.area %>
-            <% end %>
-          </td>        
 
-        </tr>
-        
-        <tr>
-          <td>
-            <i class="fa fa-map-marker"></i>
-          </td>
 
-          <td >
-            <i class="fa fa-inr"></i>
-           <% if p.price.present? %>
-              <%= p.price %>/Sqft
-            <% end %>
-          </td>
-        </tr>
-        
-         
-           <%end%>    
- 
-    <% end %>
+    <% if @properties.present? %>
+      <%@properties.each do |p|%> 
+        <%= link_to details_page_home_index_path(:id => p.id) do %>
+    <table>
+       <tr>
+            <td rowspan="2">
+              <% image = p.try(:images).try(:first).try(:image).try(:url) %>
+              <%= image_tag(image) %>
+            </td>
+            <td>
+              <% if p.location.present? %>
+                <%= p.location %>
+              <%end%>
+            </td>
       
-      </table>
-    </a>
+            <td>
+              <% if p.area.present? %>
+                <i class="fa fa-inr"></i>
+                <%= p.area %>
+              <% end %>
+            </td>        
+          </tr>
+      
+          <tr>
+            <td>
+              <i class="fa fa-map-marker"></i>
+            </td>
+      
+            <td >
+              <i class="fa fa-inr"></i>
+              <% if p.price.present? %>
+                <%= p.price %>/Sqft
+              <% end %>
+            </td>
+          </tr>
+    </table>
+    <hr/>
+        <%end%>  
+      <% end %>
+  
+    <% end %>
+
+
+
     
   </div>
 

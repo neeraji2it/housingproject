@@ -105,12 +105,12 @@ class HomeController < ApplicationController
   def cities_result
     @city = params[:city]
     @properties = Property.where(:city => params[:city])
-#    @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
-#      marker.lat property.latitude
-#      marker.lng property.longitude
-#      marker.json({ :id => property.id })
-#    end
-     render :layout => false
+    #    @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
+    #      marker.lat property.latitude
+    #      marker.lng property.longitude
+    #      marker.json({ :id => property.id })
+    #    end
+    render :layout => false
   end
   
   
@@ -119,21 +119,11 @@ class HomeController < ApplicationController
     @city = params[:city]
     @properties = Property.where(:city => params[:city])
 #     @images = Image.where(:property_id =>@property.id)
-
+    @property = Property.find(params[:id])
     render :layout => false
   end
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    def cities_ap
+  def cities_ap
     render :layout => false
   end
   
