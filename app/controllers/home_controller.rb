@@ -120,6 +120,35 @@ class HomeController < ApplicationController
     @properties = Property.where(:city => params[:city])
 #     @images = Image.where(:property_id =>@property.id)
     @property = Property.find(params[:id])
+    
+    
+    
+    property = @property.dup
+    
+    property_for_bus = @property.dup
+    property_for_bus.longitude = property_for_bus.bus_lng
+    property_for_bus.latitude = property_for_bus.bus_lat
+    
+    property_for_train = @property.dup
+    property_for_train.longitude = property_for_train.train_lng
+    property_for_train.latitude = property_for_train.train_lat
+    
+    property_for_airport = @property.dup
+    property_for_airport.longitude = property_for_airport.airport_lng
+    property_for_airport.latitude = property_for_airport.airport_lat
+    
+    @managed_property = [ property, property_for_bus, property_for_train, property_for_airport ].compact
+    
+#    @json = @managed_property.to_gmaps4rails
+    @hash = Gmaps4rails.build_markers(@managed_property) do |property, marker|
+      marker.lat property.latitude
+      marker.lng property.longitude
+    end
+    @images = Image.where(:property_id =>@property.id)
+    
+    
+    
+    
     render :layout => false
   end
   
