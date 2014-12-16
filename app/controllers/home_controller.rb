@@ -113,6 +113,26 @@ class HomeController < ApplicationController
      render :layout => false
   end
   
+  
+  
+  def details_page
+    @city = params[:city]
+    @properties = Property.where(:city => params[:city])
+#     @images = Image.where(:property_id =>@property.id)
+
+    render :layout => false
+  end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     def cities_ap
     render :layout => false
   end

@@ -90,12 +90,14 @@
 
   <div class="results">        
     <h1><%= @properties.count %> Results Found</h1> 
-    <a href="details.html" title="Details of the Land">
-
-      <table >
+    
+<a href='/home/details_page?id=#{p.id}' title="Details of the land">
+           <table >
         
         <% if @properties.present? %>
-       <%@properties.each do |p|%>
+       <%@properties.each do |p|%> 
+             <%#= link_to details_page_home_index_path(:id => p.id)  do %>
+    
      <tr border="2">
         <tr >
           <td rowspan="2">
@@ -104,8 +106,10 @@
           </td>
           <td>
             <% if p.location.present? %>
+            <%= link_to details_page_home_index_path  do %>
               <%= p.location %>
             <% end %>
+            <%end%>
           </td>
              
           <td>
@@ -116,6 +120,7 @@
           </td>        
 
         </tr>
+        
         <tr>
           <td>
             <i class="fa fa-map-marker"></i>
@@ -128,14 +133,13 @@
             <% end %>
           </td>
         </tr>
-                </tr>
-               
-        <%end%>
+        
+         
+           <%end%>    
+ 
     <% end %>
       
       </table>
-
-
     </a>
     
   </div>
@@ -154,7 +158,7 @@
       <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
       <li><a href="/home/services_mobile">Services</a></li>
       <li><a href="/contactus/new">Contact us</a> </li>
-      <li><a href="">Privacy Policy</a> </li>
+
     </ol>
   </footer>
   <div class="copyright">

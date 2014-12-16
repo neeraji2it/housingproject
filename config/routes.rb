@@ -28,6 +28,7 @@ Rails.application.routes.draw do
       get :mobile_states
       get :privacy_policy
       get :help
+      get :details_page
       get :cities_tn
       get :cities_ap
        get :cities_ka
