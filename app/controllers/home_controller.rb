@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    
-    
+  
   end
   
   def requirement
@@ -33,12 +32,13 @@ class HomeController < ApplicationController
       @properties = Property.where(:city => params[:city]).order(:price)
     end
     @city = params[:city]
-#    @json = @properties.to_gmaps4rails
+    #    @json = @properties.to_gmaps4rails
     @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
       marker.lat property.latitude
       marker.lng property.longitude
       marker.json({ :id => property.id })
     end
+    
   end
   
   def land1
@@ -46,7 +46,6 @@ class HomeController < ApplicationController
     @properties = Property.where(:city => @property.city)
     
     property = @property.dup
-    
     property_for_bus = @property.dup
     property_for_bus.longitude = property_for_bus.bus_lng
     property_for_bus.latitude = property_for_bus.bus_lat
@@ -60,8 +59,6 @@ class HomeController < ApplicationController
     property_for_airport.latitude = property_for_airport.airport_lat
     
     @managed_property = [ property, property_for_bus, property_for_train, property_for_airport ].compact
-    
-#    @json = @managed_property.to_gmaps4rails
     @hash = Gmaps4rails.build_markers(@managed_property) do |property, marker|
       marker.lat property.latitude
       marker.lng property.longitude
@@ -82,12 +79,12 @@ class HomeController < ApplicationController
   
   def aboutus_mobile
     render :layout => false
-     @device = request.env['mobvious.device_type']
+    @device = request.env['mobvious.device_type']
   end
   
   def services_mobile
     render :layout => false
-      @device = request.env['mobvious.device_type']
+    @device = request.env['mobvious.device_type']
   end
   
   def contactus_mobile
@@ -105,16 +102,10 @@ class HomeController < ApplicationController
   def cities_result
     @city = params[:city]
     @properties = Property.where(:city => params[:city])
-    #    @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
-    #      marker.lat property.latitude
-    #      marker.lng property.longitude
-    #      marker.json({ :id => property.id })
-    #    end
     render :layout => false
   end
   
-  
-  
+    
   def details_page
     @city = params[:city]
     @properties = Property.where(:city => params[:city])
@@ -130,31 +121,22 @@ class HomeController < ApplicationController
     property_for_airport.longitude = property_for_airport.airport_lng
     property_for_airport.latitude = property_for_airport.airport_lat
     @managed_property = [ property, property_for_bus, property_for_train, property_for_airport ].compact
-    #    @json = @managed_property.to_gmaps4rails
-#    @hash = Gmaps4rails.build_markers(@managed_property) do |property, marker|
-#      marker.lat property.latitude
-#      marker.lng property.longitude
-#    end
-    @images = Image.where(:property_id =>@property.id)
-    
-    
-    @hash = Gmaps4rails.build_markers(@properties) do |property, marker|
+    @hash = Gmaps4rails.build_markers(@managed_property) do |property, marker|
       marker.lat property.latitude
       marker.lng property.longitude
-      marker.json({ :id => property.id })
+      marker.json({ :id => property.id})
     end
-    
-    
-    
-    
-    render :layout => false
+        @images = Image.where(:property_id =>@property.id)
+#          render :layout => false
   end
+
+ 
   
   def cities_ap
     render :layout => false
   end
   
-   def cities_ka
+  def cities_ka
     render :layout => false
   end
   
@@ -172,20 +154,20 @@ class HomeController < ApplicationController
   end
   
   
-    def image_slide
+  def image_slide
     @property = Property.find(params[:id])
     @images = Image.where(:property_id =>@property.id)
   end
   
   
   
-    def main_home
-      render :layout => false
-      @device = request.env['mobvious.device_type']
-      puts "DFFCXXCFXFXFFSFDSF"
-      p @device
-      p "DSFSFSFDSFDSFDSFDSFSDF"
-    end
+  def main_home
+    render :layout => false
+    @device = request.env['mobvious.device_type']
+    puts "DFFCXXCFXFXFFSFDSF"
+    p @device
+    p "DSFSFSFDSFDSFDSFDSFSDF"
+  end
   
   
   def jointventure

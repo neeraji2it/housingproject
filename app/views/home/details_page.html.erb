@@ -336,7 +336,7 @@
 <div class="map-container">    
   <div id="map" style="max-width:95%; height: 199px;"></div>    
 </div>
-
+ 
 <div class="property-btn">
   <span style="padding:10px; color:#000">Got a Property? list for Free</span>
   <br />
@@ -353,9 +353,6 @@
   </ol>
 </footer>
 
-<div class="copyright">
-  Copyright 2014. All Rights Reserved.
-</div>
 
 </div>
 
@@ -382,41 +379,30 @@
           });
         });
 </script>
-<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript">
 
-</script>
+
+
+      
 <script type="text/javascript">
-  var locations = [
-    ['Bondi Beach', 12.7200, 77.8200],
-    ['Coogee Beach', 12.5267, 77.7928, 5],
-    ['Cronulla Beach', 12.9667, 77.5667, 3],
-    ['Manly Beach', 12.6000, 77.8500, 2],
-    ['Maroubra Beach', 12.6640, 78.0120, 1]
-  ];
+  var handler = Gmaps.build('Google');
+  var mapOptions = {Zoom: 6, center: { lat: 13.612518, lng: 77.51549},mapTypeId: google.maps.MapTypeId.MAP};
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: new google.maps.LatLng(12.5267, 78.0120),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+  handler.buildMap({provider: mapOptions, internal: {id: 'map'}}, function() {
+    // I assume this is the way you retrieve the amrkers array
+    var json_data = <%=raw @hash.to_json %>;
+    var markers = handler.addMarkers(json_data);
+
+    _.each(json_data, function(json, index) {
+      var marker = markers[index];
+      json.marker = marker;
+      google.maps.event.addListener(marker.getServiceObject(), 'click', function() {
+        console.log(json);
+                alert(json.id);
+             window.location.href = '/home/land1?id=' +json.id ;
+       handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    });
   });
 
-  var infowindow = new google.maps.InfoWindow();
-
-  var marker, i;
-
-  for (i = 0; i < locations.length; i++) {
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map
-    });
-
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(locations[i][0]);
-        infowindow.open(map, marker);
-      }
-    })(marker, i));
-  }
 </script>
-
-
