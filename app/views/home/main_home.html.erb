@@ -16,164 +16,119 @@
 
   <body data-spy="scroll" data-target=".main-nav" data-offset="70">
     
-    <div class="mt-sidebar"> 
-      <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
-      <nav class="main-nav"></nav>      
-    </div>
-
+      <div class="mt-sidebar"> 
+        <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
+        <nav class="main-nav"></nav>      
+      </div>
     <div class="slider-wrapper fullscreen">
       <div class="slide_bg" data-stellar-background-ratio="0.3">
-        <div class="container"> 
-          <div class="row">
-            <div class="col-md-12">
-              <div class="text-center">
-                <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/logo.png" class="logo_new"></a></h1>
-                <div class="project-container">
-                  <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path(:type=>"agriculture") %>" class="property-select">Agriculture Lands</a></div>
-                  </div>
-                  <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path(:type=>"farm") %>" class="property-select">Farm Land</a></div>
-                  </div>
-                  <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path(:type=>"commercial") %>" class="property-select">Commercial Lands</a></div>
-                  </div>
-                  <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path(:type=>"industrial") %>" class="property-select">Industrial Land</a></div>
-                  </div>
-                  
-                         <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path(:type=>"residential") %>" class="property-select">Residential Lands</a></div>
-
-                  </div>
-                  
-                  
-                  <div class="project-type">
-                    <div class="text-label"><a href="<%= home_index_path(:type=>"barren") %>" class="property-select">Barren Land</a></div>
-                  </div>
-                  
-                  
-                  
-           
-                  <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
-
-                </div>
-
-                <div id="sliderFrame">
-                  <div id="slider">
-                    <a href="" target="_blank">
-                      <img src="/assets/img/file0001811490083_small.jpg" alt="Agriculture Lands" />
-                    </a>
-                    <img src="/assets/img/agriculture.jpg" alt="Farm Lands" />
-                    <img src="/assets/img/commercial.jpg" alt="Commercial Lands" />
-                    <img src="/assets/img/industrial-land1.jpg" alt="Industrial Land" />
-                    <img src="/assets/img/residential.jpg" alt="Residential Land"  />
-                    <img src="/assets/img/barren-land.jpg" alt="Barren Land"  />
-                  </div>
-                  <div id="htmlcaption" style="display: none;">
-
-                  </div>
-                </div>
-
-
-                <div class="jsa">
-
-
-
-                  <table>
-
-                    <th>
-
-                    <div class="btn btn-facebook" style="margin-left: -380px;"> <a  href="http://www.facebook.com">   <i class="fa fa-facebook"></i> </a></div>
-                    <div class="btn btn-twitter" style="margin-left: -340px;">	<a  href="http://www.twitter.com"> <i class="fa fa-twitter"></i> </a></div>
-                    <div class="btn btn-google" style="margin-left: -300px;"><a  href="https://plus.google.com"> 	<i class="fa fa-google-plus"></a></i> </div> 
-
-                    </th>
-
-                    <th>
-                    <div class="project-type">
-                      <div class="text-label">
-                        <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
+          <div class="container"> 
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="text-center">
+                    <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/logo.png" class="logo_new"></a></h1>
+                    <div class="project-container">
+                      <div class="project-type">
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"agriculture") %>" class="property-select">Agriculture Lands</a></div>
+                      </div>
+                      <div class="project-type">
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"farm") %>" class="property-select">Farm Land</a></div>
+                      </div>
+                      <div class="project-type">
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"commercial") %>" class="property-select">Commercial Lands</a></div>
+                      </div>
+                      <div class="project-type">
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"industrial") %>" class="property-select">Industrial Land</a></div>
+                      </div>
+  
+                      <div class="project-type">
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"residential") %>" class="property-select">Residential Lands</a></div>
+                      </div>
+                      <div class="project-type">
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"barren") %>" class="property-select">Barren Land</a></div>
+                      </div>
+                      <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
+                    </div>
+  
+                    <div id="sliderFrame">
+                      <div id="slider">
+                        <a href="" target="_blank">
+                          <img src="/assets/img/file0001811490083_small.jpg" alt="Agriculture Lands" />
+                        </a>
+                        <img src="/assets/img/agriculture.jpg" alt="Farm Lands" />
+                        <img src="/assets/img/commercial.jpg" alt="Commercial Lands" />
+                        <img src="/assets/img/industrial-land1.jpg" alt="Industrial Land" />
+                        <img src="/assets/img/residential.jpg" alt="Residential Land"  />
+                        <img src="/assets/img/barren-land.jpg" alt="Barren Land"  />
+                      </div>
+                      <div id="htmlcaption" style="display: none;">
+  
                       </div>
                     </div>
-
-                    </th>
-
-                    <th>
-
-                    <div class="project-type">
-                      <div class="text-label">
-                        <a href="/properties/new" class="property-select">List Property</a></div>
+                    <div class="jsa">
+                      <table>
+                        <th>
+                        <div class="btn btn-facebook" style="margin-left: -380px;"> <a  href="http://www.facebook.com">   <i class="fa fa-facebook"></i> </a></div>
+                        <div class="btn btn-twitter" style="margin-left: -340px;">	<a  href="http://www.twitter.com"> <i class="fa fa-twitter"></i> </a></div>
+                        <div class="btn btn-google" style="margin-left: -300px;"><a  href="https://plus.google.com"> 	<i class="fa fa-google-plus"></a></i> </div> 
+                        </th>
+                        <th>
+                        <div class="project-type">
+                          <div class="text-label">
+                            <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
+                          </div>
+                        </div>
+                        </th>
+                        <th>
+                        <div class="project-type">
+                          <div class="text-label">
+                            <a href="/properties/new" class="property-select">List Property</a></div>
+                        </div>
+                        </th>
+                        <th> 
+                        <div class="project-type">
+                          <div class="text-label"><a href="<%= home_index_path(:type=>"jointventure") %>" class="property-select">Joint Venture</a></div>
+                        </div>
+                        </th>
+                      </table>
                     </div>
-
-                    </th>
-
-                    <th> 
-
-
-                    <div class="project-type">
-                      <div class="text-label"><a href="<%= home_index_path(:type=>"jointventure") %>" class="property-select">Joint Venture</a></div>
-                    </div>
-
-                    </th>
-
-                  </table>
+                  </div>   
                 </div>
-
-
-              </div>   
-
+              </div>
+  
+  
+  
+  
+              <div class="clearF"></div>
             </div>
-          </div>
-
-
-
-
-          <div class="clearF"></div>
-        </div>
-
-
-        <div class="topbar">     
-          <center>
-            <table>
-              <tr>
-                <td> <a href="/home/about_us" title="ABOUT US">About Us</a></td>
-                <td> <a href="/home/privacy_policy" title="SERVICES">Services</a></td>
-                <td><a href="/home/help" title="Help">FAQ</a></td>
-                <td><a href="/contactus/new" title="CONTACT US">Contact us</a></td>
-                </div>
-              </tr>
-            </table>
-          </center>  
-        </div>  
-      
-
-      
-      
-      
-        <div class="copyright">
+  
+  
+            <div class="topbar">     
+              <center>
+                <table>
+                  <tr>
+                    <td> <a href="/home/about_us" title="ABOUT US">About Us</a></td>
+                    <td> <a href="/home/privacy_policy" title="SERVICES">Services</a></td>
+                    <td><a href="/home/help" title="Help">FAQ</a></td>
+                    <td><a href="/contactus/new" title="CONTACT US">Contact us</a></td>
+                    </div>
+                  </tr>
+                </table>
+              </center>  
+            </div>  
+          <div class="copyright">
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <p  style="color: white;">&copy; Copyright 2013. All Rights Reserved.</p>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">          
-
             <a href="#" title="Privacy policy" style="color:#fff; ">Privacy policy |</a>
             <a href="#" title="Terms &amp; conditions" style="color:#fff;">Terms &amp; conditions</a>                    
-
           </div>       
           <div class="clearF"></div>  
         </div>  
-
       </div>
     </div>
-
   </div>
-
-
-
-
-
-
 
   <div id='overlay' style='filter:alpha(opacity=50);' onclick="hide_popup();"></div>
   <div align='center' id='popup_box'>
@@ -182,11 +137,7 @@
   </div>
 
 
-
-
-
   <script src="/assets/slider.js"></script>
-
   <!--Start of Zopim Live Chat Script-->
   <script type="text/javascript">
     window.$zopim || (function(d, s) {
@@ -502,64 +453,26 @@
             </div>
             
             
-            <div class="property-btn">
-            
-                
-                            <span style="padding:10px;">Got a Property? list for Free</span>
-                            
-                            
-                            <br />
-                            
-                            
-                            <a href="/properties/new" class="property-select">
-                            
-                            
-                                <button>List your Property</button>
-                                
-                                
-                            </a>
-                            
-        		
-            </div>
-       
-       
-       		<footer>
-            
-            
-          
-                
-
-                	<ol>
-                    
-                    
-                    	<li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
-                        
-                        
-                        <li><a href="/home/services_mobile">Services</a></li>
-                         <li><a href="/contactus/new">Contact us</a> </li>
-                         <li><a href="">Privacy Policy</a> </li>
-                        
-                        
-                    </ol>
-                    
-                    
-
-                
-            
-        	</footer>
-            
-            
-            <div class="copyright">
-            
-           		 Copyright 2014. All Rights Reserved.
-                 
-                 
-            </div>
-            
-            
-	</div>
-        
-        
+          <div class="property-btn">
+            <span style="padding:10px;">Got a Property? list for Free</span>
+            <br />
+            <a href="/properties/new" class="property-select">
+              <button>List your Property</button>
+            </a>
+          </div>
+          <footer>
+            <ol>
+              <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
+              <li><a href="/home/services_mobile">Services</a></li>
+              <li><a href="/contactus/new">Contact us</a> </li>
+              <li><a href="">Privacy Policy</a> </li>
+            </ol>
+          </footer>
+          <div class="copyright">
+            Copyright 2014. All Rights Reserved.
+          </div>
+                  </div>
+              
 </body>
 
 <%end%>

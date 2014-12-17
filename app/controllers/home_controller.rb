@@ -127,7 +127,7 @@ class HomeController < ApplicationController
       marker.json({ :id => property.id})
     end
         @images = Image.where(:property_id =>@property.id)
-#          render :layout => false
+     render :layout => false
   end
 
  
