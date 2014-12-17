@@ -1,5 +1,5 @@
 # Ignore pubilc image directories
-public/system
+#public/system
 
 # ignore database.yml file
 database.yml
