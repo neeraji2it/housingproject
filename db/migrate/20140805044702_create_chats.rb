@@ -5,7 +5,6 @@ class CreateChats < ActiveRecord::Migration
       t.string :email
       t.string :phone
       t.text :message
-
       t.timestamps
     end
   end

@@ -5,15 +5,14 @@
       <h1>Choose A City to Explore</h1>
       <%else%>
         <h1>Choose A State to Explore</h1>
-    
-      <% end %>
+          <% end %>
     </div>
     <div class="box-city">
-               
+              
       <div class="row" style="<%= params[:state] ? params[:state] == 'KA' ? ' ' : params[:state]=='AP' ? 'left: 100px;position: relative;' : ' ' : 'position: relative;left: 100px;'%>">
         <ul class="ch-grid">
           <% @states = [["Tamilnadu","TN"],["Karnataka","KA"],["Andhra Pradesh","AP"]] %>
-          <% @cities = params[:state] == 'KA' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.3106457","76.6356898"],["Coorg","12.300","75.9293"],["Chikkaballpur","13.43","77.72"],["Gauribidanur","13.59","77.52"],["Kolar","13.13","78.13"],["Bhagepalli","13.78","77.79"]] : params[:state] == 'AP' ? [["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"],["Hindupur","13.83","77.49"],["Madanapalli","13.55","78.50"],["Penukonda","14.08","77.58"]] : [["Chennai","13.060","80.24"],["Hosur","12.73","77.83"],["Denkanikottai","12.53","77.79"],["Thally","12.58","77.66"],["Bagalur","12.85","77.83"],["Kelamangalam","12.60","77.85"],["Shoolagiri","12.66","78.01"]] %>
+          <% @cities = params[:state] == 'KA' ? [["Bangalore","12.97","77.59"],["Kanakapur","12.550","77.4170"],["Mysore","12.3106457","76.6356898"],["Tumakuru","13.340","77.100"],["Chikkaballpur","13.43","77.72"],["Gauribidanur","13.59","77.52"],["Kolar","13.13","78.13"],["Bhagepalli","13.78","77.79"]] : params[:state] == 'AP' ? [["Anantapur","14.67","77.59"],["Chittoor","13.21","79.100"],["Hindupur","13.83","77.49"],["Kadri","14.1138","78.161218"],["Madanapalli","13.55","78.50"],["Penukonda","14.08","77.58"]] : [["Berigai","12.805668","77.9713"],["Jawalgiri","12.51753","77.643835"],["Hosur","12.73","77.83"],["Denkanikottai","12.53","77.79"],["Thally","12.58","77.66"],["Bagalur","12.85","77.83"],["Kelamangalam","12.60","77.85"],["Shoolagiri","12.66","78.01"]] %>
           <% @sts = params[:state].present? ? @cities : @states %>
           <% if !params[:state].present? %>
             <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
@@ -22,7 +21,7 @@
                 </div>
               </div>
             </li>
-          <% end %>
+          <% end %> 
           <% @sts.each_with_index do |name, index| %>
             <li class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
               <div class="ch-item">
@@ -38,18 +37,10 @@
           <% end %>
         </ul>
       </div>
-      
-      
-      
-      
-      
-      
-      
       <div class="clearF"></div>
       <% if params[:state].present? %>
       <% if params[:state]== 'AP' %>
-      
-      <a href="#" class="div1 btn-login btn-more-cities" style="padding:1px 13px ;  margin-left: 56px;">Nellore
+         <a href="#" class="div1 btn-login btn-more-cities" style="padding:1px 13px ;  margin-left: 56px;">Nellore
            </a>
          <a href="#" class="div2 btn-login btn-more-cities" style="padding:1px 13px";>Chirala
          </a>
@@ -60,23 +51,18 @@
          <a href="#" class="div2 btn-login btn-more-cities" style="padding:1px 13px;">Doddaballapur
          </a>
       <% elsif params[:state]== 'TN' %>
-      
-      <a href="#" class="div1 btn-login btn-more-cities" style="padding:1px 13px;">Perambalur
+            <a href="#" class="div1 btn-login btn-more-cities" style="padding:1px 13px;">Perambalur
            </a>
          <a href="#"  class="div2 btn-login btn-more-cities" style="padding:1px 13px;">Chidambaram
          </a>
       <% end %>
-      
-      
        <p><a href="#" id="btn-click" class="btn-login btn-more-cities click ">More Cities</a> </p>
       <% else %>
         <a href="#" class="div1  btn-login btn-more-cities" style="padding:1px 13px;">Maharashtra
            </a>
          <a href="#" class="div2  btn-login btn-more-cities" style="padding:1px 13px;">Kerala
          </a>
-  
-
-       <p><a href="#" id="btn-click1" class="btn-login btn-more-cities click1  ">More States</a> </p>
+         <p><a href="#" id="btn-click1" class="btn-login btn-more-cities click1  ">More States</a> </p>
       <% end %>
     </div>
   </div>

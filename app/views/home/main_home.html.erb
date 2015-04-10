@@ -26,26 +26,26 @@
             <div class="row">
                 <div class="col-md-12">
                   <div class="text-center">
-                    <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/logo.png" class="logo_new"></a></h1>
+                    <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/SVR-1.jpg" class="logo_new"></a></h1>
                     <div class="project-container">
                       <div class="project-type">
                         <div class="text-label"><a href="<%= home_index_path(:type=>"agriculture") %>" class="property-select">Agriculture Lands</a></div>
                       </div>
                       <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"farm") %>" class="property-select">Farm Land</a></div>
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"farm") %>" class="property-select">Farm Lands</a></div>
                       </div>
                       <div class="project-type">
                         <div class="text-label"><a href="<%= home_index_path(:type=>"commercial") %>" class="property-select">Commercial Lands</a></div>
                       </div>
                       <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"industrial") %>" class="property-select">Industrial Land</a></div>
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"industrial") %>" class="property-select">Industrial Lands</a></div>
                       </div>
   
                       <div class="project-type">
                         <div class="text-label"><a href="<%= home_index_path(:type=>"residential") %>" class="property-select">Residential Lands</a></div>
                       </div>
                       <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"barren") %>" class="property-select">Barren Land</a></div>
+                        <div class="text-label"><a href="<%= home_index_path(:type=>"barren") %>" class="property-select">Barren Lands</a></div>
                       </div>
                       <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
                     </div>
@@ -65,32 +65,30 @@
   
                       </div>
                     </div>
-                    <div class="jsa">
-                      <table>
-                        <th>
-                        <div class="btn btn-facebook" style="margin-left: -380px;"> <a  href="http://www.facebook.com">   <i class="fa fa-facebook"></i> </a></div>
-                        <div class="btn btn-twitter" style="margin-left: -340px;">	<a  href="http://www.twitter.com"> <i class="fa fa-twitter"></i> </a></div>
-                        <div class="btn btn-google" style="margin-left: -300px;"><a  href="https://plus.google.com"> 	<i class="fa fa-google-plus"></a></i> </div> 
-                        </th>
-                        <th>
-                        <div class="project-type">
-                          <div class="text-label">
+                    <div class="row">
+                      <div class="col-sm-3" >
+                        
+                        <div class="fb-btn-big"> <a  href="https://www.facebook.com/svrfarms">  
+                            <img src="/assets/likeusfb.png"></a></div>
+                      </div>
+                      <div class="col-sm-6">
+                        
+                        <span class="project-type">
+                          <span class="text-label">
                             <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
-                          </div>
-                        </div>
-                        </th>
-                        <th>
-                        <div class="project-type">
-                          <div class="text-label">
-                            <a href="/properties/new" class="property-select">List Property</a></div>
-                        </div>
-                        </th>
-                        <th> 
-                        <div class="project-type">
-                          <div class="text-label"><a href="<%= home_index_path(:type=>"jointventure") %>" class="property-select">Joint Venture</a></div>
-                        </div>
-                        </th>
-                      </table>
+                          </span>
+                        </span>
+                        
+                        
+                        <span class="project-type">
+                          <span class="text-label">
+                            <a href="/properties/new" class="property-select">List Property</a>
+                          </span>
+                        </span>
+                       
+                      </div>
+                     
+                      </div>
                     </div>
                   </div>   
                 </div>
@@ -103,17 +101,16 @@
             </div>
   
   
-            <div class="topbar">     
+            <div >     
               <center>
-                <table>
-                  <tr>
-                    <td> <a href="/home/about_us" title="ABOUT US">About Us</a></td>
-                    <td> <a href="/home/privacy_policy" title="SERVICES">Services</a></td>
-                    <td><a href="/home/help" title="Help">FAQ</a></td>
-                    <td><a href="/contactus/new" title="CONTACT US">Contact us</a></td>
+              
+           
+              <a href="/home/about_us" title="ABOUT US">About Us</a>
+                    <a href="/home/privacy_policy" title="SERVICES">Services</a>
+                  <a href="/contactus/new" title="CONTACT US">Contact us</a>
                     </div>
-                  </tr>
-                </table>
+                
+              
               </center>  
             </div>  
           <div class="copyright">
@@ -163,13 +160,10 @@
   <!--End of Zopim Live Chat Script-->
 
   <style>
-    .jsa{
-
-      position:absolute;
-      left:380px;
-      top: 630px; 
-
-    }
+    
+    .fb-btn-big img{ width:60px; height: 60px; text-align:left;}
+    
+    
     #overlay{
       display: none;
       background-color: #000000;
