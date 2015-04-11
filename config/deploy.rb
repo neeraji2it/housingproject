@@ -1,3 +1,5 @@
+# config valid only for current version of Capistrano
+lock '3.4.0'
 set :stages, %w(production)
 set :default_stage, "production"
 require 'capistrano/ext/multistage'
@@ -23,19 +25,6 @@ task :symlink_shared, :roles => [:app, :db] do
   run "ln -s #{shared_path}/system #{latest_release}/system"
 #  run "ln -s #{shared_path}/public/system/attaches #{latest_release}/public/system/attaches"
 end
-
-
-# after "deploy:stop",    "delayed_job:stop"
-# after "deploy:start",   "delayed_job:start"
-# after "deploy:restart", "delayed_job:restart"
-# 
-
-#task :restart_delayed_job, :roles => [:app, :db] do
-#  run "RAILS_ENV=serverdev script/delayed_job stop"
-#  run "RAILS_ENV=serverdev script/delayed_job start"
-#end
-#
-#after 'deploy:finalize_update', :restart_delayed_job
 
 
 after 'deploy:finalize_update', :symlink_shared, "deploy:migrate"
