@@ -1,6 +1,3 @@
-# config valid only for current version of Capistrano
-lock '3.4.0'
-
 set :stages, %w(production)
 set :default_stage, "production"
 require 'capistrano/ext/multistage'
