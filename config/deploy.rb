@@ -25,8 +25,6 @@ end
 
 
 after 'deploy:finalize_update', :symlink_shared, "deploy:migrate"
-
-
 namespace :deploy do
   desc "Reload the database with seed data"
   task :seed do
@@ -45,3 +43,7 @@ namespace :deploy do
     task t, :roles => :app do ; end
   end
 end
+
+
+
+

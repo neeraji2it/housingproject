@@ -4,4 +4,3 @@ set :gitrepo, "git@github.com:neeraji2it/housingproject.git"
 set :deploydir, "/var/www/house.com/public_html"
 set :branch, 'master'
 set :user, 'shivraj'
-set :log_level, :debug

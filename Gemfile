@@ -23,19 +23,15 @@ gem 'paperclip'
 gem 'nifty-generators'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bxslider-rails'
-# better rails console
 gem 'pry-rails'
 group :development do
   gem "better_errors"
 end
 gem "binding_of_caller"
 gem 'spring',        group: :development
-
 gem 'geocoder'
-
 gem 'gmaps4rails', '2.1.1'
-
 gem 'rvm-capistrano'
 gem 'capistrano-ext'
-gem "net-ssh"
+
 

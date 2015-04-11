@@ -229,7 +229,6 @@ DEPENDENCIES
   mobvious-rails
   mysql2
   nested_form
-  net-ssh
   nifty-generators
   paperclip
   pry-rails
