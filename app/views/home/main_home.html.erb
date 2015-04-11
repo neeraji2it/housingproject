@@ -15,116 +15,112 @@
   </head>
 
   <body data-spy="scroll" data-target=".main-nav" data-offset="70">
-    
-      <div class="mt-sidebar"> 
-        <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
-        <nav class="main-nav"></nav>      
-      </div>
+
+    <div class="mt-sidebar"> 
+      <span class="close-mt-sidebar"><i class="fa fa-caret-left"></i> Close Sidebar</span> 
+      <nav class="main-nav"></nav>      
+    </div>
     <div class="slider-wrapper fullscreen">
       <div class="slide_bg" data-stellar-background-ratio="0.3">
-          <div class="container"> 
-            <div class="row">
-                <div class="col-md-12">
-                  <div class="text-center">
-                    <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/SVR-1.jpg" class="logo_new"></a></h1>
-                    <div class="project-container">
-                      <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"agriculture") %>" class="property-select">Agriculture Lands</a></div>
-                      </div>
-                      <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"farm") %>" class="property-select">Farm Lands</a></div>
-                      </div>
-                      <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"commercial") %>" class="property-select">Commercial Lands</a></div>
-                      </div>
-                      <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"industrial") %>" class="property-select">Industrial Lands</a></div>
-                      </div>
-  
-                      <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"residential") %>" class="property-select">Residential Lands</a></div>
-                      </div>
-                      <div class="project-type">
-                        <div class="text-label"><a href="<%= home_index_path(:type=>"barren") %>" class="property-select">Barren Lands</a></div>
-                      </div>
-                      <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
-                    </div>
-  
-                    <div id="sliderFrame">
-                      <div id="slider">
-                        <a href="" target="_blank">
-                          <img src="/assets/img/file0001811490083_small.jpg" alt="Agriculture Lands" />
-                        </a>
-                        <img src="/assets/img/agriculture.jpg" alt="Farm Lands" />
-                        <img src="/assets/img/commercial.jpg" alt="Commercial Lands" />
-                        <img src="/assets/img/industrial-land1.jpg" alt="Industrial Land" />
-                        <img src="/assets/img/residential.jpg" alt="Residential Land"  />
-                        <img src="/assets/img/barren-land.jpg" alt="Barren Land"  />
-                      </div>
-                      <div id="htmlcaption" style="display: none;">
-  
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-3" >
-                        
-                        <div class="fb-btn-big"> <a  href="https://www.facebook.com/svrfarms">  
-                            <img src="/assets/likeusfb.png"></a></div>
-                      </div>
-                      <div class="col-sm-6">
-                        
-                        <span class="project-type">
-                          <span class="text-label">
-                            <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
-                          </span>
-                        </span>
-                        
-                        
-                        <span class="project-type">
-                          <span class="text-label">
-                            <a href="/properties/new" class="property-select">List Property</a>
-                          </span>
-                        </span>
-                       
-                      </div>
-                     
-                      </div>
-                    </div>
-                  </div>   
+        <div class="container"> 
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center">
+                <h1 style="color:#FFF; margin-top:0px;"><a href="<%= home_index_path %>"><img src="/assets/SVR-1.jpg" class="logo_new"></a></h1>
+                <div class="project-container">
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path(:type=>"agriculture") %>" class="property-select">Agriculture Lands</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path(:type=>"farm") %>" class="property-select">Farm Lands</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path(:type=>"commercial") %>" class="property-select">Commercial Lands</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path(:type=>"industrial") %>" class="property-select">Industrial Lands</a></div>
+                  </div>
+
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path(:type=>"residential") %>" class="property-select">Residential Lands</a></div>
+                  </div>
+                  <div class="project-type">
+                    <div class="text-label"><a href="<%= home_index_path(:type=>"barren") %>" class="property-select">Barren Lands</a></div>
+                  </div>
+                  <!-- &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  -->
+                </div>
+
+                <div id="sliderFrame">
+                  <div id="slider">
+                    <a href="" target="_blank">
+                      <img src="/assets/img/file0001811490083_small.jpg" alt="Agriculture Lands" />
+                    </a>
+                    <img src="/assets/img/agriculture.jpg" alt="Farm Lands" />
+                    <img src="/assets/img/commercial.jpg" alt="Commercial Lands" />
+                    <img src="/assets/img/industrial-land1.jpg" alt="Industrial Land" />
+                    <img src="/assets/img/residential.jpg" alt="Residential Land"  />
+                    <img src="/assets/img/barren-land.jpg" alt="Barren Land"  />
+                  </div>
+                  <div id="htmlcaption" style="display: none;">
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3" >
+
+                    <div class="fb-btn-big"> <a  href="https://www.facebook.com/svrfarms">  
+                        <img src="/assets/likeusfb.png"></a></div>
+                  </div>
+                  <div class="col-sm-6">
+
+                    <span class="project-type">
+                      <span class="text-label">
+                        <a href="#" class="property-select"  onclick="javascript: signup();">Post Requirements</a>
+                      </span>
+                    </span>
+
+
+                    <span class="project-type">
+                      <span class="text-label">
+                        <a href="/properties/new" class="property-select">List Property</a>
+                      </span>
+                    </span>
+
+                  </div>
+
                 </div>
               </div>
-  
-  
-  
-  
-              <div class="clearF"></div>
-            </div>
-  
-  
-            <div >     
-              <center>
-              
-           
-              <a href="/home/about_us" title="ABOUT US">About Us</a>
-                    <a href="/home/privacy_policy" title="SERVICES">Services</a>
-                  <a href="/contactus/new" title="CONTACT US">Contact us</a>
-                    </div>
-                
-              
-              </center>  
-            </div>  
-          <div class="copyright">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <p  style="color: white;">&copy; Copyright 2013. All Rights Reserved.</p>
+            </div>   
           </div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">          
-            <a href="#" title="Privacy policy" style="color:#fff; ">Privacy policy |</a>
-            <a href="#" title="Terms &amp; conditions" style="color:#fff;">Terms &amp; conditions</a>                    
-          </div>       
-          <div class="clearF"></div>  
-        </div>  
+        </div>
+
+
+
+
+        <div class="clearF"></div>
       </div>
+
+
+      <div>     
+        <center>
+          <a href="/home/about_us" title="ABOUT US">About Us</a>
+          <a href="/home/privacy_policy" title="SERVICES">Services</a>
+          <a href="/contactus/new" title="CONTACT US">Contact us</a>
+       </div>
+    </center>  
+  </div>  
+  <div class="copyright">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <p  style="color: white;">&copy; Copyright 2013. All Rights Reserved.</p>
     </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">          
+      <a href="#" title="Privacy policy" style="color:#fff; ">Privacy policy |</a>
+      <a href="#" title="Terms &amp; conditions" style="color:#fff;">Terms &amp; conditions</a>                    
+    </div>       
+    <div class="clearF"></div>  
+  </div>  
+  </div>
+  </div>
   </div>
 
   <div id='overlay' style='filter:alpha(opacity=50);' onclick="hide_popup();"></div>
@@ -160,10 +156,10 @@
   <!--End of Zopim Live Chat Script-->
 
   <style>
-    
+
     .fb-btn-big img{ width:60px; height: 60px; text-align:left;}
-    
-    
+
+
     #overlay{
       display: none;
       background-color: #000000;
@@ -238,240 +234,238 @@
       padding:10px;
     }
   </style>
-  
- 
-  
-  
-  
-  
-  
-  
-</body>
 
 
- <% else %> 
-
-<head>
-    
-    
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        
-        
-        <link rel="stylesheet" href="/assets/device.css">
-      
-        
-           
-        
-        
-		<title>SVR FARMS - HOUSING</title>	
-
-        
-        <script  type='text/javascript' src="/assets/jquery.min.js"></script>
-        
-        
-		<script>
-	
-	
-			$(function() {
-			
-			
-			 	var pull 		= $('#pull');
-			 
-			 
-				var	menu 		= $('nav ul');
-			
-
-				$(pull).on('click', function(e) {
-				
-				
-					e.preventDefault();
-				
-				
-					menu.slideToggle();
-				
-				
-				});
 
 
-				$(window).resize(function(){
-				
-				
-        			var w = $(window).width();
-				
-				
-        			if(w > 320 && menu.is(':hidden')) {
-					
-					
-        				menu.removeAttr('style');
-					
-					
-        			}
-				
-				
-    			});
-			
-			
-			});
-		
-		
-	</script>
-    
-    
-	</head>
 
-	<body>
-    	
-        	
-		<div class="container">
-        
-        
-			<nav class="clearfix">
-    
-                    				<ul class="clearfix">
-        
-                                        <li>     <a href="<%= main_home_home_index_path(:device_type => :mobile)%>">
 
-					<a href="#">Home</a></li>
-            
-            
-					<li><a href="/home/aboutus_mobile">About Us</a></li>
-            
-            
-					<li><a href="/home/services_mobile">Services</a></li>
-                        
-				       <li><a href="/contactus/new">Contact us</a> </li>
 
-  	
-           
-            
-				</ul>
-        
-        
-				<a href="#" id="pull">SVR FARMS</a>
-        
-        
-			</nav>
-            
-            
-        <h1>Real Photos, Real Locations</h1>
-        
-        
-        	<div class="fluid1">
-            
-            
-           	   <a href="/home/mobile_states">
-            
-                        <img src="/assets/agreeculture.jpg">
-                        
-                        
-                        <h2>Agriculture Lands</h2>
-                
-              	 </a>
-                
-                             </div>
-            
-            
-            <div class="fluid2">
-            
-            
-           <a href="/home/mobile_states">
-           
-           
-                        <img src="/assets/farm-land.jpg">
-                        
-                        
-                        <h2>Farm Lands</h2>
-                    
-               	   </a>
-                                     
-            </div>
-            
-   
-                 
-         
-        
-            <div class="fluid1">
-            
-            
-         		   <a href="/home/mobile_states">
-    
-                        <img  src="/assets/commercial.jpg">
-                        
-               
-                        <h2>Commercial Lands</h2>
-                    
-             	 </a>
-                 
-                 
-            </div>
-            
-            
-          <div class="fluid2">
-            <a href="/home/mobile_states">
-                <img src="assets/industrial-land1.jpg">
-                 <h2>Industrial Lands</h2>
-              </a>
-          </div>
-            
-            
-             <div class="fluid1">
-          
-          
-            <a href="/home/mobile_states">
 
-                        <img   src="/assets/residential.jpg">
-                        <h2>Residential Lands</h2>
-                        
-                   </a>
-                                 
-            </div> 
-            
-            
-            <div class="fluid2">
-            
-            
-            <a href="/home/mobile_states">	
-                
-                        <img  src="/assets/barren-land.jpg">
-                        
-                        
-                        <h2>Barren Lands</h2>
-                        
-                        
-                  </a>
-              
-              
-            </div>
-            
-            
-          <div class="property-btn">
-            <span style="padding:10px;">Got a Property? list for Free</span>
-            <br />
-            <a href="/properties/new" class="property-select">
-              <button>List your Property</button>
-            </a>
-          </div>
-          <footer>
-            <ol>
-              <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
-              <li><a href="/home/services_mobile">Services</a></li>
-              <li><a href="/contactus/new">Contact us</a> </li>
-              <li><a href="">Privacy Policy</a> </li>
-            </ol>
-          </footer>
-          <div class="copyright">
-            Copyright 2014. All Rights Reserved.
-          </div>
-                  </div>
-              
-</body>
+  </body>
 
+
+<% else %> 
+
+  <head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+    <link rel="stylesheet" href="/assets/device.css">
+
+
+
+
+
+    <title>SVR FARMS - HOUSING</title>	
+
+
+    <script  type='text/javascript' src="/assets/jquery.min.js"></script>
+
+
+    <script>
+
+
+      $(function() {
+
+
+        var pull = $('#pull');
+
+
+        var menu = $('nav ul');
+
+
+        $(pull).on('click', function(e) {
+
+
+          e.preventDefault();
+
+
+          menu.slideToggle();
+
+
+        });
+
+
+        $(window).resize(function() {
+
+
+          var w = $(window).width();
+
+
+          if (w > 320 && menu.is(':hidden')) {
+
+
+            menu.removeAttr('style');
+
+
+          }
+
+
+        });
+
+
+      });
+
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+
+    <div class="container">
+
+
+      <nav class="clearfix">
+
+        <ul class="clearfix">
+
+          <li>     <a href="<%= main_home_home_index_path(:device_type => :mobile)%>">
+
+              <a href="#">Home</a></li>
+
+
+          <li><a href="/home/aboutus_mobile">About Us</a></li>
+
+
+          <li><a href="/home/services_mobile">Services</a></li>
+
+          <li><a href="/contactus/new">Contact us</a> </li>
+
+
+
+
+        </ul>
+
+
+        <a href="#" id="pull">SVR FARMS</a>
+
+
+      </nav>
+
+
+      <h1>Real Photos, Real Locations</h1>
+
+
+      <div class="fluid1">
+
+
+        <a href="/home/mobile_states">
+
+          <img src="/assets/agreeculture.jpg">
+
+
+          <h2>Agriculture Lands</h2>
+
+        </a>
+
+      </div>
+
+
+      <div class="fluid2">
+
+
+        <a href="/home/mobile_states">
+
+
+          <img src="/assets/farm-land.jpg">
+
+
+          <h2>Farm Lands</h2>
+
+        </a>
+
+      </div>
+
+
+
+
+
+      <div class="fluid1">
+
+
+        <a href="/home/mobile_states">
+
+          <img  src="/assets/commercial.jpg">
+
+
+          <h2>Commercial Lands</h2>
+
+        </a>
+
+
+      </div>
+
+
+      <div class="fluid2">
+        <a href="/home/mobile_states">
+          <img src="assets/industrial-land1.jpg">
+          <h2>Industrial Lands</h2>
+        </a>
+      </div>
+
+
+      <div class="fluid1">
+
+
+        <a href="/home/mobile_states">
+
+          <img   src="/assets/residential.jpg">
+          <h2>Residential Lands</h2>
+
+        </a>
+
+      </div> 
+
+
+      <div class="fluid2">
+
+
+        <a href="/home/mobile_states">	
+
+          <img  src="/assets/barren-land.jpg">
+
+
+          <h2>Barren Lands</h2>
+
+
+        </a>
+
+
+      </div>
+
+
+      <div class="property-btn">
+        <span style="padding:10px;">Got a Property? list for Free</span>
+        <br />
+        <a href="/properties/new" class="property-select">
+          <button>List your Property</button>
+        </a>
+      </div>
+      <footer>
+        <ol>
+          <li><a href="/home/aboutus_mobile" title="ABOUT US">About Us</a> </li>
+          <li><a href="/home/services_mobile">Services</a></li>
+          <li><a href="/contactus/new">Contact us</a> </li>
+          <li><a href="">Privacy Policy</a> </li>
+        </ol>
+      </footer>
+      <div class="copyright">
+        Copyright 2014. All Rights Reserved.
+      </div>
+    </div>
+  </body>
 <%end%>
 
-  
-  
-  
+
+
+
 
