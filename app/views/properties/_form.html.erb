@@ -181,13 +181,13 @@
       <div class="controls">
         <%= f.fields_for :images do |image| %>
           <%= image.file_field :image %>
-          <%= image.link_to_remove image_tag("/assets/remove.png") %>
+          <%= image.link_to_remove image_tag("remove.png") %>
         <% end %>
 
       </div>
     </div>
     <div class="controls">
-      <%= f.link_to_add image_tag("/assets/add.jpeg"), :images %>
+      <%= f.link_to_add image_tag("add.jpeg"), :images %>
     </div>
   </div>
   
