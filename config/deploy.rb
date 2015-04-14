@@ -16,6 +16,7 @@ set (:deploy_to) { "#{deploydir}" }
 set :scm_user, "ubuntu"
 ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
+set :keep_releases, 4
 
 desc "Symlinks database.yml, mailer.yml file from shared directory into the latest release"
 task :symlink_shared, :roles => [:app, :db] do

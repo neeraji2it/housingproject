@@ -12,5 +12,4 @@ nbproject/
 tmp/
 
 # ignore development.log file
-log/development.log
-
+log/*.log
