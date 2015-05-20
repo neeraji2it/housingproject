@@ -27,6 +27,7 @@ Rails.application.routes.draw do
       get :main_home
       get :jointventure
       match :requirement, via: [:get, :post]
+      get :list_property
          
     end
     member do

@@ -177,5 +177,7 @@ class HomeController < ApplicationController
   def map_options
     @property = Property.find(params[:id])
   end
-
+  def  list_property
+  end
+    
 end

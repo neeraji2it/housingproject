@@ -7,13 +7,14 @@
   <%= devise_error_messages! %>
 
   <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+<%= f.email_field :email, autofocus: true %> <br></div> 
 
   <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+<%= f.password_field :password, autocomplete: "off" %> <br></div>
 
   <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+<%= f.password_field :password_confirmation, autocomplete: "off" %> <br></div>
+<br><br>
 
   <div><%= f.submit "Sign Up" %></div>
 <% end %>

@@ -48,21 +48,41 @@
   </div>
 
 
-<%#*<div class="control-group">%>
-<%#= f.label :state, :class => 'control-label' %>
-<%#*<div class="controls">%>
-<%#= f.select :state,options_for_select([["Select" ,""],["Andhrapradesh","Andhrapradesh"],["Karnataka","Karnataka"],["Tamilnadu","Tamilnadu"]], @property.state),:class => 'text_field'   %>
-<%#*</div>%>
-<%#*</div>%>  
-
-  <div class="control-group">
-    <%= f.label :city, :class => 'control-label' %>
+<div class="control-group">
+  <%= f.label :state, :class => 'control-label' %>
     <div class="controls">
-<%#= f.text_field :city, :class => 'text_field' %>
-      <%= f.select :city, CITES, {} %>
+    <%= f.select :state,options_for_select([["Select" ,""],["Andhrapradesh","Andhrapradesh"],["Karnataka","Karnataka"],["Tamilnadu","Tamilnadu"]], @property.state),:class => 'text_field'   %>
+    </div>
+</div>
+
+  <!-- <div class="control-group">
+    <%#= f.label :city, :class => 'control-label' %>
+    <div class="controls">
+      <%#= f.select :city, CITES, {} %>
     </div>
   </div>
+ -->
 
+ <div class="control-group kcity">
+   
+   <div class="controls">
+     <%= select_tag :k_city, options_for_select([["Select", ""]] + K_CITIES.map {|kcity| kcity}) %>
+   </div>
+ </div>
+
+ <div class="control-group acity">
+  
+   <div class="controls">
+     <%= select_tag :a_city, options_for_select([["Select", ""]] + A_CITIES.map {|kcity| kcity}) %>
+   </div>
+ </div>
+
+ <div class="control-group tcity">
+   
+   <div class="controls">
+     <%= select_tag :t_city, options_for_select([["Select", ""]] + T_CITIES.map {|kcity| kcity}) %>
+   </div>
+ </div>
 
   <div class="control-group">
     <%= f.label :location, :class => 'control-label' %>
@@ -256,3 +276,28 @@
     margin-right: -86px;
   }
 </style>
+
+<script>
+  $(document).ready(function() {
+    $(".kcity").hide();
+    $(".acity").hide();
+    $(".tcity").hide();
+  });
+
+  $("#property_state").change(function() {
+      var val = $("#property_state").val();
+      if (val == 'Andhrapradesh') {
+        $(".kcity").hide();
+        $(".acity").show();
+        $(".tcity").hide();
+      } else if (val == 'Karnataka') {
+        $(".kcity").show();
+        $(".acity").hide();
+        $(".tcity").hide();
+      } else if (val == 'Tamilnadu') {
+       $(".kcity").hide();
+       $(".acity").hide();
+       $(".tcity").show();
+      }
+    });
+</script>

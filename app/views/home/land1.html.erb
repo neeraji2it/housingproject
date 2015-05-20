@@ -240,16 +240,7 @@
     </div>           
 
 
-    <div id="dialog" title="Quick Contact">
-      <%= form_for :chat, :url => '/chat', :method => 'post', :class => 'form' do |f|   %>
-        <%= f.text_field :name, :placeholder => "Name" %><br/>
-        <%= f.text_field :email, :placeholder => "Email"%>
-        <%= f.text_field :phone, :maxlength =>'10',  :placeholder => "Phone"%><br/>
-        <%= f.text_area :message, :placeholder => "Write a message!"%><br/>
-        <%= f.submit 'Send', :title=>"Send"%>
-        <br/>
-      <% end  %>
-    </div>
+  
 
 
     <div class="clearF"></div>  	
@@ -259,11 +250,7 @@
   </br></br></br></br></br>
 </body>
 
-<script>
-  $(function() {
-    $("#dialog").dialog();
-  });
-</script>
+
 
 <script src="/assets/jquery.bxslider.min.js"></script>
 <script type="text/javascript">

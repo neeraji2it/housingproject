@@ -24,10 +24,14 @@ class PropertiesController < ApplicationController
 
  
   def create
+    @city = params[:a_city] if params[:a_city].present?
+    @city = params[:k_city] if params[:k_city].present?
+    @city = params[:t_city] if params[:t_city].present?
     @property = Property.new(property_params)
+    @property.city = @city
     1.times{@property.images.build} if @property.images.blank?
     respond_to do |format|
-      if @property.save
+      if @property.save!
         format.html { redirect_to @property, notice: 'Property was successfully created.' }
         format.json { render :show, status: :created, location: @property }
       else
