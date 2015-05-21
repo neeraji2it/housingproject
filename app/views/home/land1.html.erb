@@ -35,7 +35,7 @@
         <% end %>
       </div>
 
-      <div class="panel-group" id="accordion">
+  <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
@@ -44,18 +44,16 @@
               </a>
             </h4>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse">
+                  <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
-              <div class="row price">							
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">&nbsp;&nbsp;&nbsp;Price
-                  <p>&nbsp;&nbsp;&nbsp;<strong><i class="fa fa-inr"></i></strong><%= @property.price %></p>
-                  <div class="text-listed-by"> Listed By<p><%= @property.person_type %></p></div>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Rate
-                  <p><strong><i class="fa fa-inr"></i></strong><%= @property.rate %>/<span>sqft</span></p>
-                  <div class="text-listed-by">Type of Land<p><%= @property.type_of_land %></p></div>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Area
+              <div class="row price">             
+                <div class="col-xs-4 ">Price
+                  <p<strong><i class="fa fa-inr"></i></strong><%= @property.price %></p>
+                                  </div>
+                  
+                  <div class="col-xs-4">Type of Land<p><%= @property.type_of_land %></p></div>
+               <div class="col-xs-4">
+              Area
                   <p><%= @property.area %> <span>sqft</span></p>
                 </div>
               </div>
@@ -73,12 +71,7 @@
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
               <div class="text_details">
-                <%if @property.electricity_type.scan(/no/) == ["no"] %>
-
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> 
-                  <% else%> 
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <%  end %>
+                
 
 
                     <h3>Image</h3>
@@ -86,24 +79,12 @@
                     <%= link_to image_tag(@property.images.first.image.url(:original)),  image_slide_home_path(@property ) %>
                     <h3>Description</h3>
                     <%= @property.description.titleize %>
-
-                    <i class="fa fa-bolt"></i> <%= @property.electricity_type %> </div>
-                  <%if @property.present_land_status.scan(/no/) == ["no"] %> 
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%  end %><i class="fa fa-road"></i>Presently used for <%= @property.present_land_status %> </div>
-                    <%if @property.boundary_status.scan(/no/) == ["no"] %>
-                      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%  end %><i class="fa fa-road"></i> <%= @property.boundary_status %> </div>
-                      <%if @property.drainage_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="co l-xs-6 col-sm-6 col-md-6 col-lg-6"><%end%><i class="fa fa-road"></i> <%= @property.drainage_status %> </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><i class="fa fa-arrows-h"></i> <%= @property.inleave_rode %> </div>
-                        <%if @property.shed_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%end%>
-                            <i class="fa fa-building-o"></i> <%= @property.shed_status %></div>
-                          <%if @property.borewell_status.scan(/no/) == ["no"] %> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 f11 text-boundary"> <% else%> 
-                              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><%end%><i class="fa fa-tint"></i> <%= @property.borewell_status %></div>
-                            <div class="col-sm-12 col-md-12 col-lg-12"><i class="fa fa-road"></i> <%= @property.land_status %> </div>
-                          </div>						
+                         
+                            
+                          </div>            
                         </div>
                       </div>
                     </div>
-
 
                     <div class="panel panel-default">
                       <div class="panel-heading">

@@ -1,37 +1,63 @@
 
-<div>
-  <div id="title">Send Invitation To User</div><br />
-  <%= form_for(@user, :url =>  user_registration_path) do |f| %>
-    <table>
+<br/><br/>
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+
+     User SignUp</div>
+
+      <%= form_for(@user, :url =>  user_registration_path) do |f| %>
 
 
-      <tr>
-        <td valign="top">Email:</td>
-        <td><%= f.text_field :email, autofocus: true%></td>
+      <div class="panel-body">
 
-      </tr>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true ,  class: 'form-control'%>
+        </div> 
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autofocus: true ,  class: 'form-control'%>
+        </div>
 
 
-      <tr>
-        <td valign="top">  password :</td>
-        <td> <%= f.password_field :password %></td>
+        <div class="field">
+          <%= f.label :passwordConirmation %><br />
+          <%= f.password_field :password_confirmation, autofocus: true ,  class: 'form-control'%>
+        </div>
 
-      </tr>
+<br/>
+        <div class="actions">
+          <%= f.submit "Sign Up", :class => 'btn btn-primary'%>
+        </div>
+<br/>
+      </div>
 
-      <tr>
-        <td valign="top">  passwordConirmation :</td>
-        <td> <%= f.password_field :password_confirmation, autofocus: true %></td>
-
-      </tr>
-      <tr>
-        <td></td>
-        <td><%= f.submit "Sign Up", :class => 'btn btn-primary'%></td>
-      </tr>
-
-      <br><br>
-    </table>
-
-  <% end %>
-  <br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br>  
-
-</div>
+      <% end %>
+    </div>
+  </div>
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+  <br/> 
+ 
+ 

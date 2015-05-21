@@ -71,9 +71,7 @@ ActiveRecord::Schema.define(version: 20141002124254) do
     t.string   "type_of_land"
     t.string   "title"
     t.decimal  "price",                            precision: 10, scale: 0
-    t.decimal  "rate",                             precision: 10, scale: 0
     t.decimal  "area",                             precision: 10, scale: 0
-    t.string   "person_type"
     t.string   "city"
     t.string   "location"
     t.text     "description"
@@ -81,16 +79,12 @@ ActiveRecord::Schema.define(version: 20141002124254) do
     t.boolean  "gmaps"
     t.string   "email"
     t.string   "mobile"
+    t.float    "latitude",              limit: 24
     t.float    "longitude",             limit: 24
     t.integer  "view_count"
     t.integer  "contact_count"
     t.string   "electricity_type"
     t.string   "present_land_status"
-    t.string   "boundary_status"
-    t.string   "drainage_status"
-    t.string   "inleave_rode"
-    t.string   "shed_status"
-    t.string   "borewell_status"
     t.string   "land_status"
     t.string   "document_file_name"
     t.string   "document_content_type"
@@ -102,9 +96,7 @@ ActiveRecord::Schema.define(version: 20141002124254) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "latitude",              limit: 24
     t.string   "video_url"
-    t.string   "consultant"
     t.string   "state"
     t.float    "airport_lat",           limit: 24
     t.float    "airport_lng",           limit: 24

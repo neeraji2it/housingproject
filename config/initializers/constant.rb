@@ -5,6 +5,6 @@ mumbaiLOCATIONS =["Agripada","Alibag","Altamount Road","Ambarnath","Ambivali","A
  
   CITES = ["Anantapur","Bagalur","Berigai","Bhagepalli","Bangalore","Chittoor","Chikkaballpur","Denkanikottai","Gauribidanur","Hosur","Hindupur","Jawalgiri","Kanakapur","Kelamangalam", "Kadiri","Kolar","Mysore","Madanapalli","Penukonda","Shoolagiri","Thally","Tumakuru"]
 	
-	K_CITIES = ["Bangalore","Bhagepalli","Kanakapur","Chikkaballpur","Gauribidanur","Kolar","Mysore","Tumakuru"]
+	K_CITIES = ["Bangalore","Bhagepalli","Chikkaballpur","Gauribidanur","Kanakapur","Kolar","Mysore","Tumakuru"]
 	A_CITIES = ["Anantapur","Chittoor","Hindupur","Kadiri","Madanapalli","Penukonda" ]
-	T_CITIES = ["Bagalur","Berigai","Jawalgiri","Kelamangalam","Hosur","Denkanikottai""Shoolagiri","Thally"]
+	T_CITIES = ["Bagalur","Berigai","Denkanikottai","Hosur","Jawalgiri","Kelamangalam","Shoolagiri","Thally"]

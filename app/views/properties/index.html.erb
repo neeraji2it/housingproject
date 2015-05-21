@@ -9,16 +9,13 @@
     <thead>
       <tr>
         <th>S.No</th>
-        <th><%= model_class.human_attribute_name(:consultant) %></th>
+        
         <th><%= model_class.human_attribute_name(:type_of_land) %></th>
         <th><%= model_class.human_attribute_name(:title) %></th>
         <th><%= model_class.human_attribute_name(:price) %></th>
-        <th><%= model_class.human_attribute_name(:rate) %></th>
         <th><%= model_class.human_attribute_name(:area) %></th>
-        <th><%= model_class.human_attribute_name(:person_type) %></th>
-
         <th><%= model_class.human_attribute_name(:state) %></th>
-
+        <th><%= model_class.human_attribute_name(:city) %></th>
         <th><%= model_class.human_attribute_name(:location) %></th>
         <th><%= model_class.human_attribute_name(:description) %></th>
         <th><%= model_class.human_attribute_name(:name) %></th>
@@ -30,38 +27,32 @@
     </thead>
     <tbody>
       <% @properties.each_with_index do |property, index| %>
-        <tr>
-          <td><%=  index + 1%></td>
-          <td><%= property.consultant %></td>
-          <td><%= property.type_of_land.titleize %></td>
-          <td><%= property.title.titleize %></td>
-          <td><%= property.price %></td>
-          <td><%= property.rate %></td>
-          <td><%= property.area %></td>
-          <td><%= property.person_type %></td>
-          <td><%= property.city.titleize %></td>
-          <td><%= property.location.titleize %></td>
-          <td><%= property.description.titleize %></td>
-          <td><%= property.name.titleize %></td>
-          <td><%= property.email %></td>
-          <td><%= property.mobile %></td>
-          <td>
-            <span>
-              <span>
-                <%= link_to "show", property_path(property),:class => "btn btn-xs btn-success" %> <br/><br/>
-              </span>
-
+      <tr>
+        <td><%=  index + 1%></td>
+        
+        <td><%= property.type_of_land.titleize %></td>
+        <td><%= property.title.titleize %></td>
+        <td><%= property.price %></td>
+        <td><%= property.area %></td>
+        <td><%= property.state %></td>
+        <td><%= property.city %></td>
+        <td><%= property.location.titleize %></td>
+        <td><%= property.description.titleize %></td>
+        <td><%= property.name.titleize %></td>
+        <td><%= property.email %></td>
+        <td><%= property.mobile %></td>
+        <td>
+          <span>
+           
+            <%= link_to "<i class='glyphicon glyphicon-list'></i>".html_safe, property_path(property) %> 
             <% if current_admin %>
-              <span>
-                 <%= link_to "Edit", edit_property_path(property), :class => 'btn btn-xs btn-primary' %> <br/><br/>
-              </span>
-              <span>
-                <%= link_to "Destroy", property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}, :class => "btn btn-xs btn-danger" %>
-              </span>
-              </span>
-            <% end %>
-          </td>
-        </tr>
+            <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_property_path(property)%>                        
+            <%= link_to "<i class='glyphicon glyphicon-trash'></i>".html_safe, property_path(property), :method => :delete, :data => {:confirm => "Are you sure"}%>
+            
+          </span>
+          <% end %>
+        </td>
+      </tr>
       <% end %>
     </tbody>
   </table>
