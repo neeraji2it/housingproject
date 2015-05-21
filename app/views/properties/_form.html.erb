@@ -63,23 +63,23 @@
 -->
 
 <div class="control-group kcity">
- 
+   <%= f.label :city, :class => 'control-label' %>
  <div class="controls">
-   <%= select_tag :k_city, options_for_select([["Select", ""]] + K_CITIES.map {|kcity| kcity}) %>
+   <%= select_tag :k_city, options_for_select([["Select City", ""]] + K_CITIES.map {|kcity| kcity}) %>
  </div>
 </div>
 
 <div class="control-group acity">
-  
+    <%= f.label :city, :class => 'control-label' %>
  <div class="controls">
-   <%= select_tag :a_city, options_for_select([["Select", ""]] + A_CITIES.map {|kcity| kcity}) %>
+   <%= select_tag :a_city, options_for_select([["Select City", ""]] + A_CITIES.map {|kcity| kcity}) %>
  </div>
 </div>
 
 <div class="control-group tcity">
- 
+   <%= f.label :city, :class => 'control-label' %>
  <div class="controls">
-   <%= select_tag :t_city, options_for_select([["Select", ""]] + T_CITIES.map {|kcity| kcity}) %>
+   <%= select_tag :t_city, options_for_select([["Select City", ""]] + T_CITIES.map {|kcity| kcity}) %>
  </div>
 </div>
 
@@ -177,7 +177,7 @@
   .btncreate {
     background-color: #2d6ca2 !important;
     border-radius: 5px !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     height: 33px !important;
     margin-left: 90px !important;
     width: 137px !important;
