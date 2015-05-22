@@ -73,7 +73,7 @@
 
                     <h3>Image</h3>
 
-                    <%= link_to image_tag(@property.images.first.image.url(:original)),  image_slide_home_path(@property ) %>
+                    <%= link_to image_tag(@property.images.first.image.url(:medium)),  image_slide_home_path(@property ) %>
                     <h3>Description</h3>
                     <%= @property.description.titleize %>
                          
