@@ -244,7 +244,7 @@ html body ul#navigation li a.btn-login, .btn-login, input[type="submit"].btn-sen
 input[type="submit"].btn-send { margin: 0px; font-size: 12px; text-transform: none; padding: 1px 23px; width: 89px; height: 27px; font-family: Tahoma, Geneva, sans-serif; }
 input[type="submit"].btn-send:hover { color: #3e3e3e; }
 a.btn-close { text-transform: none; font-size: 12px; padding: 5px 23px; }
-.btn-more-cities { padding: 6px 25px; border: 1px solid rgba(0, 0, 0, 0.3); font-size: 14px; font-family: "Open Sans", Tahoma, Arial; letter-spacing: 1px; border-radius: 10px; margin-left: 15px; }
+.btn-more-cities { padding: 6px 25px; border: 1px solid rgba(0, 0, 0, 0.3); font-size: 14px; font-family: "Open Sans", Tahoma, Arial; letter-spacing: 1px; border-radius: 10px; margin-left: 10px; }
 .box-welcome h1 { padding-bottom: 22px; }
 .btn-more-cities:hover { color: #344b01; background: rgba(255,255,255, 0.40); }
 ul#navigation li:hover a.btn-login { background: #fff; text-decoration: none; color: #333; box-shadow: -1px -1px 0 #404040; border-color: transparent; }
