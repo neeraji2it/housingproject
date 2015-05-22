@@ -1,64 +1,42 @@
 
 <div class="container">
 
-<div class="row">
+  <div class="row">
 
-<div class="col-md-6">
-<br/>
-<ul class="bxslider">
-  <% @images.each do |image| %>
-    <li><%= image_tag(image.image.url(:original), :height => "300", :width =>"500")  %></li>
-  <% end %>
-</ul>
-</div>
-
-<div class="col-md-6" >
-
-<div class="page-header">
-  <h2>Property Details</h2>
-</div>
-
-    <div class="col-md-4">
-
-        <div class="row-fluid">
-         Property Title : <%= @property.title%> 
-        </div>
-        
-        <div class="row-fluid">
-          Type of Land :<%= @property.type_of_land %>
-        </div>
-
-        <div class="row-fluid">
-         Price:<%= @property.price %>
-        </div>
-        
-       <div class="row-fluid">
-         City:<%= @property.city %>
-        </div>
-        
-        <div class="row-fluid">
-          Location:<%= @property.location %> 
-        </div>
-        
-        <div class="row-fluid">
-         Description:<%= @property.description %> 
-        </div>
-        
-        <div class="row-fluid">
-         Mobile: <%= @property.mobile %>  
-        </div>
-        
-  
+    <div class="col-md-6">
+      <br/>
+      <ul class="bxslider">
+        <% @images.each do |image| %>
+        <li><%= image_tag(image.image.url(:original), :height => "300", :width =>"500")  %></li>
+        <% end %>
+      </ul>
     </div>
-  </div>
 
+
+    <div class="col-md-6" >
+
+      <div class="page-header">
+        <h2>Property Details</h2>
+      </div>
+
+   
+        <p> Title : <%= @property.title%>    </p>  
+        <p> Type of Land :<%= @property.type_of_land %>   </p>  
+        <p> Price:<%= @property.price %>   </p>  
+        <p> City:<%= @property.city %>   </p>  
+        <p> Location:<%= @property.location %>    </p>  
+        <p> Description:<%= @property.description %>    </p>  
+        <p>  Mobile: <%= @property.mobile %>     </p>  
+        
+       </div>
+
+  </div>
 </div>
-</div>
-  
-  <br/><br/>
-  <br/>
-  <br/>
-  <br/><br/><br/><br/><br/>
+
+<br/><br/>
+<br/>
+<br/>
+<br/><br/><br/><br/><br/>
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -74,7 +52,7 @@
     width: 480px;
     
   }
- 
+
   
   
 </style>
