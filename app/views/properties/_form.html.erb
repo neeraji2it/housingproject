@@ -1,7 +1,5 @@
 
 
-
-
 <div class="container">
  <% if @property.errors.any? %>
     <div id="error_explanation">
@@ -92,6 +90,29 @@
     </div>
   </div>
 
+
+  <div class="control-group">
+    <%= f.label :Latitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :latitude %>
+    </div>
+  </div>
+
+    <div class="field">
+    <%= f.label :Longitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :longitude%>
+    </div>
+  </div>
+
+
+</div>
+
+ 
+
+<div class="col-md-6">
+
+
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
@@ -99,11 +120,7 @@
     </div>
   </div>
 
-</div>
 
- 
-
-<div class="col-md-6">
 
  <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
@@ -146,32 +163,27 @@
 
   <div class="control-group">
     <div class="control-group">
-
       <label class="control-label" for="address">
         Upload images
       </label>
-
       <div class="controls">
         <%= f.fields_for :images do |image| %>
           <%= image.file_field :image %>
           <%= image.link_to_remove image_tag("remove.png") %>
         <% end %>
-
       </div>
     </div>
     <div class="controls">
       <%= f.link_to_add image_tag("add.jpeg"), :images %>
     </div>
   </div>
-  
-</div>
-<div class="form-actions">
-  
-      <%= f.submit :class => "btncreate" %>
+  <div class="form-actions">
+    <%= f.submit :class => "btncreate" %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
       properties_path, :class => "btn btncreate" %>
-
 </div>
+</div>
+
 </div>
 <style>
   .btncreate {
