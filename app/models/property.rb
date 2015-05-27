@@ -15,15 +15,15 @@ class Property < ActiveRecord::Base
  
   
    after_validation :geocode
-  geocoded_by :address
+ geocoded_by :address
 
 def address
-  [location, city, state].compact.join(', ')
+ [location, city, state].compact.join(', ')
 end  
   
   
 def gmaps4rails_address
-  "#{self.location}, #{self.city}"
+ "#{self.location}, #{self.city}, #{self.latitude},#{self.longitude} "
 end
 
   def gmaps4rails_infowindow
