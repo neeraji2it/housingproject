@@ -18,12 +18,12 @@ class Property < ActiveRecord::Base
  geocoded_by :address
 
 def address
- [location, city, state].compact.join(', ')
+ [latitude, longitude].compact.join(', ')
 end  
   
   
 def gmaps4rails_address
- "#{self.location}, #{self.city}, #{self.latitude},#{self.longitude} "
+ "#{self.latitude}, #{self.longitude} "
 end
 
   def gmaps4rails_infowindow
