@@ -7,6 +7,12 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
+role :app, %w{root@63.142.251.66}
+role :web, %w{root@63.142.251.66}
+role :db, %w{root@63.142.251.66}
+
+server '63.142.251.66', user: 'root', roles: %w{app web db}, my_property: :my_value
+
 
 
 # role-based syntax
@@ -30,7 +36,12 @@
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
+set :deploy_to, ''
+set :deploy_user, 'deployer'
+set :branch, 'master'
+set :rails_env, :production
+set :rvm_ruby_string, :local
+set :rvm_autolibs_flag, "read-only"
 
 
 # Custom SSH Options
