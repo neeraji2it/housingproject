@@ -13,3 +13,4 @@ tmp/
 
 # ignore development.log file
 log/*.log
+.env
