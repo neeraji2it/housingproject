@@ -1,63 +1,48 @@
-set :stages, %w(production)
-set :default_stage, "production"
-require 'capistrano/ext/multistage'
-require 'bundler/capistrano'
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
+set :application, 'my_app_name'
+set :repo_url, 'git@example.com:me/my_repo.git'
 
-role (:web) {"#{domain}"}
-role (:app) {"#{domain}"}
-role (:db) { ["#{domain}", {:primary => true}] }
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# Set the deploy branch to the current branch
-set :application, "dinemedia"
-set :scm, :git
-set (:repository) { "#{gitrepo}" }
-set (:deploy_to) { "#{deploydir}" }
-set :scm_user, "ubuntu"
-ssh_options[:forward_agent] = true
-default_run_options[:pty] = true
-set :keep_releases, 4
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, '/var/www/my_app_name'
 
-desc "Symlinks database.yml, mailer.yml file from shared directory into the latest release"
-task :symlink_shared, :roles => [:app, :db] do
-  run "ln -s #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
-  run "ln -s #{shared_path}/cache #{latest_release}/tmp/cache"
-  run "ln -s #{shared_path}/system #{latest_release}/system"
-#  run "ln -s #{shared_path}/public/system/attaches #{latest_release}/public/system/attaches"
-end
+# Default value for :scm is :git
+# set :scm, :git
 
+# Default value for :format is :pretty
+# set :format, :pretty
 
-# after "deploy:stop",    "delayed_job:stop"
-# after "deploy:start",   "delayed_job:start"
-# after "deploy:restart", "delayed_job:restart"
-# 
+# Default value for :log_level is :debug
+# set :log_level, :debug
 
-#task :restart_delayed_job, :roles => [:app, :db] do
-#  run "RAILS_ENV=serverdev script/delayed_job stop"
-#  run "RAILS_ENV=serverdev script/delayed_job start"
-#end
-#
-#after 'deploy:finalize_update', :restart_delayed_job
+# Default value for :pty is false
+# set :pty, true
 
+# Default value for :linked_files is []
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
-after 'deploy:finalize_update', :symlink_shared, "deploy:migrate"
-#after 'deploy:finalize_update', 'deploy:extractions'
+# Default value for linked_dirs is []
+# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
+# set :keep_releases, 5
 
 namespace :deploy do
-  desc "Reload the database with seed data"
-  task :seed do
-    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
-  end
-end
 
-namespace :deploy do
-  desc "Restart Application"
-  task :restart, :roles => :app do
-    run "touch #{current_path}/tmp/restart.txt"
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
   end
 
-  [:start, :stop].each do |t|
-    desc "#{t} task is a no-op with mod_rails"
-    task t, :roles => :app do ; end
-  end
 end

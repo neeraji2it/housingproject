@@ -31,8 +31,11 @@ gem "binding_of_caller"
 gem 'spring',        group: :development
 gem 'geocoder'
 gem 'gmaps4rails', '2.1.1'
-gem 'rvm-capistrano'
-gem 'capistrano-ext'
+# gem 'rvm-capistrano'
+# gem 'capistrano-ext'
+
+# deployment tools
+gem 'capistrano', '~> 3.4.0'
 
 
 
