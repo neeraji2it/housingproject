@@ -11,7 +11,7 @@ role :app, %w{root@63.142.251.66}
 role :web, %w{root@63.142.251.66}
 role :db, %w{root@63.142.251.66}
 
-server '63.142.251.66', user: 'root', roles: %w{app web db}, my_property: :my_value
+server '63.142.251.66', user: 'root', roles: %w{app web}, my_property: :my_value
 
 
 
@@ -37,7 +37,7 @@ server '63.142.251.66', user: 'root', roles: %w{app web db}, my_property: :my_va
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 set :deploy_to, '/ruby/housing'
-set :deploy_user, 'deployer'
+set :deploy_user, 'root'
 set :branch, 'master'
 set :rails_env, :production
 set :rvm_ruby_string, :local
