@@ -36,7 +36,7 @@ server '63.142.251.66', user: 'root', roles: %w{app web db}, my_property: :my_va
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-set :deploy_to, ''
+set :deploy_to, '/ruby/housing'
 set :deploy_user, 'deployer'
 set :branch, 'master'
 set :rails_env, :production
