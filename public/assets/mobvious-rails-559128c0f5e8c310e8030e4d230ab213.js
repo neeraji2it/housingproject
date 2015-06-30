@@ -1,1 +1,0 @@
-(function(){var e=[].slice;void 0===window.Mobvious&&(window.Mobvious={}),Mobvious.for_device_type=function(){var i,n,o,t,l,u;for(i=1<=arguments.length?e.call(arguments,0):[],n=i[i.length-1],u=i.slice(0,+(i.length-2)+1||9e9),o=0,t=u.length;t>o;o++)if(l=u[o],Mobvious.device_type===l)return n();return null}}).call(this);
