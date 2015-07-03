@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 20150527061639) do
     t.datetime "updated_at"
   end
 
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.integer  "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -71,8 +78,8 @@ ActiveRecord::Schema.define(version: 20150527061639) do
     t.string   "type_of_land"
     t.string   "title"
     t.decimal  "price",                            precision: 10, scale: 0
+    t.decimal  "rate",                             precision: 10, scale: 0
     t.decimal  "area",                             precision: 10, scale: 0
-    t.string   "city"
     t.string   "location"
     t.text     "description"
     t.string   "name"
@@ -83,8 +90,6 @@ ActiveRecord::Schema.define(version: 20150527061639) do
     t.float    "longitude",             limit: 24
     t.integer  "view_count"
     t.integer  "contact_count"
-    t.string   "electricity_type"
-    t.string   "present_land_status"
     t.string   "land_status"
     t.string   "document_file_name"
     t.string   "document_content_type"
@@ -97,14 +102,22 @@ ActiveRecord::Schema.define(version: 20150527061639) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "video_url"
-    t.string   "state"
     t.float    "airport_lat",           limit: 24
     t.float    "airport_lng",           limit: 24
     t.float    "bus_lat",               limit: 24
     t.float    "bus_lng",               limit: 24
     t.float    "train_lat",             limit: 24
     t.float    "train_lng",             limit: 24
+    t.integer  "city_id"
+    t.integer  "state_id"
+    t.string   "state"
     t.string   "unit"
+  end
+
+  create_table "states", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

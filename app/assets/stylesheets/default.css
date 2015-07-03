@@ -306,104 +306,106 @@ ul.list-privacy li a:hover { color: #a5c140; text-decoration: none; }
 .ch-img-3 { background-image: url(/assets/img-city4.png); }
 
 .TN.ch-img-1 {
-    background-image: url(/assets/Beregai.jpg);
+    background-image: url(/assets/tn/Beregai.jpg);
   
   }
   
  .TN.ch-img-2 {
-      background-image: url(/assets/Jwalagiri.jpg);
+      background-image: url(/assets/tn/Jwalagiri.jpg);
   } 
   
 .TN.ch-img-3 {
-   background-image: url(/assets/Hosur.jpg); 
+   background-image: url(/assets/tn/Hosur.jpg); 
   
 }
 
 
 .TN.ch-img-4 {
-   background-image: url(/assets/Denkanikottai.jpg); 
+   background-image: url(/assets/tn/Denkanikottai.jpg); 
   
 }
 
 .TN.ch-img-5 {
-   background-image: url(/assets/Thally.jpg); 
+   background-image: url(/assets/tn/Thally.jpg); 
   
 }
 
 .TN.ch-img-6 {
-   background-image: url(/assets/Bagalur.jpg); 
+   background-image: url(/assets/tn/Bagalur.jpg); 
   
 }
 
 .TN.ch-img-7 {
-   background-image: url(/assets/kELAMANGALAM.jpg); 
+   background-image: url(/assets/tn/kELAMANGALAM.jpg); 
   
 }
 
 .TN.ch-img-8 {
-   background-image: url(/assets/Shoolagiri.jpg); 
+   background-image: url(/assets/tn/Shoolagiri.jpg); 
   
 }
 
 
 
+
+
+
 .KA.ch-img-1 {
-  background-image: url(/assets/Bangalore.JPG);
+  background-image: url(/assets/ka/Bangalore.jpg);
 }
 
 .KA.ch-img-2 {
-  background-image: url(/assets/Kanakpura.jpg);
+  background-image: url(/assets/ka/Kanakpura.jpg);
 }
 
 .KA.ch-img-3 {
-  background-image: url(/assets/Mysore.jpg);
+  background-image: url(/assets/ka/Mysore.jpg);
 }
 
 .KA.ch-img-4 {
-  background-image: url(/assets/Tumkur.jpg);
+  background-image: url(/assets/ka/Tumkur.jpg);
 }
 .KA.ch-img-5 {
-  background-image: url(/assets/Chickballapur.jpg);
+  background-image: url(/assets/ka/Chickballapur.jpg);
 }
 
 .KA.ch-img-6 {
-  background-image: url(/assets/Gauribidnur.jpg);
+  background-image: url(/assets/ka/Gauribidnur.jpg);
 }
 .KA.ch-img-7{
-  background-image: url(/assets/Kolar.jpg);
+  background-image: url(/assets/ka/Kolar.jpg);
 }
 .KA.ch-img-8 {
-  background-image: url(/assets/Bagepalli.jpg);
+  background-image: url(/assets/ka/Bagepalli.jpg);
 }
-
 
 
 
 
 .AP.ch-img-1 {
-       background-image: url(/assets/Anantpur.jpg);
+       background-image: url(/assets/ap/Ana.jpg);
   }
   
 .AP.ch-img-2 {
-   background-image: url(/assets/chittoor.jpg); 
+   background-image: url(/assets/ap/chittoor.jpg); 
 }
 
 .AP.ch-img-3 {
-  background-image: url(/assets/Hindupur.jpg); 
+  background-image: url(/assets/ap/Hindupur.jpg); 
 }
 
 .AP.ch-img-4 {
-    background-image: url(/assets/Kadri.jpg);
+    background-image: url(/assets/ap/Kadri.jpg);
 }
 
 
 .AP.ch-img-5 {
-  background-image: url(/assets/Madanpalle.jpg); 
+  background-image: url(/assets/ap/Madan.jpg); 
 }
 
 
 .AP.ch-img-6 {
-  background-image: url(/assets/Penukonda.jpg); 
+  background-image: url(/assets/ap/Penu.jpg); 
 }
 
 .ch-info h3 { color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 18px; margin: 0 15px; padding: 70px 0 0 0; height: 160px; font-family: 'helvetica'; }
