@@ -79,10 +79,9 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     #    :domain => 'gmail.com',
     :port => '587',
-    :user_name => 'dinemediahousing02@gmail.com',
-    :password => 'dine-media',
-    :authentication => 'plain',
-    :openssl_verify_mode => 'none'  
+    :user_name => 'dinemediahousing001@gmail.com',
+    :password => 'dinemediapassword',
+    :authentication => 'plain'
   }
 
   # Disable automatic flushing of the log to improve performance.
