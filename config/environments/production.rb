@@ -73,7 +73,7 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
   config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { :host => 'http://svrfarms.com/' }
+  config.action_mailer.default_url_options = { :host => 'http://svrfarms.com/' }
   ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true,
     :address => 'smtp.gmail.com',
@@ -81,7 +81,8 @@ Rails.application.configure do
     :port => '587',
     :user_name => 'dinemediahousing02@gmail.com',
     :password => 'dine-media',
-    :authentication => 'plain'
+    :authentication => 'plain',
+    :enable_starttls_auto => true
   }
 
   # Disable automatic flushing of the log to improve performance.
