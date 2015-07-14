@@ -12,7 +12,7 @@ gem "kaminari"
 gem 'google-analytics-rails'
 gem 'mobvious'
 gem 'mobvious-rails'
-gem 'turbolinks'
+# gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'devise-encryptable'
