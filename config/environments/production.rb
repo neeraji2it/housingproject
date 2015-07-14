@@ -82,7 +82,7 @@ Rails.application.configure do
     :user_name => 'dinemediahousing02@gmail.com',
     :password => 'dine-media',
     :authentication => 'plain',
-    openssl_verify_mode => 'none'  
+    :openssl_verify_mode => 'none'  
   }
 
   # Disable automatic flushing of the log to improve performance.
