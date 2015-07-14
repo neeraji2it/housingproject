@@ -12,6 +12,6 @@ class ContactMailer < ActionMailer::Base
   def contact_form(contactus,  message)
     @contactus = contactus
     @body = { :message => message}
-    mail(:to => ["chandrusvr82@gmail.com","naveencaaspirant@gmail.com"],  :subject => " housing customer waiting to contact you")
+    mail(:to => ["smaranreddy123@gmail.com","bhagat@dine-media.com"],  :subject => " housing customer waiting to contact you")
   end
 end
