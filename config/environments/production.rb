@@ -78,8 +78,8 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     #    :domain => 'gmail.com',
     :port => '587',
-    :user_name => 'dinemediahousing@gmail.com',
-    :password => 'dinemediapassword',
+    :user_name => 'dinemediahousing02@gmail.com',
+    :password => 'dine-media',
     :authentication => 'plain'
   }
 
